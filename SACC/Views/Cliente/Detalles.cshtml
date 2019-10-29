@@ -1,0 +1,355 @@
+﻿@model SACC.Models.CLIENTE
+
+@{
+    ViewBag.Title = "Detalles";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Detalles</h2>
+
+<div>
+    <h4>CLIENTE</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NOMBRE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NOMBRE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NOMBRE_COMERCIAL)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NOMBRE_COMERCIAL)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RFC)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RFC)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TELEFONO_CASA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TELEFONO_CASA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TELEFONO_TRABAJO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TELEFONO_TRABAJO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PAIS)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PAIS)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DIAS_CREDITO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DIAS_CREDITO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FAX)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FAX)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CONTACTO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CONTACTO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DIRECCION)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DIRECCION)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.COMENTARIOS)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.COMENTARIOS)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CIUDAD)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CIUDAD)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.COLONIA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.COLONIA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DESCUENTO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DESCUENTO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ID_DESCUENTO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ID_DESCUENTO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ID_AGENTE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ID_AGENTE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NUMERO_EXTERIOR)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NUMERO_EXTERIOR)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NUMERO_INTERIOR)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NUMERO_INTERIOR)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CURP)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CURP)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CP)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CP)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EMAIL)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EMAIL)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.WEB_PASSWORD)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.WEB_PASSWORD)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ESTADO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ESTADO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FECHA_ALTA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FECHA_ALTA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LIMITE_CREDITO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LIMITE_CREDITO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DIRECCION_ENVIO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DIRECCION_ENVIO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.VALORACION)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VALORACION)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LEYENDAS)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LEYENDAS)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AGENTE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AGENTE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ASIG)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ASIG)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RECIBO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RECIBO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Adenda_ID_facturaglobal)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Adenda_ID_facturaglobal)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Adenda_proveedor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Adenda_proveedor)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Adenda_contrato)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Adenda_contrato)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Adenda_unidad_negocio)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Adenda_unidad_negocio)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Adenda_pedido)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Adenda_pedido)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Adenda_fianza)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Adenda_fianza)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Adenda_afianzadora)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Adenda_afianzadora)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Adenda_alta)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Adenda_alta)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Flag_extranjero)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Flag_extranjero)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Num_cuenta_pago_cliente)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Num_cuenta_pago_cliente)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Clave_CFDI)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Clave_CFDI)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Editar", "Editar", new { id = Model.ID_CLIENTE }) |
+    @Html.ActionLink("Regresar", "ClientesLista")
+</p>

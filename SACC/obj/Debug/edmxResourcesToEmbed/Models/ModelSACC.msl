@@ -1,0 +1,1887 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="JEENModelStoreContainer" CdmEntityContainer="JEENContext">
+    <EntitySetMapping Name="ASISTENCIA_TECNICA">
+      <EntityTypeMapping TypeName="JEENModel.ASISTENCIA_TECNICA">
+        <MappingFragment StoreEntitySet="ASISTENCIA_TECNICA">
+          <ScalarProperty Name="ID_AS_TEC" ColumnName="ID_AS_TEC" />
+          <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+          <ScalarProperty Name="TELEFONO" ColumnName="TELEFONO" />
+          <ScalarProperty Name="MODELO" ColumnName="MODELO" />
+          <ScalarProperty Name="MARCA" ColumnName="MARCA" />
+          <ScalarProperty Name="TIPO_ARTICULO" ColumnName="TIPO_ARTICULO" />
+          <ScalarProperty Name="DESCRIPCION_PIEZAS" ColumnName="DESCRIPCION_PIEZAS" />
+          <ScalarProperty Name="SUCURSAL" ColumnName="SUCURSAL" />
+          <ScalarProperty Name="GARANTIA" ColumnName="GARANTIA" />
+          <ScalarProperty Name="FECHA_DEBE_ATENDER" ColumnName="FECHA_DEBE_ATENDER" />
+          <ScalarProperty Name="FECHA_ATENDIDO" ColumnName="FECHA_ATENDIDO" />
+          <ScalarProperty Name="A_DOMICILIO" ColumnName="A_DOMICILIO" />
+          <ScalarProperty Name="ATENDIDO" ColumnName="ATENDIDO" />
+          <ScalarProperty Name="ID_USUARIO" ColumnName="ID_USUARIO" />
+          <ScalarProperty Name="ID_CLIENTE" ColumnName="ID_CLIENTE" />
+          <ScalarProperty Name="FECHA_CAPTURA" ColumnName="FECHA_CAPTURA" />
+          <ScalarProperty Name="PRECIO_COTIZACION" ColumnName="PRECIO_COTIZACION" />
+          <ScalarProperty Name="FECHA_COTIZACION" ColumnName="FECHA_COTIZACION" />
+          <ScalarProperty Name="FECHA_ACEPTADO_PRESUPUESTO" ColumnName="FECHA_ACEPTADO_PRESUPUESTO" />
+          <ScalarProperty Name="COMENTARIOS_COTIZACION" ColumnName="COMENTARIOS_COTIZACION" />
+          <ScalarProperty Name="COMENTARIOS_TECNICOS" ColumnName="COMENTARIOS_TECNICOS" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="COBRO_MCIA">
+      <EntityTypeMapping TypeName="JEENModel.COBRO_MCIA">
+        <MappingFragment StoreEntitySet="COBRO_MCIA">
+          <ScalarProperty Name="ID_COBRO" ColumnName="ID_COBRO" />
+          <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+          <ScalarProperty Name="COMENTARIO" ColumnName="COMENTARIO" />
+          <ScalarProperty Name="FECHA" ColumnName="FECHA" />
+          <ScalarProperty Name="ID_INVENTARIO" ColumnName="ID_INVENTARIO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="COBRO_MCIA_DETALLE">
+      <EntityTypeMapping TypeName="JEENModel.COBRO_MCIA_DETALLE">
+        <MappingFragment StoreEntitySet="COBRO_MCIA_DETALLE">
+          <ScalarProperty Name="ID_COBRO" ColumnName="ID_COBRO" />
+          <ScalarProperty Name="ID_PRODUCTO" ColumnName="ID_PRODUCTO" />
+          <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+          <ScalarProperty Name="CANTIDAD" ColumnName="CANTIDAD" />
+          <ScalarProperty Name="PRECIO_UNITARIO" ColumnName="PRECIO_UNITARIO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="COMANDAS_2">
+      <EntityTypeMapping TypeName="JEENModel.COMANDAS_2">
+        <MappingFragment StoreEntitySet="COMANDAS_2">
+          <ScalarProperty Name="ID_COMANDA" ColumnName="ID_COMANDA" />
+          <ScalarProperty Name="FECHA_INICIO" ColumnName="FECHA_INICIO" />
+          <ScalarProperty Name="FECHA_FIN" ColumnName="FECHA_FIN" />
+          <ScalarProperty Name="ID_CLIENTE" ColumnName="ID_CLIENTE" />
+          <ScalarProperty Name="ID_AGENTE" ColumnName="ID_AGENTE" />
+          <ScalarProperty Name="ID_SUCURSAL" ColumnName="ID_SUCURSAL" />
+          <ScalarProperty Name="NOTAS" ColumnName="NOTAS" />
+          <ScalarProperty Name="ESTADO_ACTUAL" ColumnName="ESTADO_ACTUAL" />
+          <ScalarProperty Name="TIPO" ColumnName="TIPO" />
+          <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+          <ScalarProperty Name="TELEFONO" ColumnName="TELEFONO" />
+          <ScalarProperty Name="IMPRE" ColumnName="IMPRE" />
+          <ScalarProperty Name="COMENTARIO" ColumnName="COMENTARIO" />
+          <ScalarProperty Name="SUCURSAL" ColumnName="SUCURSAL" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="COMANDAS_DETALLES_2">
+      <EntityTypeMapping TypeName="JEENModel.COMANDAS_DETALLES_2">
+        <MappingFragment StoreEntitySet="COMANDAS_DETALLES_2">
+          <ScalarProperty Name="ID_COMANDA" ColumnName="ID_COMANDA" />
+          <ScalarProperty Name="ARTICULO" ColumnName="ARTICULO" />
+          <ScalarProperty Name="ID_PRODUCTO" ColumnName="ID_PRODUCTO" />
+          <ScalarProperty Name="CANTIDAD" ColumnName="CANTIDAD" />
+          <ScalarProperty Name="CANTIDAD_NO_SIRVIO" ColumnName="CANTIDAD_NO_SIRVIO" />
+          <ScalarProperty Name="TIPO" ColumnName="TIPO" />
+          <ScalarProperty Name="ESTADO_ACTUAL" ColumnName="ESTADO_ACTUAL" />
+          <ScalarProperty Name="FECHA_FIN" ColumnName="FECHA_FIN" />
+          <ScalarProperty Name="I_S" ColumnName="I_S" />
+          <ScalarProperty Name="IMPRE" ColumnName="IMPRE" />
+          <ScalarProperty Name="CLASIFICACION" ColumnName="CLASIFICACION" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="COTIZA_CLIEN">
+      <EntityTypeMapping TypeName="JEENModel.COTIZA_CLIEN">
+        <MappingFragment StoreEntitySet="COTIZA_CLIEN">
+          <ScalarProperty Name="ID_COTIZA_CLIEN" ColumnName="ID_COTIZA_CLIEN" />
+          <ScalarProperty Name="ID_CLIENTE" ColumnName="ID_CLIENTE" />
+          <ScalarProperty Name="ID_AGENTE" ColumnName="ID_AGENTE" />
+          <ScalarProperty Name="FECHA" ColumnName="FECHA" />
+          <ScalarProperty Name="TOTAL" ColumnName="TOTAL" />
+          <ScalarProperty Name="SUBTOTAL" ColumnName="SUBTOTAL" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="COTIZA_REQUI">
+      <EntityTypeMapping TypeName="JEENModel.COTIZA_REQUI">
+        <MappingFragment StoreEntitySet="COTIZA_REQUI">
+          <ScalarProperty Name="ID_COTIZACION" ColumnName="ID_COTIZACION" />
+          <ScalarProperty Name="ID_REQUISICION" ColumnName="ID_REQUISICION" />
+          <ScalarProperty Name="ID_PROVEEDOR" ColumnName="ID_PROVEEDOR" />
+          <ScalarProperty Name="ID_PRODUCTO" ColumnName="ID_PRODUCTO" />
+          <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+          <ScalarProperty Name="CANTIDAD" ColumnName="CANTIDAD" />
+          <ScalarProperty Name="DIAS_ENTREGA" ColumnName="DIAS_ENTREGA" />
+          <ScalarProperty Name="PRECIO" ColumnName="PRECIO" />
+          <ScalarProperty Name="FECHA" ColumnName="FECHA" />
+          <ScalarProperty Name="ESTADO_ACTUAL" ColumnName="ESTADO_ACTUAL" />
+          <ScalarProperty Name="NUMOC" ColumnName="NUMOC" />
+          <ScalarProperty Name="MONEDA" ColumnName="MONEDA" />
+          <ScalarProperty Name="FOLIO" ColumnName="FOLIO" />
+          <ScalarProperty Name="FOLIOREQUI" ColumnName="FOLIOREQUI" />
+          <ScalarProperty Name="NO_PEDIDO" ColumnName="NO_PEDIDO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DETALLE_PEDIDO">
+      <EntityTypeMapping TypeName="JEENModel.DETALLE_PEDIDO">
+        <MappingFragment StoreEntitySet="DETALLE_PEDIDO">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ID_PRODUCTO" ColumnName="ID_PRODUCTO" />
+          <ScalarProperty Name="CANTIDAD" ColumnName="CANTIDAD" />
+          <ScalarProperty Name="ENTREGADO" ColumnName="ENTREGADO" />
+          <ScalarProperty Name="ID_PEDIDO" ColumnName="ID_PEDIDO" />
+          <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+          <ScalarProperty Name="ALMACEN" ColumnName="ALMACEN" />
+          <ScalarProperty Name="MARCA" ColumnName="MARCA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DOLAR">
+      <EntityTypeMapping TypeName="JEENModel.DOLAR">
+        <MappingFragment StoreEntitySet="DOLAR">
+          <ScalarProperty Name="ID_DOLAR" ColumnName="ID_DOLAR" />
+          <ScalarProperty Name="FECHA" ColumnName="FECHA" />
+          <ScalarProperty Name="COMPRA" ColumnName="COMPRA" />
+          <ScalarProperty Name="VENTA" ColumnName="VENTA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ENTRADAS">
+      <EntityTypeMapping TypeName="JEENModel.ENTRADAS">
+        <MappingFragment StoreEntitySet="ENTRADAS">
+          <ScalarProperty Name="ID_ENTRADA" ColumnName="ID_ENTRADA" />
+          <ScalarProperty Name="ID_PROVEEDOR" ColumnName="ID_PROVEEDOR" />
+          <ScalarProperty Name="FECHA" ColumnName="FECHA" />
+          <ScalarProperty Name="TOTAL" ColumnName="TOTAL" />
+          <ScalarProperty Name="FACTURA" ColumnName="FACTURA" />
+          <ScalarProperty Name="ID_USUARIO" ColumnName="ID_USUARIO" />
+          <ScalarProperty Name="NUM_ORDEN" ColumnName="NUM_ORDEN" />
+          <ScalarProperty Name="ID_ORDEN_COMPRA" ColumnName="ID_ORDEN_COMPRA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EXISTENCIAS">
+      <EntityTypeMapping TypeName="JEENModel.EXISTENCIAS">
+        <MappingFragment StoreEntitySet="EXISTENCIAS">
+          <ScalarProperty Name="ID_EXISTENCIA" ColumnName="ID_EXISTENCIA" />
+          <ScalarProperty Name="ID_PRODUCTO" ColumnName="ID_PRODUCTO" />
+          <ScalarProperty Name="CANTIDAD" ColumnName="CANTIDAD" />
+          <ScalarProperty Name="SUCURSAL" ColumnName="SUCURSAL" />
+          <ScalarProperty Name="LOCALIZACION" ColumnName="LOCALIZACION" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EXISTENCIAS_TEMPORAL">
+      <EntityTypeMapping TypeName="JEENModel.EXISTENCIAS_TEMPORAL">
+        <MappingFragment StoreEntitySet="EXISTENCIAS_TEMPORAL">
+          <ScalarProperty Name="ID_MOVEXISTENCIA" ColumnName="ID_MOVEXISTENCIA" />
+          <ScalarProperty Name="ID_USUARIO" ColumnName="ID_USUARIO" />
+          <ScalarProperty Name="FECHA" ColumnName="FECHA" />
+          <ScalarProperty Name="MOTIVO" ColumnName="MOTIVO" />
+          <ScalarProperty Name="ID_CLIENTE" ColumnName="ID_CLIENTE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EXISTENCIAS_TEMPORAL_DETALLES">
+      <EntityTypeMapping TypeName="JEENModel.EXISTENCIAS_TEMPORAL_DETALLES">
+        <MappingFragment StoreEntitySet="EXISTENCIAS_TEMPORAL_DETALLES">
+          <ScalarProperty Name="ID_EXDETALLE" ColumnName="ID_EXDETALLE" />
+          <ScalarProperty Name="ID_MOVEXISTENCIA" ColumnName="ID_MOVEXISTENCIA" />
+          <ScalarProperty Name="CANTIDAD" ColumnName="CANTIDAD" />
+          <ScalarProperty Name="ID_PRODUCTO" ColumnName="ID_PRODUCTO" />
+          <ScalarProperty Name="SUCURSAL" ColumnName="SUCURSAL" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GARANTIAS">
+      <EntityTypeMapping TypeName="JEENModel.GARANTIAS">
+        <MappingFragment StoreEntitySet="GARANTIAS">
+          <ScalarProperty Name="ID_GARANTIA" ColumnName="ID_GARANTIA" />
+          <ScalarProperty Name="ID_VENTA" ColumnName="ID_VENTA" />
+          <ScalarProperty Name="FECHA" ColumnName="FECHA" />
+          <ScalarProperty Name="ID_PRODUCTO" ColumnName="ID_PRODUCTO" />
+          <ScalarProperty Name="CANTIDAD" ColumnName="CANTIDAD" />
+          <ScalarProperty Name="PRECIO" ColumnName="PRECIO" />
+          <ScalarProperty Name="IMPORTE" ColumnName="IMPORTE" />
+          <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+          <ScalarProperty Name="ESTADO" ColumnName="ESTADO" />
+          <ScalarProperty Name="IDDET" ColumnName="IDDET" />
+          <ScalarProperty Name="COMENTARIO" ColumnName="COMENTARIO" />
+          <ScalarProperty Name="TIPO" ColumnName="TIPO" />
+          <ScalarProperty Name="REVUNO" ColumnName="REVUNO" />
+          <ScalarProperty Name="REVDOS" ColumnName="REVDOS" />
+          <ScalarProperty Name="COMEN" ColumnName="COMEN" />
+          <ScalarProperty Name="CANT_ACEP" ColumnName="CANT_ACEP" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="INVENTARIOS">
+      <EntityTypeMapping TypeName="JEENModel.INVENTARIOS">
+        <MappingFragment StoreEntitySet="INVENTARIOS">
+          <ScalarProperty Name="ID_INVENTARIO" ColumnName="ID_INVENTARIO" />
+          <ScalarProperty Name="ID_SUCURSAL" ColumnName="ID_SUCURSAL" />
+          <ScalarProperty Name="FECHA" ColumnName="FECHA" />
+          <ScalarProperty Name="ESTADO_ACTUAL" ColumnName="ESTADO_ACTUAL" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="JR_ALTERNOS">
+      <EntityTypeMapping TypeName="JEENModel.JR_ALTERNOS">
+        <MappingFragment StoreEntitySet="JR_ALTERNOS">
+          <ScalarProperty Name="ALTERNO" ColumnName="ALTERNO" />
+          <ScalarProperty Name="ID_REPARACION" ColumnName="ID_REPARACION" />
+          <ScalarProperty Name="ID_PRODUCTO1" ColumnName="ID_PRODUCTO1" />
+          <ScalarProperty Name="ID_PRODUCTO2" ColumnName="ID_PRODUCTO2" />
+          <ScalarProperty Name="CANTIDAD" ColumnName="CANTIDAD" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="JR_TEMPORALES">
+      <EntityTypeMapping TypeName="JEENModel.JR_TEMPORALES">
+        <MappingFragment StoreEntitySet="JR_TEMPORALES">
+          <ScalarProperty Name="TEMPORAL" ColumnName="TEMPORAL" />
+          <ScalarProperty Name="ID_COMANDA" ColumnName="ID_COMANDA" />
+          <ScalarProperty Name="ID_REPARACION" ColumnName="ID_REPARACION" />
+          <ScalarProperty Name="ID_PRODUCTO" ColumnName="ID_PRODUCTO" />
+          <ScalarProperty Name="CANTIDAD" ColumnName="CANTIDAD" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MARCA">
+      <EntityTypeMapping TypeName="JEENModel.MARCA">
+        <MappingFragment StoreEntitySet="MARCA">
+          <ScalarProperty Name="ID_MARCA" ColumnName="ID_MARCA" />
+          <ScalarProperty Name="MARCA1" ColumnName="MARCA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MSGAPTONER">
+      <EntityTypeMapping TypeName="JEENModel.MSGAPTONER">
+        <MappingFragment StoreEntitySet="MSGAPTONER">
+          <ScalarProperty Name="ID_MENSAJE" ColumnName="ID_MENSAJE" />
+          <ScalarProperty Name="ID_USUARIO_PARA" ColumnName="ID_USUARIO_PARA" />
+          <ScalarProperty Name="ID_USUARIO_DE" ColumnName="ID_USUARIO_DE" />
+          <ScalarProperty Name="MENSAJE" ColumnName="MENSAJE" />
+          <ScalarProperty Name="FECHA" ColumnName="FECHA" />
+          <ScalarProperty Name="HORA" ColumnName="HORA" />
+          <ScalarProperty Name="MINUTOS" ColumnName="MINUTOS" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NOTA_CREDITO">
+      <EntityTypeMapping TypeName="JEENModel.NOTA_CREDITO">
+        <MappingFragment StoreEntitySet="NOTA_CREDITO">
+          <ScalarProperty Name="ID_NOTA" ColumnName="ID_NOTA" />
+          <ScalarProperty Name="IMPORTE" ColumnName="IMPORTE" />
+          <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+          <ScalarProperty Name="TOTAL" ColumnName="TOTAL" />
+          <ScalarProperty Name="FECHA" ColumnName="FECHA" />
+          <ScalarProperty Name="MOTIVOCAMBIO" ColumnName="MOTIVOCAMBIO" />
+          <ScalarProperty Name="ID_VENTA" ColumnName="ID_VENTA" />
+          <ScalarProperty Name="ID_USUARIO" ColumnName="ID_USUARIO" />
+          <ScalarProperty Name="LETRAS" ColumnName="LETRAS" />
+          <ScalarProperty Name="APLICADA" ColumnName="APLICADA" />
+          <ScalarProperty Name="ID_CLIENTE" ColumnName="ID_CLIENTE" />
+          <ScalarProperty Name="FOLIO" ColumnName="FOLIO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ORDEN_COMPRA">
+      <EntityTypeMapping TypeName="JEENModel.ORDEN_COMPRA">
+        <MappingFragment StoreEntitySet="ORDEN_COMPRA">
+          <ScalarProperty Name="ID_ORDEN_COMPRA" ColumnName="ID_ORDEN_COMPRA" />
+          <ScalarProperty Name="ID_PROVEEDOR" ColumnName="ID_PROVEEDOR" />
+          <ScalarProperty Name="FECHA" ColumnName="FECHA" />
+          <ScalarProperty Name="TOTAL" ColumnName="TOTAL" />
+          <ScalarProperty Name="ENVIARA" ColumnName="ENVIARA" />
+          <ScalarProperty Name="DISCOUNT" ColumnName="DISCOUNT" />
+          <ScalarProperty Name="FREIGHT" ColumnName="FREIGHT" />
+          <ScalarProperty Name="TAX" ColumnName="TAX" />
+          <ScalarProperty Name="OTROS_CARGOS" ColumnName="OTROS_CARGOS" />
+          <ScalarProperty Name="COMENTARIO" ColumnName="COMENTARIO" />
+          <ScalarProperty Name="CONFIRMADA" ColumnName="CONFIRMADA" />
+          <ScalarProperty Name="TIPO" ColumnName="TIPO" />
+          <ScalarProperty Name="TIPO_COMPRA" ColumnName="TIPO_COMPRA" />
+          <ScalarProperty Name="NUM_ORDEN" ColumnName="NUM_ORDEN" />
+          <ScalarProperty Name="MONEDA" ColumnName="MONEDA" />
+          <ScalarProperty Name="FACT_PROVE" ColumnName="FACT_PROVE" />
+          <ScalarProperty Name="TOT_PRO" ColumnName="TOT_PRO" />
+          <ScalarProperty Name="ID_USUARIO" ColumnName="ID_USUARIO" />
+          <ScalarProperty Name="REVISION" ColumnName="REVISION" />
+          <ScalarProperty Name="ID_USUARIO_AUT" ColumnName="ID_USUARIO_AUT" />
+          <ScalarProperty Name="ESTADO" ColumnName="ESTADO" />
+          <ScalarProperty Name="CONTRARECIBO" ColumnName="CONTRARECIBO" />
+          <ScalarProperty Name="FORMA_PAGO" ColumnName="FORMA_PAGO" />
+          <ScalarProperty Name="DIAS_CREDITO" ColumnName="DIAS_CREDITO" />
+          <ScalarProperty Name="FACT_PROV" ColumnName="FACT_PROV" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ORDEN_RAPIDA">
+      <EntityTypeMapping TypeName="JEENModel.ORDEN_RAPIDA">
+        <MappingFragment StoreEntitySet="ORDEN_RAPIDA">
+          <ScalarProperty Name="ID_ORDEN_RAPIDA" ColumnName="ID_ORDEN_RAPIDA" />
+          <ScalarProperty Name="FECHA" ColumnName="FECHA" />
+          <ScalarProperty Name="ID_PROVEEDOR" ColumnName="ID_PROVEEDOR" />
+          <ScalarProperty Name="MONEDA" ColumnName="MONEDA" />
+          <ScalarProperty Name="ESTADO" ColumnName="ESTADO" />
+          <ScalarProperty Name="RENTAS" ColumnName="RENTAS" />
+          <ScalarProperty Name="FAC_NOTA" ColumnName="FAC_NOTA" />
+          <ScalarProperty Name="TOT_PROV" ColumnName="TOT_PROV" />
+          <ScalarProperty Name="COMENTARIO" ColumnName="COMENTARIO" />
+          <ScalarProperty Name="RETENCION" ColumnName="RETENCION" />
+          <ScalarProperty Name="TOTAL_RETENCION" ColumnName="TOTAL_RETENCION" />
+          <ScalarProperty Name="COMENTARIO_SALID" ColumnName="COMENTARIO_SALID" />
+          <ScalarProperty Name="TIPOIMP" ColumnName="TIPOIMP" />
+          <ScalarProperty Name="TIP" ColumnName="TIP" />
+          <ScalarProperty Name="ID_USUARIO_MOD" ColumnName="ID_USUARIO_MOD" />
+          <ScalarProperty Name="ID_USUARIO" ColumnName="ID_USUARIO" />
+          <ScalarProperty Name="FECHA_MOD" ColumnName="FECHA_MOD" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PED_CLIEN_DETALLE">
+      <EntityTypeMapping TypeName="JEENModel.PED_CLIEN_DETALLE">
+        <MappingFragment StoreEntitySet="PED_CLIEN_DETALLE">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ID_PRODUCTO" ColumnName="ID_PRODUCTO" />
+          <ScalarProperty Name="NO_PEDIDO" ColumnName="NO_PEDIDO" />
+          <ScalarProperty Name="CANTIDAD_PEDIDA" ColumnName="CANTIDAD_PEDIDA" />
+          <ScalarProperty Name="CANTIDAD_EXISTENCIA" ColumnName="CANTIDAD_EXISTENCIA" />
+          <ScalarProperty Name="CANTIDAD_PENDIENTE" ColumnName="CANTIDAD_PENDIENTE" />
+          <ScalarProperty Name="CANT_ORIGINAL" ColumnName="CANT_ORIGINAL" />
+          <ScalarProperty Name="ACTIVO" ColumnName="ACTIVO" />
+          <ScalarProperty Name="FINALIZADA" ColumnName="FINALIZADA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PEDIDO">
+      <EntityTypeMapping TypeName="JEENModel.PEDIDO">
+        <MappingFragment StoreEntitySet="PEDIDO">
+          <ScalarProperty Name="ID_PEDIDO" ColumnName="ID_PEDIDO" />
+          <ScalarProperty Name="SUCURSAL" ColumnName="SUCURSAL" />
+          <ScalarProperty Name="PIDIO" ColumnName="PIDIO" />
+          <ScalarProperty Name="FECHA" ColumnName="FECHA" />
+          <ScalarProperty Name="TIPO" ColumnName="TIPO" />
+          <ScalarProperty Name="COMENTARIO" ColumnName="COMENTARIO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PERDIDAS">
+      <EntityTypeMapping TypeName="JEENModel.PERDIDAS">
+        <MappingFragment StoreEntitySet="PERDIDAS">
+          <ScalarProperty Name="Id_Perdida" ColumnName="Id_Perdida" />
+          <ScalarProperty Name="Id_Producto" ColumnName="Id_Producto" />
+          <ScalarProperty Name="Id_Inventario" ColumnName="Id_Inventario" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+          <ScalarProperty Name="Cantidad" ColumnName="Cantidad" />
+          <ScalarProperty Name="Precio_Unitario" ColumnName="Precio_Unitario" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PRESTAMOS_CLIENTES">
+      <EntityTypeMapping TypeName="JEENModel.PRESTAMOS_CLIENTES">
+        <MappingFragment StoreEntitySet="PRESTAMOS_CLIENTES">
+          <ScalarProperty Name="ID_PRESTAMO" ColumnName="ID_PRESTAMO" />
+          <ScalarProperty Name="ID_CLIENTE" ColumnName="ID_CLIENTE" />
+          <ScalarProperty Name="FECHA_PRESTAMO" ColumnName="FECHA_PRESTAMO" />
+          <ScalarProperty Name="FECHA_ENTREGA" ColumnName="FECHA_ENTREGA" />
+          <ScalarProperty Name="DEPOSITO" ColumnName="DEPOSITO" />
+          <ScalarProperty Name="NOTAS" ColumnName="NOTAS" />
+          <ScalarProperty Name="ESTADO" ColumnName="ESTADO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PRODUCTOS_CONSUMIBLES">
+      <EntityTypeMapping TypeName="JEENModel.PRODUCTOS_CONSUMIBLES">
+        <MappingFragment StoreEntitySet="PRODUCTOS_CONSUMIBLES">
+          <ScalarProperty Name="ID_PRODUCTO" ColumnName="ID_PRODUCTO" />
+          <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+          <ScalarProperty Name="PRECIO" ColumnName="PRECIO" />
+          <ScalarProperty Name="NOTAS" ColumnName="NOTAS" />
+          <ScalarProperty Name="ID_PRODUCTO_CONSUMIBLE" ColumnName="ID_PRODUCTO_CONSUMIBLE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PROMOCION">
+      <EntityTypeMapping TypeName="JEENModel.PROMOCION">
+        <MappingFragment StoreEntitySet="PROMOCION">
+          <ScalarProperty Name="ID_PROMOCION" ColumnName="ID_PROMOCION" />
+          <ScalarProperty Name="ID_PRODUCTO" ColumnName="ID_PRODUCTO" />
+          <ScalarProperty Name="PRECIO_OFERTA" ColumnName="PRECIO_OFERTA" />
+          <ScalarProperty Name="FECHA_FIN" ColumnName="FECHA_FIN" />
+          <ScalarProperty Name="TIPO" ColumnName="TIPO" />
+          <ScalarProperty Name="ESTADO_ACTUAL" ColumnName="ESTADO_ACTUAL" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PROVEEDOR">
+      <EntityTypeMapping TypeName="JEENModel.PROVEEDOR">
+        <MappingFragment StoreEntitySet="PROVEEDOR">
+          <ScalarProperty Name="ID_PROVEEDOR" ColumnName="ID_PROVEEDOR" />
+          <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+          <ScalarProperty Name="DIRECCION" ColumnName="DIRECCION" />
+          <ScalarProperty Name="COLONIA" ColumnName="COLONIA" />
+          <ScalarProperty Name="CIUDAD" ColumnName="CIUDAD" />
+          <ScalarProperty Name="CP" ColumnName="CP" />
+          <ScalarProperty Name="RFC" ColumnName="RFC" />
+          <ScalarProperty Name="TELEFONO1" ColumnName="TELEFONO1" />
+          <ScalarProperty Name="TELEFONO2" ColumnName="TELEFONO2" />
+          <ScalarProperty Name="TELEFONO3" ColumnName="TELEFONO3" />
+          <ScalarProperty Name="NOTAS" ColumnName="NOTAS" />
+          <ScalarProperty Name="ESTADO" ColumnName="ESTADO" />
+          <ScalarProperty Name="PAIS" ColumnName="PAIS" />
+          <ScalarProperty Name="TRANS_BANCO" ColumnName="TRANS_BANCO" />
+          <ScalarProperty Name="TRANS_DIRECCION" ColumnName="TRANS_DIRECCION" />
+          <ScalarProperty Name="TRANS_CIUDAD" ColumnName="TRANS_CIUDAD" />
+          <ScalarProperty Name="TRANS_ROUTING" ColumnName="TRANS_ROUTING" />
+          <ScalarProperty Name="TRANS_CUENTA" ColumnName="TRANS_CUENTA" />
+          <ScalarProperty Name="TRANS_CLAVE_SWIFT" ColumnName="TRANS_CLAVE_SWIFT" />
+          <ScalarProperty Name="ELIMINADO" ColumnName="ELIMINADO" />
+          <ScalarProperty Name="ALMACEN1" ColumnName="ALMACEN1" />
+          <ScalarProperty Name="ALMACEN2" ColumnName="ALMACEN2" />
+          <ScalarProperty Name="ALMACEN3" ColumnName="ALMACEN3" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PROVEEDOR_ALMACEN1">
+      <EntityTypeMapping TypeName="JEENModel.PROVEEDOR_ALMACEN1">
+        <MappingFragment StoreEntitySet="PROVEEDOR_ALMACEN1">
+          <ScalarProperty Name="ID_PROVEEDOR" ColumnName="ID_PROVEEDOR" />
+          <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+          <ScalarProperty Name="TELEFONO" ColumnName="TELEFONO" />
+          <ScalarProperty Name="MAIL" ColumnName="MAIL" />
+          <ScalarProperty Name="DIRECCION" ColumnName="DIRECCION" />
+          <ScalarProperty Name="IDENTIFICACION" ColumnName="IDENTIFICACION" />
+          <ScalarProperty Name="NUMERO_ID" ColumnName="NUMERO_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PROVEEDOR_CONSUMO">
+      <EntityTypeMapping TypeName="JEENModel.PROVEEDOR_CONSUMO">
+        <MappingFragment StoreEntitySet="PROVEEDOR_CONSUMO">
+          <ScalarProperty Name="ID_PROVEEDOR" ColumnName="ID_PROVEEDOR" />
+          <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+          <ScalarProperty Name="DIRECCION" ColumnName="DIRECCION" />
+          <ScalarProperty Name="COLONIA" ColumnName="COLONIA" />
+          <ScalarProperty Name="CIUDAD" ColumnName="CIUDAD" />
+          <ScalarProperty Name="CP" ColumnName="CP" />
+          <ScalarProperty Name="RFC" ColumnName="RFC" />
+          <ScalarProperty Name="TELEFONO1" ColumnName="TELEFONO1" />
+          <ScalarProperty Name="TELEFONO2" ColumnName="TELEFONO2" />
+          <ScalarProperty Name="NOTAS" ColumnName="NOTAS" />
+          <ScalarProperty Name="ESTADO" ColumnName="ESTADO" />
+          <ScalarProperty Name="PAIS" ColumnName="PAIS" />
+          <ScalarProperty Name="ELIMINADO" ColumnName="ELIMINADO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="REEMP_INV">
+      <EntityTypeMapping TypeName="JEENModel.REEMP_INV">
+        <MappingFragment StoreEntitySet="REEMP_INV">
+          <ScalarProperty Name="ID_REEMP" ColumnName="ID_REEMP" />
+          <ScalarProperty Name="ID_PRODUCTO_DE" ColumnName="ID_PRODUCTO_DE" />
+          <ScalarProperty Name="ID_PRODUCTO_PARA" ColumnName="ID_PRODUCTO_PARA" />
+          <ScalarProperty Name="CANTIDAD" ColumnName="CANTIDAD" />
+          <ScalarProperty Name="MOTIVO" ColumnName="MOTIVO" />
+          <ScalarProperty Name="FECHA" ColumnName="FECHA" />
+          <ScalarProperty Name="SUCURSAL" ColumnName="SUCURSAL" />
+          <ScalarProperty Name="ID_USUARIO" ColumnName="ID_USUARIO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="REQUISICION">
+      <EntityTypeMapping TypeName="JEENModel.REQUISICION">
+        <MappingFragment StoreEntitySet="REQUISICION">
+          <ScalarProperty Name="ID_REQUISICION" ColumnName="ID_REQUISICION" />
+          <ScalarProperty Name="FECHA" ColumnName="FECHA" />
+          <ScalarProperty Name="ID_PRODUCTO" ColumnName="ID_PRODUCTO" />
+          <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+          <ScalarProperty Name="CANTIDAD" ColumnName="CANTIDAD" />
+          <ScalarProperty Name="ACTIVO" ColumnName="ACTIVO" />
+          <ScalarProperty Name="CONTADOR" ColumnName="CONTADOR" />
+          <ScalarProperty Name="COTIZADA" ColumnName="COTIZADA" />
+          <ScalarProperty Name="ALMACEN" ColumnName="ALMACEN" />
+          <ScalarProperty Name="URGENTE" ColumnName="URGENTE" />
+          <ScalarProperty Name="FOLIO" ColumnName="FOLIO" />
+          <ScalarProperty Name="MARCA" ColumnName="MARCA" />
+          <ScalarProperty Name="COMENTARIO" ColumnName="COMENTARIO" />
+          <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+          <ScalarProperty Name="NO_PEDIDO" ColumnName="NO_PEDIDO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="REV_COMPRA_ALMACEN1">
+      <EntityTypeMapping TypeName="JEENModel.REV_COMPRA_ALMACEN1">
+        <MappingFragment StoreEntitySet="REV_COMPRA_ALMACEN1">
+          <ScalarProperty Name="ID_REVISION" ColumnName="ID_REVISION" />
+          <ScalarProperty Name="ID_PRODUCTO" ColumnName="ID_PRODUCTO" />
+          <ScalarProperty Name="ID_PROVEEDOR" ColumnName="ID_PROVEEDOR" />
+          <ScalarProperty Name="CANTIDAD" ColumnName="CANTIDAD" />
+          <ScalarProperty Name="FECHA" ColumnName="FECHA" />
+          <ScalarProperty Name="APROVADO" ColumnName="APROVADO" />
+          <ScalarProperty Name="FECHA_APROVADO" ColumnName="FECHA_APROVADO" />
+          <ScalarProperty Name="CANTIDAD_APROVADA" ColumnName="CANTIDAD_APROVADA" />
+          <ScalarProperty Name="PRECIO_COMPRA" ColumnName="PRECIO_COMPRA" />
+          <ScalarProperty Name="GRUPO" ColumnName="GRUPO" />
+          <ScalarProperty Name="SUCURSAL" ColumnName="SUCURSAL" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SUCURSALES">
+      <EntityTypeMapping TypeName="JEENModel.SUCURSALES">
+        <MappingFragment StoreEntitySet="SUCURSALES">
+          <ScalarProperty Name="ID_SUCURSAL" ColumnName="ID_SUCURSAL" />
+          <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+          <ScalarProperty Name="CALLE" ColumnName="CALLE" />
+          <ScalarProperty Name="COLONIA" ColumnName="COLONIA" />
+          <ScalarProperty Name="CIUDAD" ColumnName="CIUDAD" />
+          <ScalarProperty Name="ESTADO" ColumnName="ESTADO" />
+          <ScalarProperty Name="TELEFONO" ColumnName="TELEFONO" />
+          <ScalarProperty Name="ELIMINADO" ColumnName="ELIMINADO" />
+          <ScalarProperty Name="DISTINTIVO" ColumnName="DISTINTIVO" />
+          <ScalarProperty Name="IVA" ColumnName="IVA" />
+          <ScalarProperty Name="CP" ColumnName="CP" />
+          <ScalarProperty Name="APLICA_PROMO" ColumnName="APLICA_PROMO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SURTIDOS">
+      <EntityTypeMapping TypeName="JEENModel.SURTIDOS">
+        <MappingFragment StoreEntitySet="SURTIDOS">
+          <ScalarProperty Name="SURTIDO" ColumnName="SURTIDO" />
+          <ScalarProperty Name="SUCURSAL" ColumnName="SUCURSAL" />
+          <ScalarProperty Name="FECHA" ColumnName="FECHA" />
+          <ScalarProperty Name="ID_PRODUCTO" ColumnName="ID_PRODUCTO" />
+          <ScalarProperty Name="CANTIDAD" ColumnName="CANTIDAD" />
+          <ScalarProperty Name="ESTADO_ACTUAL" ColumnName="ESTADO_ACTUAL" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="JEENModel.sysdiagrams">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TRASPASOS">
+      <EntityTypeMapping TypeName="JEENModel.TRASPASOS">
+        <MappingFragment StoreEntitySet="TRASPASOS">
+          <ScalarProperty Name="ID_TRASPASO" ColumnName="ID_TRASPASO" />
+          <ScalarProperty Name="SUCURSAL_DE" ColumnName="SUCURSAL_DE" />
+          <ScalarProperty Name="SUCURSAL_AL" ColumnName="SUCURSAL_AL" />
+          <ScalarProperty Name="FECHA" ColumnName="FECHA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="USUARIOS">
+      <EntityTypeMapping TypeName="JEENModel.USUARIOS">
+        <MappingFragment StoreEntitySet="USUARIOS">
+          <ScalarProperty Name="Numero" ColumnName="Numero" />
+          <ScalarProperty Name="ID_USUARIO" ColumnName="ID_USUARIO" />
+          <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+          <ScalarProperty Name="APELLIDOS" ColumnName="APELLIDOS" />
+          <ScalarProperty Name="PUESTO" ColumnName="PUESTO" />
+          <ScalarProperty Name="PASSWORD" ColumnName="PASSWORD" />
+          <ScalarProperty Name="ID_SUCURSAL" ColumnName="ID_SUCURSAL" />
+          <ScalarProperty Name="ESTADO" ColumnName="ESTADO" />
+          <ScalarProperty Name="Mail" ColumnName="Mail" />
+          <ScalarProperty Name="MailPass" ColumnName="MailPass" />
+          <ScalarProperty Name="Pe1" ColumnName="Pe1" />
+          <ScalarProperty Name="Pe2" ColumnName="Pe2" />
+          <ScalarProperty Name="Pe3" ColumnName="Pe3" />
+          <ScalarProperty Name="Pe4" ColumnName="Pe4" />
+          <ScalarProperty Name="Pe5" ColumnName="Pe5" />
+          <ScalarProperty Name="Pe6" ColumnName="Pe6" />
+          <ScalarProperty Name="Pe7" ColumnName="Pe7" />
+          <ScalarProperty Name="Pe8" ColumnName="Pe8" />
+          <ScalarProperty Name="Pe9" ColumnName="Pe9" />
+          <ScalarProperty Name="Pe10" ColumnName="Pe10" />
+          <ScalarProperty Name="Pe11" ColumnName="Pe11" />
+          <ScalarProperty Name="Pe12" ColumnName="Pe12" />
+          <ScalarProperty Name="Pe13" ColumnName="Pe13" />
+          <ScalarProperty Name="Pe14" ColumnName="Pe14" />
+          <ScalarProperty Name="Pe15" ColumnName="Pe15" />
+          <ScalarProperty Name="Pe16" ColumnName="Pe16" />
+          <ScalarProperty Name="Pe17" ColumnName="Pe17" />
+          <ScalarProperty Name="Pe18" ColumnName="Pe18" />
+          <ScalarProperty Name="Pe19" ColumnName="Pe19" />
+          <ScalarProperty Name="Pe20" ColumnName="Pe20" />
+          <ScalarProperty Name="Pe21" ColumnName="Pe21" />
+          <ScalarProperty Name="Pe22" ColumnName="Pe22" />
+          <ScalarProperty Name="Pe23" ColumnName="Pe23" />
+          <ScalarProperty Name="Pe24" ColumnName="Pe24" />
+          <ScalarProperty Name="Pe25" ColumnName="Pe25" />
+          <ScalarProperty Name="Pe26" ColumnName="Pe26" />
+          <ScalarProperty Name="Pe27" ColumnName="Pe27" />
+          <ScalarProperty Name="Pe28" ColumnName="Pe28" />
+          <ScalarProperty Name="Pe29" ColumnName="Pe29" />
+          <ScalarProperty Name="Pe30" ColumnName="Pe30" />
+          <ScalarProperty Name="Pe31" ColumnName="Pe31" />
+          <ScalarProperty Name="Pe32" ColumnName="Pe32" />
+          <ScalarProperty Name="Pe33" ColumnName="Pe33" />
+          <ScalarProperty Name="Pe34" ColumnName="Pe34" />
+          <ScalarProperty Name="Pe35" ColumnName="Pe35" />
+          <ScalarProperty Name="Pe36" ColumnName="Pe36" />
+          <ScalarProperty Name="Pe37" ColumnName="Pe37" />
+          <ScalarProperty Name="Pe38" ColumnName="Pe38" />
+          <ScalarProperty Name="Pe39" ColumnName="Pe39" />
+          <ScalarProperty Name="Pe40" ColumnName="Pe40" />
+          <ScalarProperty Name="Pe41" ColumnName="Pe41" />
+          <ScalarProperty Name="Pe42" ColumnName="Pe42" />
+          <ScalarProperty Name="Pe43" ColumnName="Pe43" />
+          <ScalarProperty Name="Pe44" ColumnName="Pe44" />
+          <ScalarProperty Name="Pe45" ColumnName="Pe45" />
+          <ScalarProperty Name="Pe46" ColumnName="Pe46" />
+          <ScalarProperty Name="Pe47" ColumnName="Pe47" />
+          <ScalarProperty Name="Pe48" ColumnName="Pe48" />
+          <ScalarProperty Name="Pe49" ColumnName="Pe49" />
+          <ScalarProperty Name="Pe50" ColumnName="Pe50" />
+          <ScalarProperty Name="Pe51" ColumnName="Pe51" />
+          <ScalarProperty Name="Pe52" ColumnName="Pe52" />
+          <ScalarProperty Name="Pe53" ColumnName="Pe53" />
+          <ScalarProperty Name="Pe54" ColumnName="Pe54" />
+          <ScalarProperty Name="Pe55" ColumnName="Pe55" />
+          <ScalarProperty Name="Pe56" ColumnName="Pe56" />
+          <ScalarProperty Name="Pe57" ColumnName="Pe57" />
+          <ScalarProperty Name="Pe58" ColumnName="Pe58" />
+          <ScalarProperty Name="Pe59" ColumnName="Pe59" />
+          <ScalarProperty Name="Pe60" ColumnName="Pe60" />
+          <ScalarProperty Name="Pe61" ColumnName="Pe61" />
+          <ScalarProperty Name="Pe62" ColumnName="Pe62" />
+          <ScalarProperty Name="Pe63" ColumnName="Pe63" />
+          <ScalarProperty Name="Pe64" ColumnName="Pe64" />
+          <ScalarProperty Name="Pe65" ColumnName="Pe65" />
+          <ScalarProperty Name="Pe66" ColumnName="Pe66" />
+          <ScalarProperty Name="Pe67" ColumnName="Pe67" />
+          <ScalarProperty Name="Pe68" ColumnName="Pe68" />
+          <ScalarProperty Name="Pe69" ColumnName="Pe69" />
+          <ScalarProperty Name="Pe70" ColumnName="Pe70" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VENTAS">
+      <EntityTypeMapping TypeName="JEENModel.VENTAS">
+        <MappingFragment StoreEntitySet="VENTAS">
+          <ScalarProperty Name="ID_VENTA" ColumnName="ID_VENTA" />
+          <ScalarProperty Name="ID_CLIENTE" ColumnName="ID_CLIENTE" />
+          <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+          <ScalarProperty Name="TOTAL" ColumnName="TOTAL" />
+          <ScalarProperty Name="DESCUENTO" ColumnName="DESCUENTO" />
+          <ScalarProperty Name="FECHA" ColumnName="FECHA" />
+          <ScalarProperty Name="ID_USUARIO" ColumnName="ID_USUARIO" />
+          <ScalarProperty Name="FACTURADO" ColumnName="FACTURADO" />
+          <ScalarProperty Name="IVA" ColumnName="IVA" />
+          <ScalarProperty Name="SUBTOTAL" ColumnName="SUBTOTAL" />
+          <ScalarProperty Name="TOTAL_LETRA" ColumnName="TOTAL_LETRA" />
+          <ScalarProperty Name="FECHA_HOY" ColumnName="FECHA_HOY" />
+          <ScalarProperty Name="DIA_HOY" ColumnName="DIA_HOY" />
+          <ScalarProperty Name="MES_HOY" ColumnName="MES_HOY" />
+          <ScalarProperty Name="AÑO_HOY" ColumnName="AÑO_HOY" />
+          <ScalarProperty Name="FECHA_PAGARE" ColumnName="FECHA_PAGARE" />
+          <ScalarProperty Name="DIA_PAGARE" ColumnName="DIA_PAGARE" />
+          <ScalarProperty Name="MES_PAGARE" ColumnName="MES_PAGARE" />
+          <ScalarProperty Name="AÑO_PAGARE" ColumnName="AÑO_PAGARE" />
+          <ScalarProperty Name="CANTIDAD_PAGARE" ColumnName="CANTIDAD_PAGARE" />
+          <ScalarProperty Name="INTERES" ColumnName="INTERES" />
+          <ScalarProperty Name="FORMA_PAGO" ColumnName="FORMA_PAGO" />
+          <ScalarProperty Name="UNA_EXIBICION" ColumnName="UNA_EXIBICION" />
+          <ScalarProperty Name="PARCIALIDADES" ColumnName="PARCIALIDADES" />
+          <ScalarProperty Name="SUCURSAL" ColumnName="SUCURSAL" />
+          <ScalarProperty Name="DIAS_CREDITO" ColumnName="DIAS_CREDITO" />
+          <ScalarProperty Name="FECHA_VENCE" ColumnName="FECHA_VENCE" />
+          <ScalarProperty Name="TIPO_PAGO" ColumnName="TIPO_PAGO" />
+          <ScalarProperty Name="FOLIO" ColumnName="FOLIO" />
+          <ScalarProperty Name="COMENTARIO" ColumnName="COMENTARIO" />
+          <ScalarProperty Name="NOOC" ColumnName="NOOC" />
+          <ScalarProperty Name="FECHA_FACTURA" ColumnName="FECHA_FACTURA" />
+          <ScalarProperty Name="F_ELECTRO" ColumnName="F_ELECTRO" />
+          <ScalarProperty Name="EFECTO_COMPROBANTE" ColumnName="EFECTO_COMPROBANTE" />
+          <ScalarProperty Name="PEDIMENTO_ADUANA" ColumnName="PEDIMENTO_ADUANA" />
+          <ScalarProperty Name="FECHA_PEDIMENTO" ColumnName="FECHA_PEDIMENTO" />
+          <ScalarProperty Name="NOMBRE_ADUANA" ColumnName="NOMBRE_ADUANA" />
+          <ScalarProperty Name="NO_APROBACION" ColumnName="NO_APROBACION" />
+          <ScalarProperty Name="SEC_FACTURA" ColumnName="SEC_FACTURA" />
+          <ScalarProperty Name="FLAG_CANCELADO" ColumnName="FLAG_CANCELADO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ABONOS_CUENTA">
+      <EntityTypeMapping TypeName="JEENModel.ABONOS_CUENTA">
+        <MappingFragment StoreEntitySet="ABONOS_CUENTA">
+          <ScalarProperty Name="ID_ABONO" ColumnName="ID_ABONO" />
+          <ScalarProperty Name="ID_CLIENTE" ColumnName="ID_CLIENTE" />
+          <ScalarProperty Name="CANT_ABONO" ColumnName="CANT_ABONO" />
+          <ScalarProperty Name="FECHA" ColumnName="FECHA" />
+          <ScalarProperty Name="ID_USUARIO" ColumnName="ID_USUARIO" />
+          <ScalarProperty Name="NO_CHEQUE" ColumnName="NO_CHEQUE" />
+          <ScalarProperty Name="BANCO" ColumnName="BANCO" />
+          <ScalarProperty Name="FECHA_CHEQUE" ColumnName="FECHA_CHEQUE" />
+          <ScalarProperty Name="EFECTIVO" ColumnName="EFECTIVO" />
+          <ScalarProperty Name="ID_CUENTA" ColumnName="ID_CUENTA" />
+          <ScalarProperty Name="REFERENCIA" ColumnName="REFERENCIA" />
+          <ScalarProperty Name="DEPOSITO_TOTAL" ColumnName="DEPOSITO_TOTAL" />
+          <ScalarProperty Name="DEUDA_ACTUAL" ColumnName="DEUDA_ACTUAL" />
+          <ScalarProperty Name="CREDITO_DISPO" ColumnName="CREDITO_DISPO" />
+          <ScalarProperty Name="ID_VENTA" ColumnName="ID_VENTA" />
+          <ScalarProperty Name="FOLIO" ColumnName="FOLIO" />
+          <ScalarProperty Name="FECHA_ALTA" ColumnName="FECHA_ALTA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ABONOS_OC_CANCELADOS">
+      <EntityTypeMapping TypeName="JEENModel.ABONOS_OC_CANCELADOS">
+        <MappingFragment StoreEntitySet="ABONOS_OC_CANCELADOS">
+          <ScalarProperty Name="ID_ABONO" ColumnName="ID_ABONO" />
+          <ScalarProperty Name="ID_PROVEEDOR" ColumnName="ID_PROVEEDOR" />
+          <ScalarProperty Name="CANT_ABONO" ColumnName="CANT_ABONO" />
+          <ScalarProperty Name="NO_CHEQUE" ColumnName="NO_CHEQUE" />
+          <ScalarProperty Name="BANCO" ColumnName="BANCO" />
+          <ScalarProperty Name="CANTIDAD" ColumnName="CANTIDAD" />
+          <ScalarProperty Name="NUMTRANS" ColumnName="NUMTRANS" />
+          <ScalarProperty Name="NUMCHEQUE" ColumnName="NUMCHEQUE" />
+          <ScalarProperty Name="NUM_ORDEN" ColumnName="NUM_ORDEN" />
+          <ScalarProperty Name="TIPO" ColumnName="TIPO" />
+          <ScalarProperty Name="ID_ORDEN" ColumnName="ID_ORDEN" />
+          <ScalarProperty Name="TIPOPAGO" ColumnName="TIPOPAGO" />
+          <ScalarProperty Name="FECHA" ColumnName="FECHA" />
+          <ScalarProperty Name="PROVEEDOR" ColumnName="PROVEEDOR" />
+          <ScalarProperty Name="USR_CANCELO" ColumnName="USR_CANCELO" />
+          <ScalarProperty Name="FECHA_CANCELACION" ColumnName="FECHA_CANCELACION" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ABONOS_PAGO_OC">
+      <EntityTypeMapping TypeName="JEENModel.ABONOS_PAGO_OC">
+        <MappingFragment StoreEntitySet="ABONOS_PAGO_OC">
+          <ScalarProperty Name="ID_ABONO" ColumnName="ID_ABONO" />
+          <ScalarProperty Name="ID_PROVEEDOR" ColumnName="ID_PROVEEDOR" />
+          <ScalarProperty Name="CANT_ABONO" ColumnName="CANT_ABONO" />
+          <ScalarProperty Name="NO_CHEQUE" ColumnName="NO_CHEQUE" />
+          <ScalarProperty Name="BANCO" ColumnName="BANCO" />
+          <ScalarProperty Name="CANTIDAD" ColumnName="CANTIDAD" />
+          <ScalarProperty Name="NUMTRANS" ColumnName="NUMTRANS" />
+          <ScalarProperty Name="NUMCHEQUE" ColumnName="NUMCHEQUE" />
+          <ScalarProperty Name="NUM_ORDEN" ColumnName="NUM_ORDEN" />
+          <ScalarProperty Name="TIPO" ColumnName="TIPO" />
+          <ScalarProperty Name="ID_ORDEN" ColumnName="ID_ORDEN" />
+          <ScalarProperty Name="TIPOPAGO" ColumnName="TIPOPAGO" />
+          <ScalarProperty Name="FECHA" ColumnName="FECHA" />
+          <ScalarProperty Name="PROVEEDOR" ColumnName="PROVEEDOR" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ALMACEN1">
+      <EntityTypeMapping TypeName="JEENModel.ALMACEN1">
+        <MappingFragment StoreEntitySet="ALMACEN1">
+          <ScalarProperty Name="ID_PRODUCTO" ColumnName="ID_PRODUCTO" />
+          <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+          <ScalarProperty Name="ID_DESCUENTO" ColumnName="ID_DESCUENTO" />
+          <ScalarProperty Name="C_MINIMA" ColumnName="C_MINIMA" />
+          <ScalarProperty Name="C_MAXIMA" ColumnName="C_MAXIMA" />
+          <ScalarProperty Name="TIPO" ColumnName="TIPO" />
+          <ScalarProperty Name="VENTA_WEB" ColumnName="VENTA_WEB" />
+          <ScalarProperty Name="MARCA" ColumnName="MARCA" />
+          <ScalarProperty Name="MATERIAL" ColumnName="MATERIAL" />
+          <ScalarProperty Name="COLOR" ColumnName="COLOR" />
+          <ScalarProperty Name="FOTO_FRENTE" ColumnName="FOTO_FRENTE" />
+          <ScalarProperty Name="FOTO_LADO" ColumnName="FOTO_LADO" />
+          <ScalarProperty Name="GANANCIA" ColumnName="GANANCIA" />
+          <ScalarProperty Name="PRECIO_COSTO" ColumnName="PRECIO_COSTO" />
+          <ScalarProperty Name="PRECIO_COSTO2" ColumnName="PRECIO_COSTO2" />
+          <ScalarProperty Name="PRECIO_VENTA" ColumnName="PRECIO_VENTA" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="LOCALIZACION" ColumnName="LOCALIZACION" />
+          <ScalarProperty Name="PRECIO_EN" ColumnName="PRECIO_EN" />
+          <ScalarProperty Name="USR_ALTA" ColumnName="USR_ALTA" />
+          <ScalarProperty Name="FECHA_ALTA" ColumnName="FECHA_ALTA" />
+          <ScalarProperty Name="USR_MOD" ColumnName="USR_MOD" />
+          <ScalarProperty Name="FECHA_MOD" ColumnName="FECHA_MOD" />
+          <ScalarProperty Name="CATEGORIA" ColumnName="CATEGORIA" />
+          <ScalarProperty Name="ESPECIE" ColumnName="ESPECIE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ALMACEN3">
+      <EntityTypeMapping TypeName="JEENModel.ALMACEN3">
+        <MappingFragment StoreEntitySet="ALMACEN3">
+          <ScalarProperty Name="NUM" ColumnName="NUM" />
+          <ScalarProperty Name="ID_PRODUCTO" ColumnName="ID_PRODUCTO" />
+          <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+          <ScalarProperty Name="ID_DESCUENTO" ColumnName="ID_DESCUENTO" />
+          <ScalarProperty Name="C_MINIMA" ColumnName="C_MINIMA" />
+          <ScalarProperty Name="C_MAXIMA" ColumnName="C_MAXIMA" />
+          <ScalarProperty Name="TIPO" ColumnName="TIPO" />
+          <ScalarProperty Name="VENTA_WEB" ColumnName="VENTA_WEB" />
+          <ScalarProperty Name="MARCA" ColumnName="MARCA" />
+          <ScalarProperty Name="MATERIAL" ColumnName="MATERIAL" />
+          <ScalarProperty Name="COLOR" ColumnName="COLOR" />
+          <ScalarProperty Name="FOTO_FRENTE" ColumnName="FOTO_FRENTE" />
+          <ScalarProperty Name="FOTO_LADO" ColumnName="FOTO_LADO" />
+          <ScalarProperty Name="GANANCIA" ColumnName="GANANCIA" />
+          <ScalarProperty Name="PRECIO_COSTO" ColumnName="PRECIO_COSTO" />
+          <ScalarProperty Name="CLASIFICACION" ColumnName="CLASIFICACION" />
+          <ScalarProperty Name="PRECIO_COSTO2" ColumnName="PRECIO_COSTO2" />
+          <ScalarProperty Name="LOCALIZACION" ColumnName="LOCALIZACION" />
+          <ScalarProperty Name="PRECIO_EN" ColumnName="PRECIO_EN" />
+          <ScalarProperty Name="USR_ALTA" ColumnName="USR_ALTA" />
+          <ScalarProperty Name="FECHA_ALTA" ColumnName="FECHA_ALTA" />
+          <ScalarProperty Name="USR_MOD" ColumnName="USR_MOD" />
+          <ScalarProperty Name="FECHA_MOD" ColumnName="FECHA_MOD" />
+          <ScalarProperty Name="CATEGORIA" ColumnName="CATEGORIA" />
+          <ScalarProperty Name="PRESENTACION" ColumnName="PRESENTACION" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AutorizaRema">
+      <EntityTypeMapping TypeName="JEENModel.AutorizaRema">
+        <MappingFragment StoreEntitySet="AutorizaRema">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Accion" ColumnName="Accion" />
+          <ScalarProperty Name="id_comanda" ColumnName="id_comanda" />
+          <ScalarProperty Name="fecha" ColumnName="fecha" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BANCOS">
+      <EntityTypeMapping TypeName="JEENModel.BANCOS">
+        <MappingFragment StoreEntitySet="BANCOS">
+          <ScalarProperty Name="ID_BANCO" ColumnName="ID_BANCO" />
+          <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+          <ScalarProperty Name="DIRECCION" ColumnName="DIRECCION" />
+          <ScalarProperty Name="TELEFONO" ColumnName="TELEFONO" />
+          <ScalarProperty Name="CUENTAS" ColumnName="CUENTAS" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CAJA_CHICA">
+      <EntityTypeMapping TypeName="JEENModel.CAJA_CHICA">
+        <MappingFragment StoreEntitySet="CAJA_CHICA">
+          <ScalarProperty Name="ID_CAJA" ColumnName="ID_CAJA" />
+          <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+          <ScalarProperty Name="FECHA" ColumnName="FECHA" />
+          <ScalarProperty Name="TOTAL" ColumnName="TOTAL" />
+          <ScalarProperty Name="TOTAL_LETRA" ColumnName="TOTAL_LETRA" />
+          <ScalarProperty Name="TIPO_ORDEN" ColumnName="TIPO_ORDEN" />
+          <ScalarProperty Name="NUM_ORDEN" ColumnName="NUM_ORDEN" />
+          <ScalarProperty Name="FECHA_REALIZADO" ColumnName="FECHA_REALIZADO" />
+          <ScalarProperty Name="ID_USUARIO" ColumnName="ID_USUARIO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CANCEPROGRA">
+      <EntityTypeMapping TypeName="JEENModel.CANCEPROGRA">
+        <MappingFragment StoreEntitySet="CANCEPROGRA">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="NO_PEDIDO" ColumnName="NO_PEDIDO" />
+          <ScalarProperty Name="FECHA" ColumnName="FECHA" />
+          <ScalarProperty Name="ID_USUARIO" ColumnName="ID_USUARIO" />
+          <ScalarProperty Name="COMENTARIO" ColumnName="COMENTARIO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CARTVAC">
+      <EntityTypeMapping TypeName="JEENModel.CARTVAC">
+        <MappingFragment StoreEntitySet="CARTVAC">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ID_PRODUCTO" ColumnName="ID_PRODUCTO" />
+          <ScalarProperty Name="CANTIDAD" ColumnName="CANTIDAD" />
+          <ScalarProperty Name="USUARIO" ColumnName="USUARIO" />
+          <ScalarProperty Name="COMENTARIO" ColumnName="COMENTARIO" />
+          <ScalarProperty Name="COMANDA" ColumnName="COMANDA" />
+          <ScalarProperty Name="SUCURSAL" ColumnName="SUCURSAL" />
+          <ScalarProperty Name="PRODUCCION" ColumnName="PRODUCCION" />
+          <ScalarProperty Name="COMENTARIO_EXTR" ColumnName="COMENTARIO_EXTR" />
+          <ScalarProperty Name="FECHA" ColumnName="FECHA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CHEQUES">
+      <EntityTypeMapping TypeName="JEENModel.CHEQUES">
+        <MappingFragment StoreEntitySet="CHEQUES">
+          <ScalarProperty Name="ID_CHEQUE" ColumnName="ID_CHEQUE" />
+          <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+          <ScalarProperty Name="FECHA" ColumnName="FECHA" />
+          <ScalarProperty Name="TOTAL" ColumnName="TOTAL" />
+          <ScalarProperty Name="TOTAL_LETRA" ColumnName="TOTAL_LETRA" />
+          <ScalarProperty Name="BANCO" ColumnName="BANCO" />
+          <ScalarProperty Name="NUM_CHEQUE" ColumnName="NUM_CHEQUE" />
+          <ScalarProperty Name="TIPO_ORDEN" ColumnName="TIPO_ORDEN" />
+          <ScalarProperty Name="NUM_ORDEN" ColumnName="NUM_ORDEN" />
+          <ScalarProperty Name="FECHA_REALIZADO" ColumnName="FECHA_REALIZADO" />
+          <ScalarProperty Name="ID_USUARIO" ColumnName="ID_USUARIO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CLASIFICACIONES">
+      <EntityTypeMapping TypeName="JEENModel.CLASIFICACIONES">
+        <MappingFragment StoreEntitySet="CLASIFICACIONES">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="CLASIFICACION" ColumnName="CLASIFICACION" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CLATINTONER">
+      <EntityTypeMapping TypeName="JEENModel.CLATINTONER">
+        <MappingFragment StoreEntitySet="CLATINTONER">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="CLASIFICACION" ColumnName="CLASIFICACION" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="COBRANZA">
+      <EntityTypeMapping TypeName="JEENModel.COBRANZA">
+        <MappingFragment StoreEntitySet="COBRANZA">
+          <ScalarProperty Name="ID_PAGO" ColumnName="ID_PAGO" />
+          <ScalarProperty Name="CLIENTE" ColumnName="CLIENTE" />
+          <ScalarProperty Name="SUCURSAL" ColumnName="SUCURSAL" />
+          <ScalarProperty Name="FACTURA" ColumnName="FACTURA" />
+          <ScalarProperty Name="CREDITO" ColumnName="CREDITO" />
+          <ScalarProperty Name="PAGO" ColumnName="PAGO" />
+          <ScalarProperty Name="TOTAL" ColumnName="TOTAL" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="COBRO_ASISTENCIA_TECNICA">
+      <EntityTypeMapping TypeName="JEENModel.COBRO_ASISTENCIA_TECNICA">
+        <MappingFragment StoreEntitySet="COBRO_ASISTENCIA_TECNICA">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ID_AS_TEC" ColumnName="ID_AS_TEC" />
+          <ScalarProperty Name="ID_PRODUCTO" ColumnName="ID_PRODUCTO" />
+          <ScalarProperty Name="CANTIDAD" ColumnName="CANTIDAD" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="COLONIAS">
+      <EntityTypeMapping TypeName="JEENModel.COLONIAS">
+        <MappingFragment StoreEntitySet="COLONIAS">
+          <ScalarProperty Name="ID_COLONIA" ColumnName="ID_COLONIA" />
+          <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+          <ScalarProperty Name="ZONA" ColumnName="ZONA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="COMPARATIVO_LICITACIONES">
+      <EntityTypeMapping TypeName="JEENModel.COMPARATIVO_LICITACIONES">
+        <MappingFragment StoreEntitySet="COMPARATIVO_LICITACIONES">
+          <ScalarProperty Name="ID_COMPARATIVO" ColumnName="ID_COMPARATIVO" />
+          <ScalarProperty Name="ID_CLIENTE" ColumnName="ID_CLIENTE" />
+          <ScalarProperty Name="ID_COMPETIDOR" ColumnName="ID_COMPETIDOR" />
+          <ScalarProperty Name="NO_LICITACION" ColumnName="NO_LICITACION" />
+          <ScalarProperty Name="ID_PRODUCTO" ColumnName="ID_PRODUCTO" />
+          <ScalarProperty Name="CANTIDAD" ColumnName="CANTIDAD" />
+          <ScalarProperty Name="PRECIO" ColumnName="PRECIO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="COMPETIDOR_LICITACION">
+      <EntityTypeMapping TypeName="JEENModel.COMPETIDOR_LICITACION">
+        <MappingFragment StoreEntitySet="COMPETIDOR_LICITACION">
+          <ScalarProperty Name="ID_COMPETIDOR" ColumnName="ID_COMPETIDOR" />
+          <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+          <ScalarProperty Name="DIRECCION" ColumnName="DIRECCION" />
+          <ScalarProperty Name="TELEFONO" ColumnName="TELEFONO" />
+          <ScalarProperty Name="MAIL" ColumnName="MAIL" />
+          <ScalarProperty Name="NOTAS" ColumnName="NOTAS" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CORTEPENDIENTE">
+      <EntityTypeMapping TypeName="JEENModel.CORTEPENDIENTE">
+        <MappingFragment StoreEntitySet="CORTEPENDIENTE">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ID_VENTA" ColumnName="ID_VENTA" />
+          <ScalarProperty Name="FACTURA" ColumnName="FACTURA" />
+          <ScalarProperty Name="CLIENTE" ColumnName="CLIENTE" />
+          <ScalarProperty Name="TOTAL" ColumnName="TOTAL" />
+          <ScalarProperty Name="TIPO" ColumnName="TIPO" />
+          <ScalarProperty Name="FECHA" ColumnName="FECHA" />
+          <ScalarProperty Name="SUCURSAL" ColumnName="SUCURSAL" />
+          <ScalarProperty Name="ESTADO" ColumnName="ESTADO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="COTIZA_CLIEN_DETALLE">
+      <EntityTypeMapping TypeName="JEENModel.COTIZA_CLIEN_DETALLE">
+        <MappingFragment StoreEntitySet="COTIZA_CLIEN_DETALLE">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ID_PRODUCTO" ColumnName="ID_PRODUCTO" />
+          <ScalarProperty Name="CANTIDAD" ColumnName="CANTIDAD" />
+          <ScalarProperty Name="PRECIO_VENTA" ColumnName="PRECIO_VENTA" />
+          <ScalarProperty Name="ID_COTIZA_CLIEN" ColumnName="ID_COTIZA_CLIEN" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CUENTA_VENTA">
+      <EntityTypeMapping TypeName="JEENModel.CUENTA_VENTA">
+        <MappingFragment StoreEntitySet="CUENTA_VENTA">
+          <ScalarProperty Name="ID_RELACION" ColumnName="ID_RELACION" />
+          <ScalarProperty Name="ID_VENTA" ColumnName="ID_VENTA" />
+          <ScalarProperty Name="ID_CUENTA" ColumnName="ID_CUENTA" />
+          <ScalarProperty Name="ESTADO" ColumnName="ESTADO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CUENTAS">
+      <EntityTypeMapping TypeName="JEENModel.CUENTAS">
+        <MappingFragment StoreEntitySet="CUENTAS">
+          <ScalarProperty Name="ID_CUENTA" ColumnName="ID_CUENTA" />
+          <ScalarProperty Name="ID_CLIENTE" ColumnName="ID_CLIENTE" />
+          <ScalarProperty Name="ID_USUARIO" ColumnName="ID_USUARIO" />
+          <ScalarProperty Name="FECHA" ColumnName="FECHA" />
+          <ScalarProperty Name="DIAS_CREDITO" ColumnName="DIAS_CREDITO" />
+          <ScalarProperty Name="FECHA_VENCE" ColumnName="FECHA_VENCE" />
+          <ScalarProperty Name="DESCUENTO" ColumnName="DESCUENTO" />
+          <ScalarProperty Name="TOTAL_COMPRA" ColumnName="TOTAL_COMPRA" />
+          <ScalarProperty Name="SUCURSAL" ColumnName="SUCURSAL" />
+          <ScalarProperty Name="PAGADA" ColumnName="PAGADA" />
+          <ScalarProperty Name="FOLIO" ColumnName="FOLIO" />
+          <ScalarProperty Name="DEUDA" ColumnName="DEUDA" />
+          <ScalarProperty Name="ID_VENTA" ColumnName="ID_VENTA" />
+          <ScalarProperty Name="DEUDA_ACTUAL" ColumnName="DEUDA_ACTUAL" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DESCUENTOS">
+      <EntityTypeMapping TypeName="JEENModel.DESCUENTOS">
+        <MappingFragment StoreEntitySet="DESCUENTOS">
+          <ScalarProperty Name="ID_DESCUENTO" ColumnName="ID_DESCUENTO" />
+          <ScalarProperty Name="CLASIFICACION" ColumnName="CLASIFICACION" />
+          <ScalarProperty Name="PORCENTAJE" ColumnName="PORCENTAJE" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DEV_GARANTIA">
+      <EntityTypeMapping TypeName="JEENModel.DEV_GARANTIA">
+        <MappingFragment StoreEntitySet="DEV_GARANTIA">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ID_PRODUCTO" ColumnName="ID_PRODUCTO" />
+          <ScalarProperty Name="CANTIDAD" ColumnName="CANTIDAD" />
+          <ScalarProperty Name="ID_VENTA" ColumnName="ID_VENTA" />
+          <ScalarProperty Name="ID_GARANTIA" ColumnName="ID_GARANTIA" />
+          <ScalarProperty Name="FECHA" ColumnName="FECHA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DEVOLUCION">
+      <EntityTypeMapping TypeName="JEENModel.DEVOLUCION">
+        <MappingFragment StoreEntitySet="DEVOLUCION">
+          <ScalarProperty Name="ID_DEV" ColumnName="ID_DEV" />
+          <ScalarProperty Name="NUM_ORDEN" ColumnName="NUM_ORDEN" />
+          <ScalarProperty Name="ID_ENTRADA" ColumnName="ID_ENTRADA" />
+          <ScalarProperty Name="ID_PRODUCTO" ColumnName="ID_PRODUCTO" />
+          <ScalarProperty Name="CANTIDAD" ColumnName="CANTIDAD" />
+          <ScalarProperty Name="FECHA" ColumnName="FECHA" />
+          <ScalarProperty Name="PROVEEDOR" ColumnName="PROVEEDOR" />
+          <ScalarProperty Name="MOTIVO" ColumnName="MOTIVO" />
+          <ScalarProperty Name="SUCURSAL" ColumnName="SUCURSAL" />
+          <ScalarProperty Name="FACT_PRO" ColumnName="FACT_PRO" />
+          <ScalarProperty Name="PRECIO" ColumnName="PRECIO" />
+          <ScalarProperty Name="TOT_DEV" ColumnName="TOT_DEV" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DIREIMPOR">
+      <EntityTypeMapping TypeName="JEENModel.DIREIMPOR">
+        <MappingFragment StoreEntitySet="DIREIMPOR">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+          <ScalarProperty Name="DIRECCION" ColumnName="DIRECCION" />
+          <ScalarProperty Name="CD" ColumnName="CD" />
+          <ScalarProperty Name="TEL1" ColumnName="TEL1" />
+          <ScalarProperty Name="TEL2" ColumnName="TEL2" />
+          <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DOMICILIOS">
+      <EntityTypeMapping TypeName="JEENModel.DOMICILIOS">
+        <MappingFragment StoreEntitySet="DOMICILIOS">
+          <ScalarProperty Name="ID_DOMICILIO" ColumnName="ID_DOMICILIO" />
+          <ScalarProperty Name="NOM_CLIENTE" ColumnName="NOM_CLIENTE" />
+          <ScalarProperty Name="DOMICILIO" ColumnName="DOMICILIO" />
+          <ScalarProperty Name="COLONIA" ColumnName="COLONIA" />
+          <ScalarProperty Name="TELEFONO" ColumnName="TELEFONO" />
+          <ScalarProperty Name="FECHA" ColumnName="FECHA" />
+          <ScalarProperty Name="DE_HORA" ColumnName="DE_HORA" />
+          <ScalarProperty Name="A_HORA" ColumnName="A_HORA" />
+          <ScalarProperty Name="NOTA" ColumnName="NOTA" />
+          <ScalarProperty Name="NUM_ARTICULOS" ColumnName="NUM_ARTICULOS" />
+          <ScalarProperty Name="ESTADO" ColumnName="ESTADO" />
+          <ScalarProperty Name="ZONA" ColumnName="ZONA" />
+          <ScalarProperty Name="ID_REPA" ColumnName="ID_REPA" />
+          <ScalarProperty Name="COMENTARIOS" ColumnName="COMENTARIOS" />
+          <ScalarProperty Name="FECHA_FIN" ColumnName="FECHA_FIN" />
+          <ScalarProperty Name="FECHA_ALTA" ColumnName="FECHA_ALTA" />
+          <ScalarProperty Name="USUARIO" ColumnName="USUARIO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ENTRADA_PRODUCTO">
+      <EntityTypeMapping TypeName="JEENModel.ENTRADA_PRODUCTO">
+        <MappingFragment StoreEntitySet="ENTRADA_PRODUCTO">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ID_ENTRADA" ColumnName="ID_ENTRADA" />
+          <ScalarProperty Name="ID_PRODUCTO" ColumnName="ID_PRODUCTO" />
+          <ScalarProperty Name="CANTIDAD" ColumnName="CANTIDAD" />
+          <ScalarProperty Name="PRECIO" ColumnName="PRECIO" />
+          <ScalarProperty Name="MONEDA" ColumnName="MONEDA" />
+          <ScalarProperty Name="FECHA" ColumnName="FECHA" />
+          <ScalarProperty Name="ID_SUCURSAL" ColumnName="ID_SUCURSAL" />
+          <ScalarProperty Name="CODIGO_BARAS" ColumnName="CODIGO_BARAS" />
+          <ScalarProperty Name="NUM_ORDEN" ColumnName="NUM_ORDEN" />
+          <ScalarProperty Name="FACT_PROV" ColumnName="FACT_PROV" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ENTRADA_RAPIDAS">
+      <EntityTypeMapping TypeName="JEENModel.ENTRADA_RAPIDAS">
+        <MappingFragment StoreEntitySet="ENTRADA_RAPIDAS">
+          <ScalarProperty Name="ID_ENTRADA" ColumnName="ID_ENTRADA" />
+          <ScalarProperty Name="ID_ORDEN_RAPIDA" ColumnName="ID_ORDEN_RAPIDA" />
+          <ScalarProperty Name="FACTURA" ColumnName="FACTURA" />
+          <ScalarProperty Name="FECHA" ColumnName="FECHA" />
+          <ScalarProperty Name="PROVEEDOR" ColumnName="PROVEEDOR" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ESTADO_CUENTA">
+      <EntityTypeMapping TypeName="JEENModel.ESTADO_CUENTA">
+        <MappingFragment StoreEntitySet="ESTADO_CUENTA">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="CANTIDAD" ColumnName="CANTIDAD" />
+          <ScalarProperty Name="SALDO" ColumnName="SALDO" />
+          <ScalarProperty Name="ID_TIPO_CARGO" ColumnName="ID_TIPO_CARGO" />
+          <ScalarProperty Name="ID_CARGO" ColumnName="ID_CARGO" />
+          <ScalarProperty Name="EFECTUADO" ColumnName="EFECTUADO" />
+          <ScalarProperty Name="FECHA" ColumnName="FECHA" />
+          <ScalarProperty Name="FECHA_VENCIMIENTO" ColumnName="FECHA_VENCIMIENTO" />
+          <ScalarProperty Name="FECHA_VENCIMIENTO_NO_VACIA" ColumnName="FECHA_VENCIMIENTO_NO_VACIA" />
+          <ScalarProperty Name="ID_ABONO" ColumnName="ID_ABONO" />
+          <ScalarProperty Name="ABONO" ColumnName="ABONO" />
+          <ScalarProperty Name="FECHA_PAGO" ColumnName="FECHA_PAGO" />
+          <ScalarProperty Name="OBSERVACIONES" ColumnName="OBSERVACIONES" />
+          <ScalarProperty Name="ID_FACTURA" ColumnName="ID_FACTURA" />
+          <ScalarProperty Name="ID_NOTA" ColumnName="ID_NOTA" />
+          <ScalarProperty Name="FECHA_CONTRARECIBO" ColumnName="FECHA_CONTRARECIBO" />
+          <ScalarProperty Name="FECHA_COBRO" ColumnName="FECHA_COBRO" />
+          <ScalarProperty Name="CHEQUE" ColumnName="CHEQUE" />
+          <ScalarProperty Name="BANCO" ColumnName="BANCO" />
+          <ScalarProperty Name="ID_CLIENTE" ColumnName="ID_CLIENTE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EXISTENCIA_FIJA">
+      <EntityTypeMapping TypeName="JEENModel.EXISTENCIA_FIJA">
+        <MappingFragment StoreEntitySet="EXISTENCIA_FIJA">
+          <ScalarProperty Name="ID_EXIS_FIJA" ColumnName="ID_EXIS_FIJA" />
+          <ScalarProperty Name="ID_PRODUCTO" ColumnName="ID_PRODUCTO" />
+          <ScalarProperty Name="CANTIDAD" ColumnName="CANTIDAD" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EXISTENCIASTEMPORALES">
+      <EntityTypeMapping TypeName="JEENModel.EXISTENCIASTEMPORALES">
+        <MappingFragment StoreEntitySet="EXISTENCIASTEMPORALES">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ID_PRODUCTO" ColumnName="ID_PRODUCTO" />
+          <ScalarProperty Name="CANTIDAD" ColumnName="CANTIDAD" />
+          <ScalarProperty Name="SUCURSAL" ColumnName="SUCURSAL" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FactCan">
+      <EntityTypeMapping TypeName="JEENModel.FactCan">
+        <MappingFragment StoreEntitySet="FactCan">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ID_VENTA" ColumnName="ID_VENTA" />
+          <ScalarProperty Name="FOLIO" ColumnName="FOLIO" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+          <ScalarProperty Name="ID_USUARIO" ColumnName="ID_USUARIO" />
+          <ScalarProperty Name="ID_PROVEEDOR" ColumnName="ID_PROVEEDOR" />
+          <ScalarProperty Name="ID_CLIENTE" ColumnName="ID_CLIENTE" />
+          <ScalarProperty Name="PASA_FACTU" ColumnName="PASA_FACTU" />
+          <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FACTPROVEEDOR">
+      <EntityTypeMapping TypeName="JEENModel.FACTPROVEEDOR">
+        <MappingFragment StoreEntitySet="FACTPROVEEDOR">
+          <ScalarProperty Name="ID_FP" ColumnName="ID_FP" />
+          <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+          <ScalarProperty Name="NUM_ORDEN_COMPRA" ColumnName="NUM_ORDEN_COMPRA" />
+          <ScalarProperty Name="FACTURA_PROV" ColumnName="FACTURA_PROV" />
+          <ScalarProperty Name="TIPO" ColumnName="TIPO" />
+          <ScalarProperty Name="TOTAL" ColumnName="TOTAL" />
+          <ScalarProperty Name="MONEDA" ColumnName="MONEDA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FACTURAS">
+      <EntityTypeMapping TypeName="JEENModel.FACTURAS">
+        <MappingFragment StoreEntitySet="FACTURAS">
+          <ScalarProperty Name="ID_FACTURA" ColumnName="ID_FACTURA" />
+          <ScalarProperty Name="ID_CLIENTE" ColumnName="ID_CLIENTE" />
+          <ScalarProperty Name="FECHA" ColumnName="FECHA" />
+          <ScalarProperty Name="TOTAL" ColumnName="TOTAL" />
+          <ScalarProperty Name="ID_USUARIO" ColumnName="ID_USUARIO" />
+          <ScalarProperty Name="TOTAL_LETRAS" ColumnName="TOTAL_LETRAS" />
+          <ScalarProperty Name="ORDENCOMPRA" ColumnName="ORDENCOMPRA" />
+          <ScalarProperty Name="SOLICITO" ColumnName="SOLICITO" />
+          <ScalarProperty Name="ID_COMANDA" ColumnName="ID_COMANDA" />
+          <ScalarProperty Name="ID_NOTA" ColumnName="ID_NOTA" />
+          <ScalarProperty Name="FORMA_PAGO" ColumnName="FORMA_PAGO" />
+          <ScalarProperty Name="CANCELADA" ColumnName="CANCELADA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FOLIOSUC">
+      <EntityTypeMapping TypeName="JEENModel.FOLIOSUC">
+        <MappingFragment StoreEntitySet="FOLIOSUC">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="FOLIO" ColumnName="FOLIO" />
+          <ScalarProperty Name="SUCURSAL" ColumnName="SUCURSAL" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="IMPCOMAN">
+      <EntityTypeMapping TypeName="JEENModel.IMPCOMAN">
+        <MappingFragment StoreEntitySet="IMPCOMAN">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ID_COMANDA" ColumnName="ID_COMANDA" />
+          <ScalarProperty Name="FECHA" ColumnName="FECHA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="INVENTARIO_DETALLE">
+      <EntityTypeMapping TypeName="JEENModel.INVENTARIO_DETALLE">
+        <MappingFragment StoreEntitySet="INVENTARIO_DETALLE">
+          <ScalarProperty Name="ID_PRODUCTO" ColumnName="ID_PRODUCTO" />
+          <ScalarProperty Name="ID_INVENTARIO" ColumnName="ID_INVENTARIO" />
+          <ScalarProperty Name="CANTIDAD" ColumnName="CANTIDAD" />
+          <ScalarProperty Name="ESTADO_ACTUAL" ColumnName="ESTADO_ACTUAL" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="JUEGO_REPARACION">
+      <EntityTypeMapping TypeName="JEENModel.JUEGO_REPARACION">
+        <MappingFragment StoreEntitySet="JUEGO_REPARACION">
+          <ScalarProperty Name="ID_REPARACION" ColumnName="ID_REPARACION" />
+          <ScalarProperty Name="ID_PRODUCTO" ColumnName="ID_PRODUCTO" />
+          <ScalarProperty Name="CANTIDAD" ColumnName="CANTIDAD" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LICITACIONES">
+      <EntityTypeMapping TypeName="JEENModel.LICITACIONES">
+        <MappingFragment StoreEntitySet="LICITACIONES">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ID_PRODUCTO" ColumnName="ID_PRODUCTO" />
+          <ScalarProperty Name="ID_CLIENTE" ColumnName="ID_CLIENTE" />
+          <ScalarProperty Name="PRECIO_VENTA" ColumnName="PRECIO_VENTA" />
+          <ScalarProperty Name="FECHA_FIN" ColumnName="FECHA_FIN" />
+          <ScalarProperty Name="ID_USUARIO_CAPTURO" ColumnName="ID_USUARIO_CAPTURO" />
+          <ScalarProperty Name="CANT_MIN" ColumnName="CANT_MIN" />
+          <ScalarProperty Name="NO_CONTRATO" ColumnName="NO_CONTRATO" />
+          <ScalarProperty Name="CANT_MAX" ColumnName="CANT_MAX" />
+          <ScalarProperty Name="NO_LICITACION" ColumnName="NO_LICITACION" />
+          <ScalarProperty Name="FECHA_INICIO" ColumnName="FECHA_INICIO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MERMAS">
+      <EntityTypeMapping TypeName="JEENModel.MERMAS">
+        <MappingFragment StoreEntitySet="MERMAS">
+          <ScalarProperty Name="ID_MERMA" ColumnName="ID_MERMA" />
+          <ScalarProperty Name="ID_NOTA" ColumnName="ID_NOTA" />
+          <ScalarProperty Name="ID_PRODUCTO" ColumnName="ID_PRODUCTO" />
+          <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+          <ScalarProperty Name="CANTIDAD" ColumnName="CANTIDAD" />
+          <ScalarProperty Name="FECHA" ColumnName="FECHA" />
+          <ScalarProperty Name="CHEKADO" ColumnName="CHEKADO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MOTIVOS_SCRAP">
+      <EntityTypeMapping TypeName="JEENModel.MOTIVOS_SCRAP">
+        <MappingFragment StoreEntitySet="MOTIVOS_SCRAP">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="MOTIVO" ColumnName="MOTIVO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NOTA_CREDITO_PRODUCTO">
+      <EntityTypeMapping TypeName="JEENModel.NOTA_CREDITO_PRODUCTO">
+        <MappingFragment StoreEntitySet="NOTA_CREDITO_PRODUCTO">
+          <ScalarProperty Name="ID_NOTA" ColumnName="ID_NOTA" />
+          <ScalarProperty Name="ID_PRODUCTO" ColumnName="ID_PRODUCTO" />
+          <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+          <ScalarProperty Name="CANTIDAD" ColumnName="CANTIDAD" />
+          <ScalarProperty Name="PRECIO" ColumnName="PRECIO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NOTAS">
+      <EntityTypeMapping TypeName="JEENModel.NOTAS">
+        <MappingFragment StoreEntitySet="NOTAS">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ID_CLIENTE" ColumnName="ID_CLIENTE" />
+          <ScalarProperty Name="FECHA" ColumnName="FECHA" />
+          <ScalarProperty Name="TOTAL" ColumnName="TOTAL" />
+          <ScalarProperty Name="FECHA_PAGO" ColumnName="FECHA_PAGO" />
+          <ScalarProperty Name="DESCUENTO" ColumnName="DESCUENTO" />
+          <ScalarProperty Name="FACTURADA" ColumnName="FACTURADA" />
+          <ScalarProperty Name="ID_USER" ColumnName="ID_USER" />
+          <ScalarProperty Name="ID_FACTURA" ColumnName="ID_FACTURA" />
+          <ScalarProperty Name="ID_COMANDA" ColumnName="ID_COMANDA" />
+          <ScalarProperty Name="ORDENCOMPRA" ColumnName="ORDENCOMPRA" />
+          <ScalarProperty Name="SOLICITO" ColumnName="SOLICITO" />
+          <ScalarProperty Name="CREDITO" ColumnName="CREDITO" />
+          <ScalarProperty Name="ID_FORMA_PAGO" ColumnName="ID_FORMA_PAGO" />
+          <ScalarProperty Name="BANCO" ColumnName="BANCO" />
+          <ScalarProperty Name="CHEQUE" ColumnName="CHEQUE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ORDEN">
+      <EntityTypeMapping TypeName="JEENModel.ORDEN">
+        <MappingFragment StoreEntitySet="ORDEN">
+          <ScalarProperty Name="ID_ORDEN" ColumnName="ID_ORDEN" />
+          <ScalarProperty Name="CLIENTE" ColumnName="CLIENTE" />
+          <ScalarProperty Name="DIRECCION" ColumnName="DIRECCION" />
+          <ScalarProperty Name="FECHA" ColumnName="FECHA" />
+          <ScalarProperty Name="VENDEDOR" ColumnName="VENDEDOR" />
+          <ScalarProperty Name="FACTURADA" ColumnName="FACTURADA" />
+          <ScalarProperty Name="ID_ESTADO" ColumnName="ID_ESTADO" />
+          <ScalarProperty Name="ID_CLIENTE" ColumnName="ID_CLIENTE" />
+          <ScalarProperty Name="ID_USUARIO" ColumnName="ID_USUARIO" />
+          <ScalarProperty Name="ID_NOTA" ColumnName="ID_NOTA" />
+          <ScalarProperty Name="TOTAL" ColumnName="TOTAL" />
+          <ScalarProperty Name="ORDENCOMPRA" ColumnName="ORDENCOMPRA" />
+          <ScalarProperty Name="SOLICITO" ColumnName="SOLICITO" />
+          <ScalarProperty Name="FORMA_PAGO" ColumnName="FORMA_PAGO" />
+          <ScalarProperty Name="CONFIRMADA" ColumnName="CONFIRMADA" />
+          <ScalarProperty Name="COMENTARIOS" ColumnName="COMENTARIOS" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ORDEN_CANCE">
+      <EntityTypeMapping TypeName="JEENModel.ORDEN_CANCE">
+        <MappingFragment StoreEntitySet="ORDEN_CANCE">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ORDEN" ColumnName="ORDEN" />
+          <ScalarProperty Name="TIPO" ColumnName="TIPO" />
+          <ScalarProperty Name="COMENTARIO" ColumnName="COMENTARIO" />
+          <ScalarProperty Name="ID_USUARIO" ColumnName="ID_USUARIO" />
+          <ScalarProperty Name="FECHA" ColumnName="FECHA" />
+          <ScalarProperty Name="FECHA_HORA" ColumnName="FECHA_HORA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ORDEN_COMPRA_DETALLE">
+      <EntityTypeMapping TypeName="JEENModel.ORDEN_COMPRA_DETALLE">
+        <MappingFragment StoreEntitySet="ORDEN_COMPRA_DETALLE">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ID_ORDEN_COMPRA" ColumnName="ID_ORDEN_COMPRA" />
+          <ScalarProperty Name="ID_PRODUCTO" ColumnName="ID_PRODUCTO" />
+          <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+          <ScalarProperty Name="CANTIDAD" ColumnName="CANTIDAD" />
+          <ScalarProperty Name="PRECIO" ColumnName="PRECIO" />
+          <ScalarProperty Name="DIAS_ENTREGA" ColumnName="DIAS_ENTREGA" />
+          <ScalarProperty Name="FECHA" ColumnName="FECHA" />
+          <ScalarProperty Name="SURTIDO" ColumnName="SURTIDO" />
+          <ScalarProperty Name="FACT_PROVE" ColumnName="FACT_PROVE" />
+          <ScalarProperty Name="NO_ENVIO" ColumnName="NO_ENVIO" />
+          <ScalarProperty Name="NO_PEDIDO" ColumnName="NO_PEDIDO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ORDEN_RAPIDA_DETALLE">
+      <EntityTypeMapping TypeName="JEENModel.ORDEN_RAPIDA_DETALLE">
+        <MappingFragment StoreEntitySet="ORDEN_RAPIDA_DETALLE">
+          <ScalarProperty Name="ID_ORDEN_RAPIDA" ColumnName="ID_ORDEN_RAPIDA" />
+          <ScalarProperty Name="ID_PRODUCTO" ColumnName="ID_PRODUCTO" />
+          <ScalarProperty Name="PRECIO" ColumnName="PRECIO" />
+          <ScalarProperty Name="SUBTOTAL" ColumnName="SUBTOTAL" />
+          <ScalarProperty Name="CANTIDAD" ColumnName="CANTIDAD" />
+          <ScalarProperty Name="IVA" ColumnName="IVA" />
+          <ScalarProperty Name="TOTAL" ColumnName="TOTAL" />
+          <ScalarProperty Name="IVARETENIDO" ColumnName="IVARETENIDO" />
+          <ScalarProperty Name="ISR" ColumnName="ISR" />
+          <ScalarProperty Name="IVADIEZ" ColumnName="IVADIEZ" />
+          <ScalarProperty Name="ISR2" ColumnName="ISR2" />
+          <ScalarProperty Name="NO_PROD" ColumnName="NO_PROD" />
+          <ScalarProperty Name="SURTIDO" ColumnName="SURTIDO" />
+          <ScalarProperty Name="CAN_RECIBIDA" ColumnName="CAN_RECIBIDA" />
+          <ScalarProperty Name="FACTURA" ColumnName="FACTURA" />
+          <ScalarProperty Name="COMENTARIO_SALID" ColumnName="COMENTARIO_SALID" />
+          <ScalarProperty Name="TPIVA" ColumnName="TPIVA" />
+          <ScalarProperty Name="OTROS_IMP" ColumnName="OTROS_IMP" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ORDENES_NO_SURTIDAS">
+      <EntityTypeMapping TypeName="JEENModel.ORDENES_NO_SURTIDAS">
+        <MappingFragment StoreEntitySet="ORDENES_NO_SURTIDAS">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ID_PRODUCTO" ColumnName="ID_PRODUCTO" />
+          <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+          <ScalarProperty Name="PRECIO" ColumnName="PRECIO" />
+          <ScalarProperty Name="CANTIDAD" ColumnName="CANTIDAD" />
+          <ScalarProperty Name="TIPO" ColumnName="TIPO" />
+          <ScalarProperty Name="NUM_ORDEN" ColumnName="NUM_ORDEN" />
+          <ScalarProperty Name="ESTADO" ColumnName="ESTADO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PAGO_OC">
+      <EntityTypeMapping TypeName="JEENModel.PAGO_OC">
+        <MappingFragment StoreEntitySet="PAGO_OC">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ID_ORDEN" ColumnName="ID_ORDEN" />
+          <ScalarProperty Name="TIPOPAGO" ColumnName="TIPOPAGO" />
+          <ScalarProperty Name="BANCO" ColumnName="BANCO" />
+          <ScalarProperty Name="NUMTRANS" ColumnName="NUMTRANS" />
+          <ScalarProperty Name="NUMCHEQUE" ColumnName="NUMCHEQUE" />
+          <ScalarProperty Name="CANTIDAD" ColumnName="CANTIDAD" />
+          <ScalarProperty Name="FECHA" ColumnName="FECHA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PASSWORD">
+      <EntityTypeMapping TypeName="JEENModel.PASSWORD">
+        <MappingFragment StoreEntitySet="PASSWORD">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="DEPT" ColumnName="DEPT" />
+          <ScalarProperty Name="VENTA" ColumnName="VENTA" />
+          <ScalarProperty Name="CLAVE" ColumnName="CLAVE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PED_CLIEN">
+      <EntityTypeMapping TypeName="JEENModel.PED_CLIEN">
+        <MappingFragment StoreEntitySet="PED_CLIEN">
+          <ScalarProperty Name="NO_PEDIDO" ColumnName="NO_PEDIDO" />
+          <ScalarProperty Name="ID_CLIENTE" ColumnName="ID_CLIENTE" />
+          <ScalarProperty Name="USUARIO" ColumnName="USUARIO" />
+          <ScalarProperty Name="FECHA" ColumnName="FECHA" />
+          <ScalarProperty Name="ESTADO" ColumnName="ESTADO" />
+          <ScalarProperty Name="FECHA_CAPTURA" ColumnName="FECHA_CAPTURA" />
+          <ScalarProperty Name="NO_ORDEN" ColumnName="NO_ORDEN" />
+          <ScalarProperty Name="COMENTARIO" ColumnName="COMENTARIO" />
+          <ScalarProperty Name="FECHA_CIERRE" ColumnName="FECHA_CIERRE" />
+          <ScalarProperty Name="FECHA_FACTURACION" ColumnName="FECHA_FACTURACION" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PEDIDO_VENTA">
+      <EntityTypeMapping TypeName="JEENModel.PEDIDO_VENTA">
+        <MappingFragment StoreEntitySet="PEDIDO_VENTA">
+          <ScalarProperty Name="ID_Registro" ColumnName="ID_Registro" />
+          <ScalarProperty Name="NO_PEDIDO" ColumnName="NO_PEDIDO" />
+          <ScalarProperty Name="ID_VENTA" ColumnName="ID_VENTA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PhotosQuery">
+      <EntityTypeMapping TypeName="JEENModel.PhotosQuery">
+        <MappingFragment StoreEntitySet="PhotosQuery">
+          <ScalarProperty Name="ID_PHOTO" ColumnName="ID_PHOTO" />
+          <ScalarProperty Name="PHOTO" ColumnName="PHOTO" />
+          <ScalarProperty Name="NOTE" ColumnName="NOTE" />
+          <ScalarProperty Name="ID_CLIENTE" ColumnName="ID_CLIENTE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PRESTAMOS_CARTUCHOS">
+      <EntityTypeMapping TypeName="JEENModel.PRESTAMOS_CARTUCHOS">
+        <MappingFragment StoreEntitySet="PRESTAMOS_CARTUCHOS">
+          <ScalarProperty Name="ID_PRESTAMO" ColumnName="ID_PRESTAMO" />
+          <ScalarProperty Name="USUARIO" ColumnName="USUARIO" />
+          <ScalarProperty Name="SUCURSAL" ColumnName="SUCURSAL" />
+          <ScalarProperty Name="FECHA" ColumnName="FECHA" />
+          <ScalarProperty Name="NOTAS" ColumnName="NOTAS" />
+          <ScalarProperty Name="ESTADO" ColumnName="ESTADO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PRESTAMOS_CARTUCHOS_DETALLE">
+      <EntityTypeMapping TypeName="JEENModel.PRESTAMOS_CARTUCHOS_DETALLE">
+        <MappingFragment StoreEntitySet="PRESTAMOS_CARTUCHOS_DETALLE">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ID_PRESTAMO" ColumnName="ID_PRESTAMO" />
+          <ScalarProperty Name="ID_PRODUCTO" ColumnName="ID_PRODUCTO" />
+          <ScalarProperty Name="CANTIDAD" ColumnName="CANTIDAD" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PRESTAMOS_CLIENTES_DETALLE">
+      <EntityTypeMapping TypeName="JEENModel.PRESTAMOS_CLIENTES_DETALLE">
+        <MappingFragment StoreEntitySet="PRESTAMOS_CLIENTES_DETALLE">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ID_PRESTAMO" ColumnName="ID_PRESTAMO" />
+          <ScalarProperty Name="ID_PRODUCTO" ColumnName="ID_PRODUCTO" />
+          <ScalarProperty Name="CANTIDAD" ColumnName="CANTIDAD" />
+          <ScalarProperty Name="PRECIO_VENTA" ColumnName="PRECIO_VENTA" />
+          <ScalarProperty Name="NO_SERIE" ColumnName="NO_SERIE" />
+          <ScalarProperty Name="CONT_INICIAL" ColumnName="CONT_INICIAL" />
+          <ScalarProperty Name="ESTADO" ColumnName="ESTADO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProdPend">
+      <EntityTypeMapping TypeName="JEENModel.ProdPend">
+        <MappingFragment StoreEntitySet="ProdPend">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ID_COMANDA" ColumnName="ID_COMANDA" />
+          <ScalarProperty Name="ARTICULO" ColumnName="ARTICULO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PRODUCCION">
+      <EntityTypeMapping TypeName="JEENModel.PRODUCCION">
+        <MappingFragment StoreEntitySet="PRODUCCION">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="FECHA" ColumnName="FECHA" />
+          <ScalarProperty Name="ID_USER" ColumnName="ID_USER" />
+          <ScalarProperty Name="ID_USER_CONFIRMAR" ColumnName="ID_USER_CONFIRMAR" />
+          <ScalarProperty Name="EFECTUADO" ColumnName="EFECTUADO" />
+          <ScalarProperty Name="COMENTARIOS" ColumnName="COMENTARIOS" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PRODUCCION_ENTRADAS">
+      <EntityTypeMapping TypeName="JEENModel.PRODUCCION_ENTRADAS">
+        <MappingFragment StoreEntitySet="PRODUCCION_ENTRADAS">
+          <ScalarProperty Name="ID_PRODUCTO" ColumnName="ID_PRODUCTO" />
+          <ScalarProperty Name="CANTIDAD" ColumnName="CANTIDAD" />
+          <ScalarProperty Name="PRECIO" ColumnName="PRECIO" />
+          <ScalarProperty Name="ID_PRODUCCION" ColumnName="ID_PRODUCCION" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PRODUCCION_SALIDAS">
+      <EntityTypeMapping TypeName="JEENModel.PRODUCCION_SALIDAS">
+        <MappingFragment StoreEntitySet="PRODUCCION_SALIDAS">
+          <ScalarProperty Name="ID_PRODUCTO" ColumnName="ID_PRODUCTO" />
+          <ScalarProperty Name="CANTIDAD" ColumnName="CANTIDAD" />
+          <ScalarProperty Name="PRECIO" ColumnName="PRECIO" />
+          <ScalarProperty Name="ID_PRODUCCION" ColumnName="ID_PRODUCCION" />
+          <ScalarProperty Name="CONFIRMADO" ColumnName="CONFIRMADO" />
+          <ScalarProperty Name="CANTIDAD1" ColumnName="CANTIDAD1" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PRODUCCIONES_ALMACEN3">
+      <EntityTypeMapping TypeName="JEENModel.PRODUCCIONES_ALMACEN3">
+        <MappingFragment StoreEntitySet="PRODUCCIONES_ALMACEN3">
+          <ScalarProperty Name="ID_FABRICACION" ColumnName="ID_FABRICACION" />
+          <ScalarProperty Name="ID_PRODUCTO" ColumnName="ID_PRODUCTO" />
+          <ScalarProperty Name="FECHA" ColumnName="FECHA" />
+          <ScalarProperty Name="ID_USUARIO" ColumnName="ID_USUARIO" />
+          <ScalarProperty Name="CANTIDAD" ColumnName="CANTIDAD" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PROMO_CATEGO">
+      <EntityTypeMapping TypeName="JEENModel.PROMO_CATEGO">
+        <MappingFragment StoreEntitySet="PROMO_CATEGO">
+          <ScalarProperty Name="ID_PROMO" ColumnName="ID_PROMO" />
+          <ScalarProperty Name="CATEGORIA" ColumnName="CATEGORIA" />
+          <ScalarProperty Name="CANTIDAD" ColumnName="CANTIDAD" />
+          <ScalarProperty Name="FECHA_VENCE" ColumnName="FECHA_VENCE" />
+          <ScalarProperty Name="PORCE_DESC" ColumnName="PORCE_DESC" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PROMO_PORCE">
+      <EntityTypeMapping TypeName="JEENModel.PROMO_PORCE">
+        <MappingFragment StoreEntitySet="PROMO_PORCE">
+          <ScalarProperty Name="ID_PROMO" ColumnName="ID_PROMO" />
+          <ScalarProperty Name="ID_PRODUCTO" ColumnName="ID_PRODUCTO" />
+          <ScalarProperty Name="CANTIDAD" ColumnName="CANTIDAD" />
+          <ScalarProperty Name="PORCE_DESC" ColumnName="PORCE_DESC" />
+          <ScalarProperty Name="FECHA_VENCE" ColumnName="FECHA_VENCE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RASTREOREQUI">
+      <EntityTypeMapping TypeName="JEENModel.RASTREOREQUI">
+        <MappingFragment StoreEntitySet="RASTREOREQUI">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ID_REQUI" ColumnName="ID_REQUI" />
+          <ScalarProperty Name="SOLICITO" ColumnName="SOLICITO" />
+          <ScalarProperty Name="CANTIDAD" ColumnName="CANTIDAD" />
+          <ScalarProperty Name="COMENTARIO" ColumnName="COMENTARIO" />
+          <ScalarProperty Name="FECHA" ColumnName="FECHA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="REPAS">
+      <EntityTypeMapping TypeName="JEENModel.REPAS">
+        <MappingFragment StoreEntitySet="REPAS">
+          <ScalarProperty Name="ID_REPA" ColumnName="ID_REPA" />
+          <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+          <ScalarProperty Name="APELLIDOS" ColumnName="APELLIDOS" />
+          <ScalarProperty Name="CLAVE" ColumnName="CLAVE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="REPORTE_COMPRAS_ALM1">
+      <EntityTypeMapping TypeName="JEENModel.REPORTE_COMPRAS_ALM1">
+        <MappingFragment StoreEntitySet="REPORTE_COMPRAS_ALM1">
+          <ScalarProperty Name="FECHA_DE" ColumnName="FECHA_DE" />
+          <ScalarProperty Name="FECHA_AL" ColumnName="FECHA_AL" />
+          <ScalarProperty Name="ID_REPORTE" ColumnName="ID_REPORTE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="REQUISICION_ORDEN_RAPIDA">
+      <EntityTypeMapping TypeName="JEENModel.REQUISICION_ORDEN_RAPIDA">
+        <MappingFragment StoreEntitySet="REQUISICION_ORDEN_RAPIDA">
+          <ScalarProperty Name="ID_REQUISICION" ColumnName="ID_REQUISICION" />
+          <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+          <ScalarProperty Name="NOTAS" ColumnName="NOTAS" />
+          <ScalarProperty Name="FECHA_ALTA" ColumnName="FECHA_ALTA" />
+          <ScalarProperty Name="ACTIVO" ColumnName="ACTIVO" />
+          <ScalarProperty Name="USUARIO" ColumnName="USUARIO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RESPALDOS_BD">
+      <EntityTypeMapping TypeName="JEENModel.RESPALDOS_BD">
+        <MappingFragment StoreEntitySet="RESPALDOS_BD">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="FECHA" ColumnName="FECHA" />
+          <ScalarProperty Name="NOMBRE_RESPALDO" ColumnName="NOMBRE_RESPALDO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SALDO_FAVOR_PROVEEDOR">
+      <EntityTypeMapping TypeName="JEENModel.SALDO_FAVOR_PROVEEDOR">
+        <MappingFragment StoreEntitySet="SALDO_FAVOR_PROVEEDOR">
+          <ScalarProperty Name="ID_SALDO" ColumnName="ID_SALDO" />
+          <ScalarProperty Name="ID_PROVEEDOR" ColumnName="ID_PROVEEDOR" />
+          <ScalarProperty Name="PROVEEDOR" ColumnName="PROVEEDOR" />
+          <ScalarProperty Name="NUM_ORDEN" ColumnName="NUM_ORDEN" />
+          <ScalarProperty Name="TIPO" ColumnName="TIPO" />
+          <ScalarProperty Name="ID_ORDEN_COMPRA" ColumnName="ID_ORDEN_COMPRA" />
+          <ScalarProperty Name="TOTAL" ColumnName="TOTAL" />
+          <ScalarProperty Name="FECHA" ColumnName="FECHA" />
+          <ScalarProperty Name="MOTIVO_CANCELACION" ColumnName="MOTIVO_CANCELACION" />
+          <ScalarProperty Name="APLICADA" ColumnName="APLICADA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SALIDAS">
+      <EntityTypeMapping TypeName="JEENModel.SALIDAS">
+        <MappingFragment StoreEntitySet="SALIDAS">
+          <ScalarProperty Name="ID_SALIDA" ColumnName="ID_SALIDA" />
+          <ScalarProperty Name="ID_PRODUCTO" ColumnName="ID_PRODUCTO" />
+          <ScalarProperty Name="PRECIO" ColumnName="PRECIO" />
+          <ScalarProperty Name="CANTIDAD" ColumnName="CANTIDAD" />
+          <ScalarProperty Name="JUSTIFICACION" ColumnName="JUSTIFICACION" />
+          <ScalarProperty Name="ID_USUARIO" ColumnName="ID_USUARIO" />
+          <ScalarProperty Name="SUCURSAL" ColumnName="SUCURSAL" />
+          <ScalarProperty Name="FECHA" ColumnName="FECHA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SalidasInvProd">
+      <EntityTypeMapping TypeName="JEENModel.SalidasInvProd">
+        <MappingFragment StoreEntitySet="SalidasInvProd">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ID_PRODUCCION" ColumnName="ID_PRODUCCION" />
+          <ScalarProperty Name="ID_PRODUCTO" ColumnName="ID_PRODUCTO" />
+          <ScalarProperty Name="CANTIDAD" ColumnName="CANTIDAD" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SCRAP">
+      <EntityTypeMapping TypeName="JEENModel.SCRAP">
+        <MappingFragment StoreEntitySet="SCRAP">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ID_COMANDA" ColumnName="ID_COMANDA" />
+          <ScalarProperty Name="ID_PRODUCTO" ColumnName="ID_PRODUCTO" />
+          <ScalarProperty Name="CANTIDAD" ColumnName="CANTIDAD" />
+          <ScalarProperty Name="MOTIVO" ColumnName="MOTIVO" />
+          <ScalarProperty Name="COMENTARIO" ColumnName="COMENTARIO" />
+          <ScalarProperty Name="FECHA" ColumnName="FECHA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SCRAP_SUCURSAL">
+      <EntityTypeMapping TypeName="JEENModel.SCRAP_SUCURSAL">
+        <MappingFragment StoreEntitySet="SCRAP_SUCURSAL">
+          <ScalarProperty Name="ID_SCRAP" ColumnName="ID_SCRAP" />
+          <ScalarProperty Name="ID_PRODUCTO" ColumnName="ID_PRODUCTO" />
+          <ScalarProperty Name="CANTIDAD" ColumnName="CANTIDAD" />
+          <ScalarProperty Name="MOTIVO" ColumnName="MOTIVO" />
+          <ScalarProperty Name="SUCURSAL" ColumnName="SUCURSAL" />
+          <ScalarProperty Name="FECHA" ColumnName="FECHA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SEMANA">
+      <EntityTypeMapping TypeName="JEENModel.SEMANA">
+        <MappingFragment StoreEntitySet="SEMANA">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="D1" ColumnName="D1" />
+          <ScalarProperty Name="D2" ColumnName="D2" />
+          <ScalarProperty Name="D3" ColumnName="D3" />
+          <ScalarProperty Name="D4" ColumnName="D4" />
+          <ScalarProperty Name="D5" ColumnName="D5" />
+          <ScalarProperty Name="D6" ColumnName="D6" />
+          <ScalarProperty Name="D7" ColumnName="D7" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SOLICITUD_NC">
+      <EntityTypeMapping TypeName="JEENModel.SOLICITUD_NC">
+        <MappingFragment StoreEntitySet="SOLICITUD_NC">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+          <ScalarProperty Name="TOTAL" ColumnName="TOTAL" />
+          <ScalarProperty Name="FECHA" ColumnName="FECHA" />
+          <ScalarProperty Name="MOTIVOCAMBIO" ColumnName="MOTIVOCAMBIO" />
+          <ScalarProperty Name="ID_VENTA" ColumnName="ID_VENTA" />
+          <ScalarProperty Name="ID_USUARIO" ColumnName="ID_USUARIO" />
+          <ScalarProperty Name="ID_CLIENTE" ColumnName="ID_CLIENTE" />
+          <ScalarProperty Name="AUTORIZADO" ColumnName="AUTORIZADO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TablaPruebaImagen">
+      <EntityTypeMapping TypeName="JEENModel.TablaPruebaImagen">
+        <MappingFragment StoreEntitySet="TablaPruebaImagen">
+          <ScalarProperty Name="imagen" ColumnName="imagen" />
+          <ScalarProperty Name="imagen1" ColumnName="imagen1" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TPAGOS_OC">
+      <EntityTypeMapping TypeName="JEENModel.TPAGOS_OC">
+        <MappingFragment StoreEntitySet="TPAGOS_OC">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TRASPASO_DETALLE">
+      <EntityTypeMapping TypeName="JEENModel.TRASPASO_DETALLE">
+        <MappingFragment StoreEntitySet="TRASPASO_DETALLE">
+          <ScalarProperty Name="ID_TRASPASO_DETALLE" ColumnName="ID_TRASPASO_DETALLE" />
+          <ScalarProperty Name="ID_TRASPASO" ColumnName="ID_TRASPASO" />
+          <ScalarProperty Name="ID_PRODUCTO" ColumnName="ID_PRODUCTO" />
+          <ScalarProperty Name="CANTIDAD" ColumnName="CANTIDAD" />
+          <ScalarProperty Name="ESTADO" ColumnName="ESTADO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VALE_CAJA">
+      <EntityTypeMapping TypeName="JEENModel.VALE_CAJA">
+        <MappingFragment StoreEntitySet="VALE_CAJA">
+          <ScalarProperty Name="ID_VALE" ColumnName="ID_VALE" />
+          <ScalarProperty Name="ID_VENTA" ColumnName="ID_VENTA" />
+          <ScalarProperty Name="IMPORTE" ColumnName="IMPORTE" />
+          <ScalarProperty Name="FECHA" ColumnName="FECHA" />
+          <ScalarProperty Name="APLICADO" ColumnName="APLICADO" />
+          <ScalarProperty Name="ID_USUARIO" ColumnName="ID_USUARIO" />
+          <ScalarProperty Name="CANTIDAD" ColumnName="CANTIDAD" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Venta_Especial">
+      <EntityTypeMapping TypeName="JEENModel.Venta_Especial">
+        <MappingFragment StoreEntitySet="Venta_Especial">
+          <ScalarProperty Name="Numero" ColumnName="Numero" />
+          <ScalarProperty Name="Clave" ColumnName="Clave" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+          <ScalarProperty Name="Cumplido" ColumnName="Cumplido" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VENTAS_DETALLE">
+      <EntityTypeMapping TypeName="JEENModel.VENTAS_DETALLE">
+        <MappingFragment StoreEntitySet="VENTAS_DETALLE">
+          <ScalarProperty Name="ID_VENTA" ColumnName="ID_VENTA" />
+          <ScalarProperty Name="ID_PRODUCTO" ColumnName="ID_PRODUCTO" />
+          <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+          <ScalarProperty Name="CANTIDAD" ColumnName="CANTIDAD" />
+          <ScalarProperty Name="PRECIO_VENTA" ColumnName="PRECIO_VENTA" />
+          <ScalarProperty Name="PRECIO_COSTO" ColumnName="PRECIO_COSTO" />
+          <ScalarProperty Name="GANANCIA" ColumnName="GANANCIA" />
+          <ScalarProperty Name="ID_GARANTIA" ColumnName="ID_GARANTIA" />
+          <ScalarProperty Name="IDDET" ColumnName="IDDET" />
+          <ScalarProperty Name="NO_COM_AT" ColumnName="NO_COM_AT" />
+          <ScalarProperty Name="IMPORTE" ColumnName="IMPORTE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CLIENTE">
+      <EntityTypeMapping TypeName="JEENModel.CLIENTE">
+        <MappingFragment StoreEntitySet="CLIENTE">
+          <ScalarProperty Name="Clave_CFDI" ColumnName="Clave_CFDI" />
+          <ScalarProperty Name="Num_cuenta_pago_cliente" ColumnName="Num_cuenta_pago_cliente" />
+          <ScalarProperty Name="Flag_extranjero" ColumnName="Flag_extranjero" />
+          <ScalarProperty Name="Adenda_alta" ColumnName="Adenda_alta" />
+          <ScalarProperty Name="Adenda_afianzadora" ColumnName="Adenda_afianzadora" />
+          <ScalarProperty Name="Adenda_fianza" ColumnName="Adenda_fianza" />
+          <ScalarProperty Name="Adenda_pedido" ColumnName="Adenda_pedido" />
+          <ScalarProperty Name="Adenda_unidad_negocio" ColumnName="Adenda_unidad_negocio" />
+          <ScalarProperty Name="Adenda_contrato" ColumnName="Adenda_contrato" />
+          <ScalarProperty Name="Adenda_proveedor" ColumnName="Adenda_proveedor" />
+          <ScalarProperty Name="Adenda_ID_facturaglobal" ColumnName="Adenda_ID_facturaglobal" />
+          <ScalarProperty Name="RECIBO" ColumnName="RECIBO" />
+          <ScalarProperty Name="ASIG" ColumnName="ASIG" />
+          <ScalarProperty Name="AGENTE" ColumnName="AGENTE" />
+          <ScalarProperty Name="LEYENDAS" ColumnName="LEYENDAS" />
+          <ScalarProperty Name="VALORACION" ColumnName="VALORACION" />
+          <ScalarProperty Name="DIRECCION_ENVIO" ColumnName="DIRECCION_ENVIO" />
+          <ScalarProperty Name="LIMITE_CREDITO" ColumnName="LIMITE_CREDITO" />
+          <ScalarProperty Name="FECHA_ALTA" ColumnName="FECHA_ALTA" />
+          <ScalarProperty Name="ESTADO" ColumnName="ESTADO" />
+          <ScalarProperty Name="WEB_PASSWORD" ColumnName="WEB_PASSWORD" />
+          <ScalarProperty Name="EMAIL" ColumnName="EMAIL" />
+          <ScalarProperty Name="CP" ColumnName="CP" />
+          <ScalarProperty Name="CURP" ColumnName="CURP" />
+          <ScalarProperty Name="NUMERO_INTERIOR" ColumnName="NUMERO_INTERIOR" />
+          <ScalarProperty Name="NUMERO_EXTERIOR" ColumnName="NUMERO_EXTERIOR" />
+          <ScalarProperty Name="ID_AGENTE" ColumnName="ID_AGENTE" />
+          <ScalarProperty Name="ID_DESCUENTO" ColumnName="ID_DESCUENTO" />
+          <ScalarProperty Name="DESCUENTO" ColumnName="DESCUENTO" />
+          <ScalarProperty Name="COLONIA" ColumnName="COLONIA" />
+          <ScalarProperty Name="CIUDAD" ColumnName="CIUDAD" />
+          <ScalarProperty Name="COMENTARIOS" ColumnName="COMENTARIOS" />
+          <ScalarProperty Name="DIRECCION" ColumnName="DIRECCION" />
+          <ScalarProperty Name="CONTACTO" ColumnName="CONTACTO" />
+          <ScalarProperty Name="FAX" ColumnName="FAX" />
+          <ScalarProperty Name="DIAS_CREDITO" ColumnName="DIAS_CREDITO" />
+          <ScalarProperty Name="PAIS" ColumnName="PAIS" />
+          <ScalarProperty Name="TELEFONO_TRABAJO" ColumnName="TELEFONO_TRABAJO" />
+          <ScalarProperty Name="TELEFONO_CASA" ColumnName="TELEFONO_CASA" />
+          <ScalarProperty Name="RFC" ColumnName="RFC" />
+          <ScalarProperty Name="NOMBRE_COMERCIAL" ColumnName="NOMBRE_COMERCIAL" />
+          <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+          <ScalarProperty Name="ID_CLIENTE" ColumnName="ID_CLIENTE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MENSAJERO">
+      <EntityTypeMapping TypeName="JEENModel.MENSAJERO">
+        <MappingFragment StoreEntitySet="MENSAJERO">
+          <ScalarProperty Name="Clave" ColumnName="Clave" />
+          <ScalarProperty Name="Apellidos" ColumnName="Apellidos" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="IdMensajero" ColumnName="IdMensajero" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

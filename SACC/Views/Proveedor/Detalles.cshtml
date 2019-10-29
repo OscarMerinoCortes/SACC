@@ -1,0 +1,195 @@
+﻿@model SACC.Models.PROVEEDOR
+
+@{
+    ViewBag.Title = "Detalles";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Detalles</h2>
+
+<div>
+    <h4>PROVEEDOR</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NOMBRE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NOMBRE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DIRECCION)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DIRECCION)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.COLONIA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.COLONIA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CIUDAD)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CIUDAD)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CP)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CP)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RFC)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RFC)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TELEFONO1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TELEFONO1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TELEFONO2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TELEFONO2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TELEFONO3)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TELEFONO3)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NOTAS)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NOTAS)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ESTADO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ESTADO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PAIS)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PAIS)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TRANS_BANCO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TRANS_BANCO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TRANS_DIRECCION)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TRANS_DIRECCION)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TRANS_CIUDAD)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TRANS_CIUDAD)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TRANS_ROUTING)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TRANS_ROUTING)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TRANS_CUENTA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TRANS_CUENTA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TRANS_CLAVE_SWIFT)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TRANS_CLAVE_SWIFT)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ELIMINADO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ELIMINADO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ALMACEN1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ALMACEN1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ALMACEN2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ALMACEN2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ALMACEN3)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ALMACEN3)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Editar", "Editar", new { id = Model.ID_PROVEEDOR }) |
+    @Html.ActionLink("Regresar", "ProveedorLista")
+</p>

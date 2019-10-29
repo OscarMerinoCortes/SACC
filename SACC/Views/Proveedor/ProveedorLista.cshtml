@@ -1,0 +1,170 @@
+﻿@model IEnumerable<SACC.Models.PROVEEDOR>
+
+@{
+    ViewBag.Title = "Proveedor";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    <link rel="stylesheet" href="~/Content/EstiloTablas.css" />
+}
+
+<h2>Proveedores</h2>
+
+<p>
+    @Html.ActionLink("Nuevo registro", "Create")
+</p>
+<table class="table" align="center">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.NOMBRE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DIRECCION)
+        </th>
+        @*<th>
+            @Html.DisplayNameFor(model => model.COLONIA)
+        </th>*@
+        <th>
+            @Html.DisplayNameFor(model => model.CIUDAD)
+        </th>
+        @*<th>
+            @Html.DisplayNameFor(model => model.CP)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RFC)
+        </th>*@
+        <th>
+            @Html.DisplayNameFor(model => model.TELEFONO1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TELEFONO2)
+        </th>
+        @*<th>
+            @Html.DisplayNameFor(model => model.TELEFONO3)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NOTAS)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ESTADO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PAIS)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TRANS_BANCO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TRANS_DIRECCION)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TRANS_CIUDAD)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TRANS_ROUTING)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TRANS_CUENTA)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TRANS_CLAVE_SWIFT)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ELIMINADO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ALMACEN1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ALMACEN2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ALMACEN3)
+        </th>*@
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.NOMBRE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DIRECCION)
+        </td>
+        @*<td>
+            @Html.DisplayFor(modelItem => item.COLONIA)
+        </td>*@
+        <td>
+            @Html.DisplayFor(modelItem => item.CIUDAD)
+        </td>
+        @*<td>
+            @Html.DisplayFor(modelItem => item.CP)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RFC)
+        </td>*@
+        <td>
+            @Html.DisplayFor(modelItem => item.TELEFONO1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TELEFONO2)
+        </td>
+        @*<td>
+            @Html.DisplayFor(modelItem => item.TELEFONO3)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NOTAS)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ESTADO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PAIS)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TRANS_BANCO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TRANS_DIRECCION)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TRANS_CIUDAD)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TRANS_ROUTING)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TRANS_CUENTA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TRANS_CLAVE_SWIFT)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ELIMINADO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ALMACEN1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ALMACEN2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ALMACEN3)
+        </td>*@
+        <td>
+            @Html.ActionLink("Editar", "Editar", new { id=item.ID_PROVEEDOR }) |
+            @Html.ActionLink("Detalles", "Detalles", new { id=item.ID_PROVEEDOR }) |
+            @Html.ActionLink("Eliminar", "Delete", new { id=item.ID_PROVEEDOR }, new { @class = "aElimina" })
+        </td>
+    </tr>
+}
+    @section scripts {
+        <script>
+        $(".aElimina").click(function (event) {
+            if (!confirm('Estas seguro de eliminar ?')) {
+                event.preventDefault();
+            }
+        });
+        </script>
+    }
+
+</table>

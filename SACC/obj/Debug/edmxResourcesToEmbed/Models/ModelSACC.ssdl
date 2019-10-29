@@ -1,0 +1,2967 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="JEENModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'JEEN.dbo.ABONOS_CUENTA' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="ABONOS_CUENTA">
+    <Key>
+      <PropertyRef Name="ID_ABONO" />
+      <PropertyRef Name="FECHA_ALTA" />
+    </Key>
+    <Property Name="ID_ABONO" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ID_CLIENTE" Type="int" />
+    <Property Name="CANT_ABONO" Type="float" />
+    <Property Name="FECHA" Type="datetime" />
+    <Property Name="ID_USUARIO" Type="varchar" MaxLength="50" />
+    <Property Name="NO_CHEQUE" Type="varchar" MaxLength="18" />
+    <Property Name="BANCO" Type="varchar" MaxLength="20" />
+    <Property Name="FECHA_CHEQUE" Type="datetime" />
+    <Property Name="EFECTIVO" Type="char" MaxLength="1" />
+    <Property Name="ID_CUENTA" Type="int" />
+    <Property Name="REFERENCIA" Type="varchar" MaxLength="35" />
+    <Property Name="DEPOSITO_TOTAL" Type="float" />
+    <Property Name="DEUDA_ACTUAL" Type="char" MaxLength="10" />
+    <Property Name="CREDITO_DISPO" Type="char" MaxLength="10" />
+    <Property Name="ID_VENTA" Type="int" />
+    <Property Name="FOLIO" Type="varchar" MaxLength="10" />
+    <Property Name="FECHA_ALTA" Type="datetime" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'JEEN.dbo.ABONOS_OC_CANCELADOS' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="ABONOS_OC_CANCELADOS">
+    <Key>
+      <PropertyRef Name="FECHA_CANCELACION" />
+    </Key>
+    <Property Name="ID_ABONO" Type="int" />
+    <Property Name="ID_PROVEEDOR" Type="int" />
+    <Property Name="CANT_ABONO" Type="float" />
+    <Property Name="NO_CHEQUE" Type="varchar" MaxLength="50" />
+    <Property Name="BANCO" Type="varchar" MaxLength="50" />
+    <Property Name="CANTIDAD" Type="varchar" MaxLength="50" />
+    <Property Name="NUMTRANS" Type="varchar" MaxLength="50" />
+    <Property Name="NUMCHEQUE" Type="varchar" MaxLength="50" />
+    <Property Name="NUM_ORDEN" Type="int" />
+    <Property Name="TIPO" Type="char" MaxLength="2" />
+    <Property Name="ID_ORDEN" Type="int" />
+    <Property Name="TIPOPAGO" Type="char" MaxLength="15" />
+    <Property Name="FECHA" Type="datetime" />
+    <Property Name="PROVEEDOR" Type="varchar" MaxLength="100" />
+    <Property Name="USR_CANCELO" Type="varchar" MaxLength="50" />
+    <Property Name="FECHA_CANCELACION" Type="datetime" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'JEEN.dbo.ABONOS_PAGO_OC' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="ABONOS_PAGO_OC">
+    <Key>
+      <PropertyRef Name="ID_ABONO" />
+    </Key>
+    <Property Name="ID_ABONO" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ID_PROVEEDOR" Type="int" />
+    <Property Name="CANT_ABONO" Type="float" />
+    <Property Name="NO_CHEQUE" Type="varchar" MaxLength="50" />
+    <Property Name="BANCO" Type="char" MaxLength="50" />
+    <Property Name="CANTIDAD" Type="varchar" MaxLength="50" />
+    <Property Name="NUMTRANS" Type="varchar" MaxLength="50" />
+    <Property Name="NUMCHEQUE" Type="varchar" MaxLength="50" />
+    <Property Name="NUM_ORDEN" Type="int" />
+    <Property Name="TIPO" Type="char" MaxLength="2" />
+    <Property Name="ID_ORDEN" Type="int" />
+    <Property Name="TIPOPAGO" Type="char" MaxLength="20" />
+    <Property Name="FECHA" Type="datetime" />
+    <Property Name="PROVEEDOR" Type="char" MaxLength="100" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'JEEN.dbo.ALMACEN1' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="ALMACEN1">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID_PRODUCTO" Type="char" MaxLength="25" />
+    <Property Name="DESCRIPCION" Type="varchar" MaxLength="100" />
+    <Property Name="ID_DESCUENTO" Type="char" MaxLength="10" />
+    <Property Name="C_MINIMA" Type="float" />
+    <Property Name="C_MAXIMA" Type="float" />
+    <Property Name="TIPO" Type="char" MaxLength="10" />
+    <Property Name="VENTA_WEB" Type="char" MaxLength="10" />
+    <Property Name="MARCA" Type="varchar" MaxLength="50" />
+    <Property Name="MATERIAL" Type="char" MaxLength="20" />
+    <Property Name="COLOR" Type="char" MaxLength="10" />
+    <Property Name="FOTO_FRENTE" Type="image" />
+    <Property Name="FOTO_LADO" Type="image" />
+    <Property Name="GANANCIA" Type="float" />
+    <Property Name="PRECIO_COSTO" Type="float" />
+    <Property Name="PRECIO_COSTO2" Type="float" />
+    <Property Name="PRECIO_VENTA" Type="float" />
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="LOCALIZACION" Type="char" MaxLength="10" />
+    <Property Name="PRECIO_EN" Type="varchar" MaxLength="10" />
+    <Property Name="USR_ALTA" Type="int" />
+    <Property Name="FECHA_ALTA" Type="datetime" />
+    <Property Name="USR_MOD" Type="int" />
+    <Property Name="FECHA_MOD" Type="datetime" />
+    <Property Name="CATEGORIA" Type="varchar" MaxLength="25" />
+    <Property Name="ESPECIE" Type="varchar" MaxLength="25" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'JEEN.dbo.ALMACEN3' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="ALMACEN3">
+    <Key>
+      <PropertyRef Name="NUM" />
+      <PropertyRef Name="PRECIO_EN" />
+    </Key>
+    <Property Name="NUM" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ID_PRODUCTO" Type="char" MaxLength="25" />
+    <Property Name="DESCRIPCION" Type="varchar" MaxLength="100" />
+    <Property Name="ID_DESCUENTO" Type="varchar" MaxLength="30" />
+    <Property Name="C_MINIMA" Type="float" />
+    <Property Name="C_MAXIMA" Type="float" />
+    <Property Name="TIPO" Type="varchar" MaxLength="10" />
+    <Property Name="VENTA_WEB" Type="char" MaxLength="10" />
+    <Property Name="MARCA" Type="varchar" MaxLength="50" />
+    <Property Name="MATERIAL" Type="char" MaxLength="20" />
+    <Property Name="COLOR" Type="char" MaxLength="10" />
+    <Property Name="FOTO_FRENTE" Type="image" />
+    <Property Name="FOTO_LADO" Type="image" />
+    <Property Name="GANANCIA" Type="float" />
+    <Property Name="PRECIO_COSTO" Type="float" />
+    <Property Name="CLASIFICACION" Type="varchar" MaxLength="25" />
+    <Property Name="PRECIO_COSTO2" Type="float" />
+    <Property Name="LOCALIZACION" Type="char" MaxLength="10" />
+    <Property Name="PRECIO_EN" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="USR_ALTA" Type="int" />
+    <Property Name="FECHA_ALTA" Type="datetime" />
+    <Property Name="USR_MOD" Type="int" />
+    <Property Name="FECHA_MOD" Type="datetime" />
+    <Property Name="CATEGORIA" Type="varchar" MaxLength="25" />
+    <Property Name="PRESENTACION" Type="varchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="ASISTENCIA_TECNICA">
+    <Key>
+      <PropertyRef Name="ID_AS_TEC" />
+    </Key>
+    <Property Name="ID_AS_TEC" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NOMBRE" Type="varchar" MaxLength="100" />
+    <Property Name="TELEFONO" Type="varchar" MaxLength="25" />
+    <Property Name="MODELO" Type="varchar" MaxLength="50" />
+    <Property Name="MARCA" Type="varchar" MaxLength="50" />
+    <Property Name="TIPO_ARTICULO" Type="varchar" MaxLength="100" />
+    <Property Name="DESCRIPCION_PIEZAS" Type="varchar" MaxLength="100" />
+    <Property Name="SUCURSAL" Type="char" MaxLength="15" />
+    <Property Name="GARANTIA" Type="char" MaxLength="1" />
+    <Property Name="FECHA_DEBE_ATENDER" Type="datetime" />
+    <Property Name="FECHA_ATENDIDO" Type="datetime" />
+    <Property Name="A_DOMICILIO" Type="char" MaxLength="1" />
+    <Property Name="ATENDIDO" Type="int" />
+    <Property Name="ID_USUARIO" Type="varchar" MaxLength="20" />
+    <Property Name="ID_CLIENTE" Type="int" />
+    <Property Name="FECHA_CAPTURA" Type="datetime" />
+    <Property Name="PRECIO_COTIZACION" Type="float" />
+    <Property Name="FECHA_COTIZACION" Type="datetime" />
+    <Property Name="FECHA_ACEPTADO_PRESUPUESTO" Type="datetime" />
+    <Property Name="COMENTARIOS_COTIZACION" Type="varchar" MaxLength="100" />
+    <Property Name="COMENTARIOS_TECNICOS" Type="varchar" MaxLength="500" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'JEEN.dbo.AutorizaRema' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="AutorizaRema">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nombre" Type="varchar" MaxLength="75" />
+    <Property Name="Accion" Type="varchar" MaxLength="20" />
+    <Property Name="id_comanda" Type="int" />
+    <Property Name="fecha" Type="datetime" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'JEEN.dbo.BANCOS' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="BANCOS">
+    <Key>
+      <PropertyRef Name="ID_BANCO" />
+    </Key>
+    <Property Name="ID_BANCO" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NOMBRE" Type="varchar" MaxLength="50" />
+    <Property Name="DIRECCION" Type="varchar" MaxLength="50" />
+    <Property Name="TELEFONO" Type="varchar" MaxLength="50" />
+    <Property Name="CUENTAS" Type="varchar" MaxLength="150" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'JEEN.dbo.CAJA_CHICA' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="CAJA_CHICA">
+    <Key>
+      <PropertyRef Name="ID_CAJA" />
+    </Key>
+    <Property Name="ID_CAJA" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NOMBRE" Type="varchar" MaxLength="150" />
+    <Property Name="FECHA" Type="datetime" />
+    <Property Name="TOTAL" Type="float" />
+    <Property Name="TOTAL_LETRA" Type="varchar" MaxLength="150" />
+    <Property Name="TIPO_ORDEN" Type="varchar" MaxLength="10" />
+    <Property Name="NUM_ORDEN" Type="int" />
+    <Property Name="FECHA_REALIZADO" Type="datetime" />
+    <Property Name="ID_USUARIO" Type="int" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'JEEN.dbo.CANCEPROGRA' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="CANCEPROGRA">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NO_PEDIDO" Type="int" />
+    <Property Name="FECHA" Type="datetime" />
+    <Property Name="ID_USUARIO" Type="int" />
+    <Property Name="COMENTARIO" Type="char" MaxLength="10" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'JEEN.dbo.CARTVAC' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="CARTVAC">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="numeric" Precision="24" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ID_PRODUCTO" Type="char" MaxLength="30" />
+    <Property Name="CANTIDAD" Type="int" />
+    <Property Name="USUARIO" Type="char" MaxLength="30" />
+    <Property Name="COMENTARIO" Type="char" MaxLength="50" />
+    <Property Name="COMANDA" Type="char" MaxLength="30" />
+    <Property Name="SUCURSAL" Type="char" MaxLength="30" />
+    <Property Name="PRODUCCION" Type="char" MaxLength="30" />
+    <Property Name="COMENTARIO_EXTR" Type="char" MaxLength="50" />
+    <Property Name="FECHA" Type="datetime" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'JEEN.dbo.CHEQUES' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="CHEQUES">
+    <Key>
+      <PropertyRef Name="ID_CHEQUE" />
+    </Key>
+    <Property Name="ID_CHEQUE" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NOMBRE" Type="varchar" MaxLength="500" />
+    <Property Name="FECHA" Type="datetime" />
+    <Property Name="TOTAL" Type="varchar" MaxLength="25" />
+    <Property Name="TOTAL_LETRA" Type="varchar" MaxLength="400" />
+    <Property Name="BANCO" Type="varchar" MaxLength="100" />
+    <Property Name="NUM_CHEQUE" Type="varchar" MaxLength="50" />
+    <Property Name="TIPO_ORDEN" Type="varchar" MaxLength="15" />
+    <Property Name="NUM_ORDEN" Type="varchar" MaxLength="250" />
+    <Property Name="FECHA_REALIZADO" Type="datetime" />
+    <Property Name="ID_USUARIO" Type="int" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'JEEN.dbo.CLASIFICACIONES' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="CLASIFICACIONES">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CLASIFICACION" Type="varchar" MaxLength="25" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'JEEN.dbo.CLATINTONER' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="CLATINTONER">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CLASIFICACION" Type="char" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="CLIENTE">
+    <Key>
+      <PropertyRef Name="ID_CLIENTE" />
+    </Key>
+    <Property Name="ID_CLIENTE" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NOMBRE" Type="varchar" MaxLength="150" />
+    <Property Name="NOMBRE_COMERCIAL" Type="varchar" MaxLength="150" />
+    <Property Name="RFC" Type="varchar" MaxLength="30" />
+    <Property Name="TELEFONO_CASA" Type="varchar" MaxLength="20" />
+    <Property Name="TELEFONO_TRABAJO" Type="varchar" MaxLength="20" />
+    <Property Name="PAIS" Type="varchar" MaxLength="20" />
+    <Property Name="DIAS_CREDITO" Type="varchar" MaxLength="15" />
+    <Property Name="FAX" Type="varchar" MaxLength="20" />
+    <Property Name="CONTACTO" Type="varchar" MaxLength="100" />
+    <Property Name="DIRECCION" Type="varchar" MaxLength="100" />
+    <Property Name="COMENTARIOS" Type="varchar" MaxLength="250" />
+    <Property Name="CIUDAD" Type="varchar" MaxLength="100" />
+    <Property Name="COLONIA" Type="varchar" MaxLength="40" />
+    <Property Name="DESCUENTO" Type="float" />
+    <Property Name="ID_DESCUENTO" Type="varchar" MaxLength="30" />
+    <Property Name="ID_AGENTE" Type="char" MaxLength="10" />
+    <Property Name="NUMERO_EXTERIOR" Type="char" MaxLength="40" />
+    <Property Name="NUMERO_INTERIOR" Type="char" MaxLength="40" />
+    <Property Name="CURP" Type="varchar" MaxLength="20" />
+    <Property Name="CP" Type="char" MaxLength="10" />
+    <Property Name="EMAIL" Type="varchar" MaxLength="50" />
+    <Property Name="WEB_PASSWORD" Type="varchar" MaxLength="15" />
+    <Property Name="ESTADO" Type="char" MaxLength="20" />
+    <Property Name="FECHA_ALTA" Type="char" MaxLength="10" />
+    <Property Name="LIMITE_CREDITO" Type="float" />
+    <Property Name="DIRECCION_ENVIO" Type="varchar" MaxLength="100" />
+    <Property Name="VALORACION" Type="char" MaxLength="1" />
+    <Property Name="LEYENDAS" Type="char" MaxLength="1" />
+    <Property Name="AGENTE" Type="char" MaxLength="30" />
+    <Property Name="ASIG" Type="char" MaxLength="1" />
+    <Property Name="RECIBO" Type="char" MaxLength="20" />
+    <Property Name="Adenda_ID_facturaglobal" Type="int" Nullable="false" />
+    <Property Name="Adenda_proveedor" Type="nvarchar" MaxLength="20" />
+    <Property Name="Adenda_contrato" Type="nvarchar" MaxLength="25" />
+    <Property Name="Adenda_unidad_negocio" Type="nvarchar" MaxLength="10" />
+    <Property Name="Adenda_pedido" Type="nvarchar" MaxLength="20" />
+    <Property Name="Adenda_fianza" Type="nvarchar" MaxLength="25" />
+    <Property Name="Adenda_afianzadora" Type="nvarchar" MaxLength="40" />
+    <Property Name="Adenda_alta" Type="nvarchar" MaxLength="25" />
+    <Property Name="Flag_extranjero" Type="bit" Nullable="false" />
+    <Property Name="Num_cuenta_pago_cliente" Type="nvarchar" MaxLength="25" />
+    <Property Name="Clave_CFDI" Type="nvarchar" MaxLength="150" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'JEEN.dbo.COBRANZA' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="COBRANZA">
+    <Key>
+      <PropertyRef Name="ID_PAGO" />
+    </Key>
+    <Property Name="ID_PAGO" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CLIENTE" Type="char" MaxLength="50" />
+    <Property Name="SUCURSAL" Type="char" MaxLength="20" />
+    <Property Name="FACTURA" Type="char" MaxLength="10" />
+    <Property Name="CREDITO" Type="char" MaxLength="2" />
+    <Property Name="PAGO" Type="float" />
+    <Property Name="TOTAL" Type="float" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'JEEN.dbo.COBRO_ASISTENCIA_TECNICA' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="COBRO_ASISTENCIA_TECNICA">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ID_AS_TEC" Type="int" />
+    <Property Name="ID_PRODUCTO" Type="varchar" MaxLength="25" />
+    <Property Name="CANTIDAD" Type="int" />
+  </EntityType>
+  <EntityType Name="COBRO_MCIA">
+    <Key>
+      <PropertyRef Name="ID_COBRO" />
+    </Key>
+    <Property Name="ID_COBRO" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NOMBRE" Type="char" MaxLength="100" Nullable="false" />
+    <Property Name="COMENTARIO" Type="char" MaxLength="300" Nullable="false" />
+    <Property Name="FECHA" Type="datetime" Nullable="false" />
+    <Property Name="ID_INVENTARIO" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="COBRO_MCIA_DETALLE">
+    <Key>
+      <PropertyRef Name="ID_COBRO" />
+      <PropertyRef Name="ID_PRODUCTO" />
+    </Key>
+    <Property Name="ID_COBRO" Type="int" Nullable="false" />
+    <Property Name="ID_PRODUCTO" Type="char" MaxLength="20" Nullable="false" />
+    <Property Name="DESCRIPCION" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="CANTIDAD" Type="float" Nullable="false" />
+    <Property Name="PRECIO_UNITARIO" Type="float" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'JEEN.dbo.COLONIAS' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="COLONIAS">
+    <Key>
+      <PropertyRef Name="ID_COLONIA" />
+    </Key>
+    <Property Name="ID_COLONIA" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NOMBRE" Type="varchar" MaxLength="25" />
+    <Property Name="ZONA" Type="varchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="COMANDAS_2">
+    <Key>
+      <PropertyRef Name="ID_COMANDA" />
+    </Key>
+    <Property Name="ID_COMANDA" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FECHA_INICIO" Type="datetime" />
+    <Property Name="FECHA_FIN" Type="datetime" />
+    <Property Name="ID_CLIENTE" Type="int" />
+    <Property Name="ID_AGENTE" Type="int" />
+    <Property Name="ID_SUCURSAL" Type="int" />
+    <Property Name="NOTAS" Type="varchar" MaxLength="200" />
+    <Property Name="ESTADO_ACTUAL" Type="char" MaxLength="1" />
+    <Property Name="TIPO" Type="char" MaxLength="1" />
+    <Property Name="NOMBRE" Type="varchar" MaxLength="100" />
+    <Property Name="TELEFONO" Type="varchar" MaxLength="20" />
+    <Property Name="IMPRE" Type="char" MaxLength="1" />
+    <Property Name="COMENTARIO" Type="char" MaxLength="100" />
+    <Property Name="SUCURSAL" Type="varchar" MaxLength="30" />
+  </EntityType>
+  <EntityType Name="COMANDAS_DETALLES_2">
+    <Key>
+      <PropertyRef Name="ID_COMANDA" />
+      <PropertyRef Name="ARTICULO" />
+    </Key>
+    <Property Name="ID_COMANDA" Type="int" Nullable="false" />
+    <Property Name="ARTICULO" Type="int" Nullable="false" />
+    <Property Name="ID_PRODUCTO" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="CANTIDAD" Type="float" Nullable="false" />
+    <Property Name="CANTIDAD_NO_SIRVIO" Type="float" Nullable="false" />
+    <Property Name="TIPO" Type="char" MaxLength="1" />
+    <Property Name="ESTADO_ACTUAL" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="FECHA_FIN" Type="datetime" />
+    <Property Name="I_S" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IMPRE" Type="char" MaxLength="1" />
+    <Property Name="CLASIFICACION" Type="char" MaxLength="1" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'JEEN.dbo.COMPARATIVO_LICITACIONES' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="COMPARATIVO_LICITACIONES">
+    <Key>
+      <PropertyRef Name="ID_COMPARATIVO" />
+    </Key>
+    <Property Name="ID_COMPARATIVO" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ID_CLIENTE" Type="int" />
+    <Property Name="ID_COMPETIDOR" Type="int" />
+    <Property Name="NO_LICITACION" Type="varchar" MaxLength="50" />
+    <Property Name="ID_PRODUCTO" Type="varchar" MaxLength="25" />
+    <Property Name="CANTIDAD" Type="float" />
+    <Property Name="PRECIO" Type="float" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'JEEN.dbo.COMPETIDOR_LICITACION' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="COMPETIDOR_LICITACION">
+    <Key>
+      <PropertyRef Name="ID_COMPETIDOR" />
+    </Key>
+    <Property Name="ID_COMPETIDOR" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NOMBRE" Type="varchar" MaxLength="50" />
+    <Property Name="DIRECCION" Type="varchar" MaxLength="80" />
+    <Property Name="TELEFONO" Type="varchar" MaxLength="25" />
+    <Property Name="MAIL" Type="varchar" MaxLength="50" />
+    <Property Name="NOTAS" Type="varchar" MaxLength="200" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'JEEN.dbo.CORTEPENDIENTE' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="CORTEPENDIENTE">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ID_VENTA" Type="int" />
+    <Property Name="FACTURA" Type="char" MaxLength="10" />
+    <Property Name="CLIENTE" Type="char" MaxLength="100" />
+    <Property Name="TOTAL" Type="float" />
+    <Property Name="TIPO" Type="char" MaxLength="50" />
+    <Property Name="FECHA" Type="datetime" />
+    <Property Name="SUCURSAL" Type="char" MaxLength="20" />
+    <Property Name="ESTADO" Type="char" MaxLength="1" />
+  </EntityType>
+  <EntityType Name="COTIZA_CLIEN">
+    <Key>
+      <PropertyRef Name="ID_COTIZA_CLIEN" />
+    </Key>
+    <Property Name="ID_COTIZA_CLIEN" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ID_CLIENTE" Type="int" />
+    <Property Name="ID_AGENTE" Type="int" />
+    <Property Name="FECHA" Type="datetime" />
+    <Property Name="TOTAL" Type="float" />
+    <Property Name="SUBTOTAL" Type="float" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'JEEN.dbo.COTIZA_CLIEN_DETALLE' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="COTIZA_CLIEN_DETALLE">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ID_PRODUCTO" Type="varchar" MaxLength="25" />
+    <Property Name="CANTIDAD" Type="float" />
+    <Property Name="PRECIO_VENTA" Type="float" />
+    <Property Name="ID_COTIZA_CLIEN" Type="int" />
+  </EntityType>
+  <EntityType Name="COTIZA_REQUI">
+    <Key>
+      <PropertyRef Name="ID_COTIZACION" />
+    </Key>
+    <Property Name="ID_COTIZACION" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ID_REQUISICION" Type="int" Nullable="false" />
+    <Property Name="ID_PROVEEDOR" Type="int" Nullable="false" />
+    <Property Name="ID_PRODUCTO" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="DESCRIPCION" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="CANTIDAD" Type="float" Nullable="false" />
+    <Property Name="DIAS_ENTREGA" Type="int" />
+    <Property Name="PRECIO" Type="float" />
+    <Property Name="FECHA" Type="datetime" Nullable="false" />
+    <Property Name="ESTADO_ACTUAL" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="NUMOC" Type="int" />
+    <Property Name="MONEDA" Type="varchar" MaxLength="15" />
+    <Property Name="FOLIO" Type="int" />
+    <Property Name="FOLIOREQUI" Type="int" />
+    <Property Name="NO_PEDIDO" Type="int" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'JEEN.dbo.CUENTA_VENTA' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="CUENTA_VENTA">
+    <Key>
+      <PropertyRef Name="ID_RELACION" />
+    </Key>
+    <Property Name="ID_RELACION" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ID_VENTA" Type="int" />
+    <Property Name="ID_CUENTA" Type="int" />
+    <Property Name="ESTADO" Type="char" MaxLength="1" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'JEEN.dbo.CUENTAS' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="CUENTAS">
+    <Key>
+      <PropertyRef Name="ID_CUENTA" />
+    </Key>
+    <Property Name="ID_CUENTA" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ID_CLIENTE" Type="int" />
+    <Property Name="ID_USUARIO" Type="varchar" MaxLength="50" />
+    <Property Name="FECHA" Type="datetime" />
+    <Property Name="DIAS_CREDITO" Type="int" />
+    <Property Name="FECHA_VENCE" Type="datetime" />
+    <Property Name="DESCUENTO" Type="float" />
+    <Property Name="TOTAL_COMPRA" Type="float" />
+    <Property Name="SUCURSAL" Type="char" MaxLength="15" />
+    <Property Name="PAGADA" Type="char" MaxLength="1" />
+    <Property Name="FOLIO" Type="varchar" MaxLength="15" />
+    <Property Name="DEUDA" Type="float" />
+    <Property Name="ID_VENTA" Type="int" />
+    <Property Name="DEUDA_ACTUAL" Type="float" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'JEEN.dbo.DESCUENTOS' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="DESCUENTOS">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID_DESCUENTO" Type="varchar" MaxLength="30" />
+    <Property Name="CLASIFICACION" Type="varchar" MaxLength="25" />
+    <Property Name="PORCENTAJE" Type="float" />
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityType Name="DETALLE_PEDIDO">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ID_PRODUCTO" Type="varchar" MaxLength="50" />
+    <Property Name="CANTIDAD" Type="float" />
+    <Property Name="ENTREGADO" Type="char" MaxLength="1" />
+    <Property Name="ID_PEDIDO" Type="int" />
+    <Property Name="DESCRIPCION" Type="varchar" MaxLength="100" />
+    <Property Name="ALMACEN" Type="varchar" MaxLength="2" />
+    <Property Name="MARCA" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'JEEN.dbo.DEV_GARANTIA' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="DEV_GARANTIA">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="numeric" Precision="24" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ID_PRODUCTO" Type="char" MaxLength="20" />
+    <Property Name="CANTIDAD" Type="float" />
+    <Property Name="ID_VENTA" Type="char" MaxLength="10" />
+    <Property Name="ID_GARANTIA" Type="char" MaxLength="10" />
+    <Property Name="FECHA" Type="datetime" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'JEEN.dbo.DEVOLUCION' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="DEVOLUCION">
+    <Key>
+      <PropertyRef Name="ID_DEV" />
+    </Key>
+    <Property Name="ID_DEV" Type="numeric" Precision="24" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NUM_ORDEN" Type="char" MaxLength="10" />
+    <Property Name="ID_ENTRADA" Type="char" MaxLength="10" />
+    <Property Name="ID_PRODUCTO" Type="char" MaxLength="10" />
+    <Property Name="CANTIDAD" Type="int" />
+    <Property Name="FECHA" Type="datetime" />
+    <Property Name="PROVEEDOR" Type="char" MaxLength="100" />
+    <Property Name="MOTIVO" Type="char" MaxLength="100" />
+    <Property Name="SUCURSAL" Type="char" MaxLength="10" />
+    <Property Name="FACT_PRO" Type="char" MaxLength="10" />
+    <Property Name="PRECIO" Type="char" MaxLength="53" />
+    <Property Name="TOT_DEV" Type="char" MaxLength="53" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'JEEN.dbo.DIREIMPOR' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="DIREIMPOR">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NOMBRE" Type="varchar" MaxLength="50" />
+    <Property Name="DIRECCION" Type="varchar" MaxLength="60" />
+    <Property Name="CD" Type="varchar" MaxLength="50" />
+    <Property Name="TEL1" Type="varchar" MaxLength="50" />
+    <Property Name="TEL2" Type="varchar" MaxLength="50" />
+    <Property Name="STATUS" Type="varchar" MaxLength="1" />
+  </EntityType>
+  <EntityType Name="DOLAR">
+    <Key>
+      <PropertyRef Name="ID_DOLAR" />
+    </Key>
+    <Property Name="ID_DOLAR" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FECHA" Type="datetime" />
+    <Property Name="COMPRA" Type="float" />
+    <Property Name="VENTA" Type="float" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'JEEN.dbo.DOMICILIOS' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="DOMICILIOS">
+    <Key>
+      <PropertyRef Name="ID_DOMICILIO" />
+    </Key>
+    <Property Name="ID_DOMICILIO" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NOM_CLIENTE" Type="varchar" MaxLength="100" />
+    <Property Name="DOMICILIO" Type="varchar" MaxLength="100" />
+    <Property Name="COLONIA" Type="varchar" MaxLength="50" />
+    <Property Name="TELEFONO" Type="varchar" MaxLength="10" />
+    <Property Name="FECHA" Type="datetime" />
+    <Property Name="DE_HORA" Type="char" MaxLength="5" />
+    <Property Name="A_HORA" Type="char" MaxLength="5" />
+    <Property Name="NOTA" Type="varchar" MaxLength="100" />
+    <Property Name="NUM_ARTICULOS" Type="char" MaxLength="10" />
+    <Property Name="ESTADO" Type="char" MaxLength="1" />
+    <Property Name="ZONA" Type="varchar" MaxLength="10" />
+    <Property Name="ID_REPA" Type="int" />
+    <Property Name="COMENTARIOS" Type="varchar" MaxLength="50" />
+    <Property Name="FECHA_FIN" Type="datetime" />
+    <Property Name="FECHA_ALTA" Type="datetime" />
+    <Property Name="USUARIO" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'JEEN.dbo.ENTRADA_PRODUCTO' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="ENTRADA_PRODUCTO">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="ID_ENTRADA" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ID_ENTRADA" Type="int" Nullable="false" />
+    <Property Name="ID_PRODUCTO" Type="varchar" MaxLength="50" />
+    <Property Name="CANTIDAD" Type="float" />
+    <Property Name="PRECIO" Type="float" />
+    <Property Name="MONEDA" Type="char" MaxLength="10" />
+    <Property Name="FECHA" Type="datetime" />
+    <Property Name="ID_SUCURSAL" Type="char" MaxLength="10" />
+    <Property Name="CODIGO_BARAS" Type="char" MaxLength="50" />
+    <Property Name="NUM_ORDEN" Type="int" />
+    <Property Name="FACT_PROV" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'JEEN.dbo.ENTRADA_RAPIDAS' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="ENTRADA_RAPIDAS">
+    <Key>
+      <PropertyRef Name="ID_ENTRADA" />
+    </Key>
+    <Property Name="ID_ENTRADA" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ID_ORDEN_RAPIDA" Type="int" />
+    <Property Name="FACTURA" Type="char" MaxLength="10" />
+    <Property Name="FECHA" Type="datetime" />
+    <Property Name="PROVEEDOR" Type="char" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="ENTRADAS">
+    <Key>
+      <PropertyRef Name="ID_ENTRADA" />
+    </Key>
+    <Property Name="ID_ENTRADA" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ID_PROVEEDOR" Type="int" Nullable="false" />
+    <Property Name="FECHA" Type="datetime" Nullable="false" />
+    <Property Name="TOTAL" Type="float" />
+    <Property Name="FACTURA" Type="varchar" MaxLength="50" />
+    <Property Name="ID_USUARIO" Type="char" MaxLength="10" />
+    <Property Name="NUM_ORDEN" Type="char" MaxLength="10" />
+    <Property Name="ID_ORDEN_COMPRA" Type="int" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'JEEN.dbo.ESTADO_CUENTA' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="ESTADO_CUENTA">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="ID_TIPO_CARGO" />
+      <PropertyRef Name="FECHA" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="CANTIDAD" Type="float" />
+    <Property Name="SALDO" Type="float" />
+    <Property Name="ID_TIPO_CARGO" Type="int" Nullable="false" />
+    <Property Name="ID_CARGO" Type="int" />
+    <Property Name="EFECTUADO" Type="varchar" MaxLength="1" />
+    <Property Name="FECHA" Type="datetime" Nullable="false" />
+    <Property Name="FECHA_VENCIMIENTO" Type="datetime" />
+    <Property Name="FECHA_VENCIMIENTO_NO_VACIA" Type="datetime" />
+    <Property Name="ID_ABONO" Type="int" />
+    <Property Name="ABONO" Type="float" />
+    <Property Name="FECHA_PAGO" Type="datetime" />
+    <Property Name="OBSERVACIONES" Type="varchar" MaxLength="150" />
+    <Property Name="ID_FACTURA" Type="int" />
+    <Property Name="ID_NOTA" Type="int" />
+    <Property Name="FECHA_CONTRARECIBO" Type="datetime" />
+    <Property Name="FECHA_COBRO" Type="datetime" />
+    <Property Name="CHEQUE" Type="varchar" MaxLength="100" />
+    <Property Name="BANCO" Type="varchar" MaxLength="100" />
+    <Property Name="ID_CLIENTE" Type="int" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'JEEN.dbo.EXISTENCIA_FIJA' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="EXISTENCIA_FIJA">
+    <Key>
+      <PropertyRef Name="ID_EXIS_FIJA" />
+    </Key>
+    <Property Name="ID_EXIS_FIJA" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ID_PRODUCTO" Type="varchar" MaxLength="25" />
+    <Property Name="CANTIDAD" Type="float" />
+  </EntityType>
+  <EntityType Name="EXISTENCIAS">
+    <Key>
+      <PropertyRef Name="ID_EXISTENCIA" />
+    </Key>
+    <Property Name="ID_EXISTENCIA" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ID_PRODUCTO" Type="varchar" MaxLength="25" />
+    <Property Name="CANTIDAD" Type="float" />
+    <Property Name="SUCURSAL" Type="char" MaxLength="15" />
+    <Property Name="LOCALIZACION" Type="char" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="EXISTENCIAS_TEMPORAL">
+    <Key>
+      <PropertyRef Name="ID_MOVEXISTENCIA" />
+    </Key>
+    <Property Name="ID_MOVEXISTENCIA" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ID_USUARIO" Type="int" />
+    <Property Name="FECHA" Type="datetime" />
+    <Property Name="MOTIVO" Type="char" MaxLength="70" />
+    <Property Name="ID_CLIENTE" Type="int" />
+  </EntityType>
+  <EntityType Name="EXISTENCIAS_TEMPORAL_DETALLES">
+    <Key>
+      <PropertyRef Name="ID_EXDETALLE" />
+    </Key>
+    <Property Name="ID_EXDETALLE" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ID_MOVEXISTENCIA" Type="int" Nullable="false" />
+    <Property Name="CANTIDAD" Type="float" />
+    <Property Name="ID_PRODUCTO" Type="char" MaxLength="25" Nullable="false" />
+    <Property Name="SUCURSAL" Type="char" MaxLength="20" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'JEEN.dbo.EXISTENCIASTEMPORALES' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="EXISTENCIASTEMPORALES">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ID_PRODUCTO" Type="varchar" MaxLength="25" />
+    <Property Name="CANTIDAD" Type="float" />
+    <Property Name="SUCURSAL" Type="varchar" MaxLength="30" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'JEEN.dbo.FactCan' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="FactCan">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ID_VENTA" Type="int" />
+    <Property Name="FOLIO" Type="varchar" MaxLength="10" />
+    <Property Name="Fecha" Type="datetime" />
+    <Property Name="ID_USUARIO" Type="varchar" MaxLength="10" />
+    <Property Name="ID_PROVEEDOR" Type="int" />
+    <Property Name="ID_CLIENTE" Type="int" />
+    <Property Name="PASA_FACTU" Type="char" MaxLength="30" />
+    <Property Name="NOMBRE" Type="char" MaxLength="100" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'JEEN.dbo.FACTPROVEEDOR' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="FACTPROVEEDOR">
+    <Key>
+      <PropertyRef Name="ID_FP" />
+    </Key>
+    <Property Name="ID_FP" Type="numeric" Precision="18" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NOMBRE" Type="char" MaxLength="10" />
+    <Property Name="NUM_ORDEN_COMPRA" Type="char" MaxLength="10" />
+    <Property Name="FACTURA_PROV" Type="char" MaxLength="10" />
+    <Property Name="TIPO" Type="char" MaxLength="10" />
+    <Property Name="TOTAL" Type="char" MaxLength="53" />
+    <Property Name="MONEDA" Type="char" MaxLength="10" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'JEEN.dbo.FACTURAS' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="FACTURAS">
+    <Key>
+      <PropertyRef Name="ID_FACTURA" />
+      <PropertyRef Name="ID_CLIENTE" />
+      <PropertyRef Name="FECHA" />
+      <PropertyRef Name="ID_USUARIO" />
+    </Key>
+    <Property Name="ID_FACTURA" Type="int" Nullable="false" />
+    <Property Name="ID_CLIENTE" Type="int" Nullable="false" />
+    <Property Name="FECHA" Type="datetime" Nullable="false" />
+    <Property Name="TOTAL" Type="float" />
+    <Property Name="ID_USUARIO" Type="char" MaxLength="10" Nullable="false" />
+    <Property Name="TOTAL_LETRAS" Type="varchar" MaxLength="200" />
+    <Property Name="ORDENCOMPRA" Type="varchar" MaxLength="20" />
+    <Property Name="SOLICITO" Type="varchar" MaxLength="100" />
+    <Property Name="ID_COMANDA" Type="int" />
+    <Property Name="ID_NOTA" Type="int" />
+    <Property Name="FORMA_PAGO" Type="char" MaxLength="20" />
+    <Property Name="CANCELADA" Type="char" MaxLength="1" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'JEEN.dbo.FOLIOSUC' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="FOLIOSUC">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FOLIO" Type="bigint" />
+    <Property Name="SUCURSAL" Type="varchar" MaxLength="25" />
+  </EntityType>
+  <EntityType Name="GARANTIAS">
+    <Key>
+      <PropertyRef Name="ID_GARANTIA" />
+    </Key>
+    <Property Name="ID_GARANTIA" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ID_VENTA" Type="int" />
+    <Property Name="FECHA" Type="datetime" />
+    <Property Name="ID_PRODUCTO" Type="char" MaxLength="25" />
+    <Property Name="CANTIDAD" Type="float" />
+    <Property Name="PRECIO" Type="float" />
+    <Property Name="IMPORTE" Type="float" />
+    <Property Name="DESCRIPCION" Type="varchar" MaxLength="100" />
+    <Property Name="ESTADO" Type="varchar" MaxLength="1" />
+    <Property Name="IDDET" Type="int" />
+    <Property Name="COMENTARIO" Type="varchar" MaxLength="600" />
+    <Property Name="TIPO" Type="varchar" MaxLength="20" />
+    <Property Name="REVUNO" Type="char" MaxLength="50" />
+    <Property Name="REVDOS" Type="char" MaxLength="50" />
+    <Property Name="COMEN" Type="char" MaxLength="50" />
+    <Property Name="CANT_ACEP" Type="char" MaxLength="10" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'JEEN.dbo.IMPCOMAN' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="IMPCOMAN">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ID_COMANDA" Type="int" />
+    <Property Name="FECHA" Type="datetime" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'JEEN.dbo.INVENTARIO_DETALLE' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="INVENTARIO_DETALLE">
+    <Key>
+      <PropertyRef Name="ESTADO_ACTUAL" />
+    </Key>
+    <Property Name="ID_PRODUCTO" Type="char" MaxLength="20" />
+    <Property Name="ID_INVENTARIO" Type="int" />
+    <Property Name="CANTIDAD" Type="float" />
+    <Property Name="ESTADO_ACTUAL" Type="char" MaxLength="1" Nullable="false" />
+  </EntityType>
+  <EntityType Name="INVENTARIOS">
+    <Key>
+      <PropertyRef Name="ID_INVENTARIO" />
+    </Key>
+    <Property Name="ID_INVENTARIO" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ID_SUCURSAL" Type="char" MaxLength="15" />
+    <Property Name="FECHA" Type="datetime" />
+    <Property Name="ESTADO_ACTUAL" Type="char" MaxLength="1" />
+  </EntityType>
+  <EntityType Name="JR_ALTERNOS">
+    <Key>
+      <PropertyRef Name="ALTERNO" />
+    </Key>
+    <Property Name="ALTERNO" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ID_REPARACION" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="ID_PRODUCTO1" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="ID_PRODUCTO2" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="CANTIDAD" Type="float" Nullable="false" />
+  </EntityType>
+  <EntityType Name="JR_TEMPORALES">
+    <Key>
+      <PropertyRef Name="TEMPORAL" />
+    </Key>
+    <Property Name="TEMPORAL" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ID_COMANDA" Type="int" Nullable="false" />
+    <Property Name="ID_REPARACION" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="ID_PRODUCTO" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="CANTIDAD" Type="float" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'JEEN.dbo.JUEGO_REPARACION' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="JUEGO_REPARACION">
+    <Key>
+      <PropertyRef Name="ID_REPARACION" />
+      <PropertyRef Name="ID_PRODUCTO" />
+      <PropertyRef Name="CANTIDAD" />
+    </Key>
+    <Property Name="ID_REPARACION" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="ID_PRODUCTO" Type="char" MaxLength="25" Nullable="false" />
+    <Property Name="CANTIDAD" Type="float" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'JEEN.dbo.LICITACIONES' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="LICITACIONES">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ID_PRODUCTO" Type="varchar" MaxLength="25" />
+    <Property Name="ID_CLIENTE" Type="int" />
+    <Property Name="PRECIO_VENTA" Type="float" />
+    <Property Name="FECHA_FIN" Type="datetime" />
+    <Property Name="ID_USUARIO_CAPTURO" Type="int" />
+    <Property Name="CANT_MIN" Type="int" />
+    <Property Name="NO_CONTRATO" Type="varchar" MaxLength="25" />
+    <Property Name="CANT_MAX" Type="int" />
+    <Property Name="NO_LICITACION" Type="varchar" MaxLength="25" />
+    <Property Name="FECHA_INICIO" Type="datetime" />
+  </EntityType>
+  <EntityType Name="MARCA">
+    <Key>
+      <PropertyRef Name="ID_MARCA" />
+    </Key>
+    <Property Name="ID_MARCA" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MARCA" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="MENSAJERO">
+    <Key>
+      <PropertyRef Name="IdMensajero" />
+    </Key>
+    <Property Name="IdMensajero" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nombre" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Apellidos" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Clave" Type="varchar" MaxLength="15" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'JEEN.dbo.MERMAS' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="MERMAS">
+    <Key>
+      <PropertyRef Name="ID_MERMA" />
+    </Key>
+    <Property Name="ID_MERMA" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ID_NOTA" Type="int" />
+    <Property Name="ID_PRODUCTO" Type="varchar" MaxLength="25" />
+    <Property Name="DESCRIPCION" Type="varchar" MaxLength="100" />
+    <Property Name="CANTIDAD" Type="float" />
+    <Property Name="FECHA" Type="datetime" />
+    <Property Name="CHEKADO" Type="char" MaxLength="1" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'JEEN.dbo.MOTIVOS_SCRAP' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="MOTIVOS_SCRAP">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MOTIVO" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="MSGAPTONER">
+    <Key>
+      <PropertyRef Name="ID_MENSAJE" />
+    </Key>
+    <Property Name="ID_MENSAJE" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ID_USUARIO_PARA" Type="varchar" MaxLength="50" />
+    <Property Name="ID_USUARIO_DE" Type="varchar" MaxLength="50" />
+    <Property Name="MENSAJE" Type="varchar" MaxLength="200" />
+    <Property Name="FECHA" Type="datetime" />
+    <Property Name="HORA" Type="char" MaxLength="2" />
+    <Property Name="MINUTOS" Type="char" MaxLength="2" />
+  </EntityType>
+  <EntityType Name="NOTA_CREDITO">
+    <Key>
+      <PropertyRef Name="ID_NOTA" />
+    </Key>
+    <Property Name="ID_NOTA" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IMPORTE" Type="float" />
+    <Property Name="NOMBRE" Type="varchar" MaxLength="150" />
+    <Property Name="TOTAL" Type="float" />
+    <Property Name="FECHA" Type="datetime" />
+    <Property Name="MOTIVOCAMBIO" Type="varchar" MaxLength="100" />
+    <Property Name="ID_VENTA" Type="int" />
+    <Property Name="ID_USUARIO" Type="varchar" MaxLength="50" />
+    <Property Name="LETRAS" Type="varchar" MaxLength="200" />
+    <Property Name="APLICADA" Type="varchar" MaxLength="1" />
+    <Property Name="ID_CLIENTE" Type="int" />
+    <Property Name="FOLIO" Type="varchar" MaxLength="10" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'JEEN.dbo.NOTA_CREDITO_PRODUCTO' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="NOTA_CREDITO_PRODUCTO">
+    <Key>
+      <PropertyRef Name="ID_NOTA" />
+      <PropertyRef Name="ID_PRODUCTO" />
+      <PropertyRef Name="CANTIDAD" />
+      <PropertyRef Name="PRECIO" />
+    </Key>
+    <Property Name="ID_NOTA" Type="int" Nullable="false" />
+    <Property Name="ID_PRODUCTO" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="DESCRIPCION" Type="char" MaxLength="100" />
+    <Property Name="CANTIDAD" Type="int" Nullable="false" />
+    <Property Name="PRECIO" Type="float" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'JEEN.dbo.NOTAS' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="NOTAS">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="ID_CLIENTE" />
+      <PropertyRef Name="FECHA" />
+      <PropertyRef Name="ID_USER" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="ID_CLIENTE" Type="int" Nullable="false" />
+    <Property Name="FECHA" Type="datetime" Nullable="false" />
+    <Property Name="TOTAL" Type="float" />
+    <Property Name="FECHA_PAGO" Type="datetime" />
+    <Property Name="DESCUENTO" Type="float" />
+    <Property Name="FACTURADA" Type="char" MaxLength="1" />
+    <Property Name="ID_USER" Type="int" Nullable="false" />
+    <Property Name="ID_FACTURA" Type="int" />
+    <Property Name="ID_COMANDA" Type="int" />
+    <Property Name="ORDENCOMPRA" Type="varchar" MaxLength="20" />
+    <Property Name="SOLICITO" Type="varchar" MaxLength="100" />
+    <Property Name="CREDITO" Type="char" MaxLength="1" />
+    <Property Name="ID_FORMA_PAGO" Type="int" />
+    <Property Name="BANCO" Type="varchar" MaxLength="30" />
+    <Property Name="CHEQUE" Type="varchar" MaxLength="30" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'JEEN.dbo.ORDEN' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="ORDEN">
+    <Key>
+      <PropertyRef Name="ID_ORDEN" />
+      <PropertyRef Name="CLIENTE" />
+      <PropertyRef Name="DIRECCION" />
+      <PropertyRef Name="FECHA" />
+      <PropertyRef Name="ID_USUARIO" />
+      <PropertyRef Name="TOTAL" />
+    </Key>
+    <Property Name="ID_ORDEN" Type="int" Nullable="false" />
+    <Property Name="CLIENTE" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="DIRECCION" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="FECHA" Type="datetime" Nullable="false" />
+    <Property Name="VENDEDOR" Type="varchar" MaxLength="50" />
+    <Property Name="FACTURADA" Type="char" MaxLength="1" />
+    <Property Name="ID_ESTADO" Type="int" />
+    <Property Name="ID_CLIENTE" Type="int" />
+    <Property Name="ID_USUARIO" Type="char" MaxLength="10" Nullable="false" />
+    <Property Name="ID_NOTA" Type="int" />
+    <Property Name="TOTAL" Type="float" Nullable="false" />
+    <Property Name="ORDENCOMPRA" Type="varchar" MaxLength="20" />
+    <Property Name="SOLICITO" Type="varchar" MaxLength="100" />
+    <Property Name="FORMA_PAGO" Type="char" MaxLength="10" />
+    <Property Name="CONFIRMADA" Type="char" MaxLength="1" />
+    <Property Name="COMENTARIOS" Type="varchar" MaxLength="200" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'JEEN.dbo.ORDEN_CANCE' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="ORDEN_CANCE">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="FECHA_HORA" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ORDEN" Type="int" />
+    <Property Name="TIPO" Type="char" MaxLength="1" />
+    <Property Name="COMENTARIO" Type="char" MaxLength="100" />
+    <Property Name="ID_USUARIO" Type="int" />
+    <Property Name="FECHA" Type="datetime" />
+    <Property Name="FECHA_HORA" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ORDEN_COMPRA">
+    <Key>
+      <PropertyRef Name="ID_ORDEN_COMPRA" />
+    </Key>
+    <Property Name="ID_ORDEN_COMPRA" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ID_PROVEEDOR" Type="int" />
+    <Property Name="FECHA" Type="datetime" />
+    <Property Name="TOTAL" Type="float" />
+    <Property Name="ENVIARA" Type="varchar" MaxLength="100" />
+    <Property Name="DISCOUNT" Type="float" />
+    <Property Name="FREIGHT" Type="float" />
+    <Property Name="TAX" Type="float" />
+    <Property Name="OTROS_CARGOS" Type="float" Nullable="false" />
+    <Property Name="COMENTARIO" Type="varchar" MaxLength="100" />
+    <Property Name="CONFIRMADA" Type="char" MaxLength="1" />
+    <Property Name="TIPO" Type="char" MaxLength="1" />
+    <Property Name="TIPO_COMPRA" Type="char" MaxLength="10" />
+    <Property Name="NUM_ORDEN" Type="int" />
+    <Property Name="MONEDA" Type="varchar" MaxLength="25" />
+    <Property Name="FACT_PROVE" Type="varchar" MaxLength="20" />
+    <Property Name="TOT_PRO" Type="float" />
+    <Property Name="ID_USUARIO" Type="int" />
+    <Property Name="REVISION" Type="int" Nullable="false" />
+    <Property Name="ID_USUARIO_AUT" Type="int" />
+    <Property Name="ESTADO" Type="char" MaxLength="1" />
+    <Property Name="CONTRARECIBO" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="FORMA_PAGO" Type="char" MaxLength="1" />
+    <Property Name="DIAS_CREDITO" Type="float" />
+    <Property Name="FACT_PROV" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'JEEN.dbo.ORDEN_COMPRA_DETALLE' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="ORDEN_COMPRA_DETALLE">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="SURTIDO" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ID_ORDEN_COMPRA" Type="int" />
+    <Property Name="ID_PRODUCTO" Type="varchar" MaxLength="25" />
+    <Property Name="DESCRIPCION" Type="varchar" MaxLength="200" />
+    <Property Name="CANTIDAD" Type="float" />
+    <Property Name="PRECIO" Type="float" />
+    <Property Name="DIAS_ENTREGA" Type="int" />
+    <Property Name="FECHA" Type="datetime" />
+    <Property Name="SURTIDO" Type="float" Nullable="false" />
+    <Property Name="FACT_PROVE" Type="varchar" MaxLength="20" />
+    <Property Name="NO_ENVIO" Type="varchar" MaxLength="20" />
+    <Property Name="NO_PEDIDO" Type="int" />
+  </EntityType>
+  <EntityType Name="ORDEN_RAPIDA">
+    <Key>
+      <PropertyRef Name="ID_ORDEN_RAPIDA" />
+    </Key>
+    <Property Name="ID_ORDEN_RAPIDA" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FECHA" Type="datetime" />
+    <Property Name="ID_PROVEEDOR" Type="int" />
+    <Property Name="MONEDA" Type="varchar" MaxLength="15" />
+    <Property Name="ESTADO" Type="char" MaxLength="1" />
+    <Property Name="RENTAS" Type="char" MaxLength="1" />
+    <Property Name="FAC_NOTA" Type="char" MaxLength="10" />
+    <Property Name="TOT_PROV" Type="char" MaxLength="10" />
+    <Property Name="COMENTARIO" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="RETENCION" Type="float" />
+    <Property Name="TOTAL_RETENCION" Type="float" />
+    <Property Name="COMENTARIO_SALID" Type="varchar" MaxLength="100" />
+    <Property Name="TIPOIMP" Type="varchar" MaxLength="50" />
+    <Property Name="TIP" Type="varchar" MaxLength="50" />
+    <Property Name="ID_USUARIO_MOD" Type="int" />
+    <Property Name="ID_USUARIO" Type="int" />
+    <Property Name="FECHA_MOD" Type="datetime" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'JEEN.dbo.ORDEN_RAPIDA_DETALLE' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="ORDEN_RAPIDA_DETALLE">
+    <Key>
+      <PropertyRef Name="IVA" />
+      <PropertyRef Name="IVARETENIDO" />
+      <PropertyRef Name="ISR" />
+      <PropertyRef Name="IVADIEZ" />
+      <PropertyRef Name="ISR2" />
+      <PropertyRef Name="NO_PROD" />
+      <PropertyRef Name="SURTIDO" />
+      <PropertyRef Name="CAN_RECIBIDA" />
+    </Key>
+    <Property Name="ID_ORDEN_RAPIDA" Type="int" />
+    <Property Name="ID_PRODUCTO" Type="varchar" MaxLength="25" />
+    <Property Name="PRECIO" Type="float" />
+    <Property Name="SUBTOTAL" Type="float" />
+    <Property Name="CANTIDAD" Type="float" />
+    <Property Name="IVA" Type="float" Nullable="false" />
+    <Property Name="TOTAL" Type="float" />
+    <Property Name="IVARETENIDO" Type="float" Nullable="false" />
+    <Property Name="ISR" Type="float" Nullable="false" />
+    <Property Name="IVADIEZ" Type="float" Nullable="false" />
+    <Property Name="ISR2" Type="float" Nullable="false" />
+    <Property Name="NO_PROD" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SURTIDO" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="CAN_RECIBIDA" Type="int" Nullable="false" />
+    <Property Name="FACTURA" Type="varchar" MaxLength="50" />
+    <Property Name="COMENTARIO_SALID" Type="char" MaxLength="100" />
+    <Property Name="TPIVA" Type="char" MaxLength="2" />
+    <Property Name="OTROS_IMP" Type="float" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'JEEN.dbo.ORDENES_NO_SURTIDAS' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="ORDENES_NO_SURTIDAS">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="ESTADO" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="ID_PRODUCTO" Type="varchar" MaxLength="25" />
+    <Property Name="DESCRIPCION" Type="varchar" MaxLength="100" />
+    <Property Name="PRECIO" Type="float" />
+    <Property Name="CANTIDAD" Type="float" />
+    <Property Name="TIPO" Type="varchar" MaxLength="1" />
+    <Property Name="NUM_ORDEN" Type="int" />
+    <Property Name="ESTADO" Type="varchar" MaxLength="1" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'JEEN.dbo.PAGO_OC' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="PAGO_OC">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ID_ORDEN" Type="int" />
+    <Property Name="TIPOPAGO" Type="varchar" MaxLength="50" />
+    <Property Name="BANCO" Type="varchar" MaxLength="50" />
+    <Property Name="NUMTRANS" Type="varchar" MaxLength="50" />
+    <Property Name="NUMCHEQUE" Type="varchar" MaxLength="50" />
+    <Property Name="CANTIDAD" Type="float" />
+    <Property Name="FECHA" Type="datetime" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'JEEN.dbo.PASSWORD' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="PASSWORD">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DEPT" Type="char" MaxLength="30" />
+    <Property Name="VENTA" Type="char" MaxLength="30" />
+    <Property Name="CLAVE" Type="char" MaxLength="10" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'JEEN.dbo.PED_CLIEN' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="PED_CLIEN">
+    <Key>
+      <PropertyRef Name="NO_PEDIDO" />
+    </Key>
+    <Property Name="NO_PEDIDO" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ID_CLIENTE" Type="int" />
+    <Property Name="USUARIO" Type="varchar" MaxLength="50" />
+    <Property Name="FECHA" Type="datetime" />
+    <Property Name="ESTADO" Type="char" MaxLength="1" />
+    <Property Name="FECHA_CAPTURA" Type="datetime" />
+    <Property Name="NO_ORDEN" Type="varchar" MaxLength="15" />
+    <Property Name="COMENTARIO" Type="varchar" MaxLength="300" />
+    <Property Name="FECHA_CIERRE" Type="datetime" />
+    <Property Name="FECHA_FACTURACION" Type="datetime" />
+  </EntityType>
+  <EntityType Name="PED_CLIEN_DETALLE">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ID_PRODUCTO" Type="varchar" MaxLength="25" />
+    <Property Name="NO_PEDIDO" Type="int" />
+    <Property Name="CANTIDAD_PEDIDA" Type="float" />
+    <Property Name="CANTIDAD_EXISTENCIA" Type="float" />
+    <Property Name="CANTIDAD_PENDIENTE" Type="float" />
+    <Property Name="CANT_ORIGINAL" Type="float" />
+    <Property Name="ACTIVO" Type="varchar" MaxLength="1" />
+    <Property Name="FINALIZADA" Type="char" MaxLength="1" />
+  </EntityType>
+  <EntityType Name="PEDIDO">
+    <Key>
+      <PropertyRef Name="ID_PEDIDO" />
+    </Key>
+    <Property Name="ID_PEDIDO" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SUCURSAL" Type="char" MaxLength="15" />
+    <Property Name="PIDIO" Type="varchar" MaxLength="50" />
+    <Property Name="FECHA" Type="datetime" />
+    <Property Name="TIPO" Type="char" MaxLength="1" />
+    <Property Name="COMENTARIO" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'JEEN.dbo.PEDIDO_VENTA' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="PEDIDO_VENTA">
+    <Key>
+      <PropertyRef Name="ID_Registro" />
+    </Key>
+    <Property Name="ID_Registro" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NO_PEDIDO" Type="int" />
+    <Property Name="ID_VENTA" Type="int" />
+  </EntityType>
+  <EntityType Name="PERDIDAS">
+    <Key>
+      <PropertyRef Name="Id_Perdida" />
+    </Key>
+    <Property Name="Id_Perdida" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Id_Producto" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="Id_Inventario" Type="int" Nullable="false" />
+    <Property Name="Fecha" Type="datetime" Nullable="false" />
+    <Property Name="Cantidad" Type="float" Nullable="false" />
+    <Property Name="Precio_Unitario" Type="float" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'JEEN.dbo.PhotosQuery' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="PhotosQuery">
+    <Key>
+      <PropertyRef Name="ID_PHOTO" />
+    </Key>
+    <Property Name="ID_PHOTO" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PHOTO" Type="image" />
+    <Property Name="NOTE" Type="varchar" MaxLength="300" />
+    <Property Name="ID_CLIENTE" Type="char" MaxLength="10" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'JEEN.dbo.PRESTAMOS_CARTUCHOS' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="PRESTAMOS_CARTUCHOS">
+    <Key>
+      <PropertyRef Name="ID_PRESTAMO" />
+    </Key>
+    <Property Name="ID_PRESTAMO" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="USUARIO" Type="int" />
+    <Property Name="SUCURSAL" Type="char" MaxLength="15" />
+    <Property Name="FECHA" Type="datetime" />
+    <Property Name="NOTAS" Type="varchar" MaxLength="200" />
+    <Property Name="ESTADO" Type="char" MaxLength="1" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'JEEN.dbo.PRESTAMOS_CARTUCHOS_DETALLE' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="PRESTAMOS_CARTUCHOS_DETALLE">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ID_PRESTAMO" Type="int" />
+    <Property Name="ID_PRODUCTO" Type="char" MaxLength="25" />
+    <Property Name="CANTIDAD" Type="float" />
+  </EntityType>
+  <EntityType Name="PRESTAMOS_CLIENTES">
+    <Key>
+      <PropertyRef Name="ID_PRESTAMO" />
+    </Key>
+    <Property Name="ID_PRESTAMO" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ID_CLIENTE" Type="int" />
+    <Property Name="FECHA_PRESTAMO" Type="datetime" />
+    <Property Name="FECHA_ENTREGA" Type="datetime" />
+    <Property Name="DEPOSITO" Type="float" />
+    <Property Name="NOTAS" Type="varchar" MaxLength="200" />
+    <Property Name="ESTADO" Type="char" MaxLength="1" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'JEEN.dbo.PRESTAMOS_CLIENTES_DETALLE' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="PRESTAMOS_CLIENTES_DETALLE">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="ESTADO" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ID_PRESTAMO" Type="int" />
+    <Property Name="ID_PRODUCTO" Type="varchar" MaxLength="25" />
+    <Property Name="CANTIDAD" Type="float" />
+    <Property Name="PRECIO_VENTA" Type="float" />
+    <Property Name="NO_SERIE" Type="varchar" MaxLength="50" />
+    <Property Name="CONT_INICIAL" Type="int" />
+    <Property Name="ESTADO" Type="char" MaxLength="1" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'JEEN.dbo.ProdPend' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="ProdPend">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ID_COMANDA" Type="int" />
+    <Property Name="ARTICULO" Type="int" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'JEEN.dbo.PRODUCCION' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="PRODUCCION">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="FECHA" />
+      <PropertyRef Name="ID_USER" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="FECHA" Type="datetime" Nullable="false" />
+    <Property Name="ID_USER" Type="int" Nullable="false" />
+    <Property Name="ID_USER_CONFIRMAR" Type="int" />
+    <Property Name="EFECTUADO" Type="char" MaxLength="1" />
+    <Property Name="COMENTARIOS" Type="varchar" MaxLength="200" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'JEEN.dbo.PRODUCCION_ENTRADAS' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="PRODUCCION_ENTRADAS">
+    <Key>
+      <PropertyRef Name="ID_PRODUCTO" />
+      <PropertyRef Name="CANTIDAD" />
+      <PropertyRef Name="PRECIO" />
+    </Key>
+    <Property Name="ID_PRODUCTO" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="CANTIDAD" Type="int" Nullable="false" />
+    <Property Name="PRECIO" Type="float" Nullable="false" />
+    <Property Name="ID_PRODUCCION" Type="int" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'JEEN.dbo.PRODUCCION_SALIDAS' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="PRODUCCION_SALIDAS">
+    <Key>
+      <PropertyRef Name="ID_PRODUCTO" />
+      <PropertyRef Name="CANTIDAD" />
+      <PropertyRef Name="PRECIO" />
+    </Key>
+    <Property Name="ID_PRODUCTO" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="CANTIDAD" Type="int" Nullable="false" />
+    <Property Name="PRECIO" Type="float" Nullable="false" />
+    <Property Name="ID_PRODUCCION" Type="int" />
+    <Property Name="CONFIRMADO" Type="char" MaxLength="1" />
+    <Property Name="CANTIDAD1" Type="int" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'JEEN.dbo.PRODUCCIONES_ALMACEN3' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="PRODUCCIONES_ALMACEN3">
+    <Key>
+      <PropertyRef Name="ID_FABRICACION" />
+    </Key>
+    <Property Name="ID_FABRICACION" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ID_PRODUCTO" Type="varchar" MaxLength="25" />
+    <Property Name="FECHA" Type="datetime" />
+    <Property Name="ID_USUARIO" Type="int" />
+    <Property Name="CANTIDAD" Type="float" />
+  </EntityType>
+  <EntityType Name="PRODUCTOS_CONSUMIBLES">
+    <Key>
+      <PropertyRef Name="ID_PRODUCTO" />
+    </Key>
+    <Property Name="ID_PRODUCTO" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="DESCRIPCION" Type="varchar" MaxLength="100" />
+    <Property Name="PRECIO" Type="float" />
+    <Property Name="NOTAS" Type="varchar" MaxLength="500" />
+    <Property Name="ID_PRODUCTO_CONSUMIBLE" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'JEEN.dbo.PROMO_CATEGO' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="PROMO_CATEGO">
+    <Key>
+      <PropertyRef Name="ID_PROMO" />
+    </Key>
+    <Property Name="ID_PROMO" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CATEGORIA" Type="varchar" MaxLength="25" />
+    <Property Name="CANTIDAD" Type="float" />
+    <Property Name="FECHA_VENCE" Type="datetime" />
+    <Property Name="PORCE_DESC" Type="float" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'JEEN.dbo.PROMO_PORCE' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="PROMO_PORCE">
+    <Key>
+      <PropertyRef Name="ID_PROMO" />
+    </Key>
+    <Property Name="ID_PROMO" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ID_PRODUCTO" Type="varchar" MaxLength="25" />
+    <Property Name="CANTIDAD" Type="float" />
+    <Property Name="PORCE_DESC" Type="float" />
+    <Property Name="FECHA_VENCE" Type="datetime" />
+  </EntityType>
+  <EntityType Name="PROMOCION">
+    <Key>
+      <PropertyRef Name="ID_PROMOCION" />
+    </Key>
+    <Property Name="ID_PROMOCION" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ID_PRODUCTO" Type="char" MaxLength="25" />
+    <Property Name="PRECIO_OFERTA" Type="float" Nullable="false" />
+    <Property Name="FECHA_FIN" Type="datetime" Nullable="false" />
+    <Property Name="TIPO" Type="varchar" MaxLength="50" />
+    <Property Name="ESTADO_ACTUAL" Type="char" MaxLength="1" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PROVEEDOR">
+    <Key>
+      <PropertyRef Name="ID_PROVEEDOR" />
+    </Key>
+    <Property Name="ID_PROVEEDOR" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NOMBRE" Type="varchar" MaxLength="100" />
+    <Property Name="DIRECCION" Type="varchar" MaxLength="100" />
+    <Property Name="COLONIA" Type="varchar" MaxLength="30" />
+    <Property Name="CIUDAD" Type="varchar" MaxLength="30" />
+    <Property Name="CP" Type="varchar" MaxLength="10" />
+    <Property Name="RFC" Type="varchar" MaxLength="30" />
+    <Property Name="TELEFONO1" Type="varchar" MaxLength="20" />
+    <Property Name="TELEFONO2" Type="varchar" MaxLength="20" />
+    <Property Name="TELEFONO3" Type="varchar" MaxLength="20" />
+    <Property Name="NOTAS" Type="varchar" MaxLength="300" />
+    <Property Name="ESTADO" Type="char" MaxLength="20" />
+    <Property Name="PAIS" Type="char" MaxLength="20" />
+    <Property Name="TRANS_BANCO" Type="varchar" MaxLength="100" />
+    <Property Name="TRANS_DIRECCION" Type="varchar" MaxLength="100" />
+    <Property Name="TRANS_CIUDAD" Type="varchar" MaxLength="100" />
+    <Property Name="TRANS_ROUTING" Type="varchar" MaxLength="100" />
+    <Property Name="TRANS_CUENTA" Type="varchar" MaxLength="100" />
+    <Property Name="TRANS_CLAVE_SWIFT" Type="varchar" MaxLength="100" />
+    <Property Name="ELIMINADO" Type="char" MaxLength="1" />
+    <Property Name="ALMACEN1" Type="varchar" MaxLength="1" />
+    <Property Name="ALMACEN2" Type="varchar" MaxLength="1" />
+    <Property Name="ALMACEN3" Type="varchar" MaxLength="1" />
+  </EntityType>
+  <EntityType Name="PROVEEDOR_ALMACEN1">
+    <Key>
+      <PropertyRef Name="ID_PROVEEDOR" />
+    </Key>
+    <Property Name="ID_PROVEEDOR" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NOMBRE" Type="varchar" MaxLength="100" />
+    <Property Name="TELEFONO" Type="varchar" MaxLength="15" />
+    <Property Name="MAIL" Type="varchar" MaxLength="50" />
+    <Property Name="DIRECCION" Type="varchar" MaxLength="150" />
+    <Property Name="IDENTIFICACION" Type="varchar" MaxLength="25" />
+    <Property Name="NUMERO_ID" Type="varchar" MaxLength="30" />
+  </EntityType>
+  <EntityType Name="PROVEEDOR_CONSUMO">
+    <Key>
+      <PropertyRef Name="ID_PROVEEDOR" />
+    </Key>
+    <Property Name="ID_PROVEEDOR" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NOMBRE" Type="varchar" MaxLength="100" />
+    <Property Name="DIRECCION" Type="varchar" MaxLength="50" />
+    <Property Name="COLONIA" Type="varchar" MaxLength="40" />
+    <Property Name="CIUDAD" Type="varchar" MaxLength="30" />
+    <Property Name="CP" Type="int" />
+    <Property Name="RFC" Type="varchar" MaxLength="30" />
+    <Property Name="TELEFONO1" Type="varchar" MaxLength="20" />
+    <Property Name="TELEFONO2" Type="varchar" MaxLength="20" />
+    <Property Name="NOTAS" Type="varchar" MaxLength="300" />
+    <Property Name="ESTADO" Type="char" MaxLength="20" />
+    <Property Name="PAIS" Type="char" MaxLength="20" />
+    <Property Name="ELIMINADO" Type="char" MaxLength="1" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'JEEN.dbo.RASTREOREQUI' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="RASTREOREQUI">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ID_REQUI" Type="int" />
+    <Property Name="SOLICITO" Type="varchar" MaxLength="50" />
+    <Property Name="CANTIDAD" Type="float" />
+    <Property Name="COMENTARIO" Type="varchar" MaxLength="300" />
+    <Property Name="FECHA" Type="datetime" />
+  </EntityType>
+  <EntityType Name="REEMP_INV">
+    <Key>
+      <PropertyRef Name="ID_REEMP" />
+    </Key>
+    <Property Name="ID_REEMP" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ID_PRODUCTO_DE" Type="varchar" MaxLength="25" />
+    <Property Name="ID_PRODUCTO_PARA" Type="varchar" MaxLength="25" />
+    <Property Name="CANTIDAD" Type="float" />
+    <Property Name="MOTIVO" Type="varchar" MaxLength="500" />
+    <Property Name="FECHA" Type="datetime" />
+    <Property Name="SUCURSAL" Type="varchar" MaxLength="15" />
+    <Property Name="ID_USUARIO" Type="int" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'JEEN.dbo.REPAS' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="REPAS">
+    <Key>
+      <PropertyRef Name="ID_REPA" />
+    </Key>
+    <Property Name="ID_REPA" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NOMBRE" Type="varchar" MaxLength="50" />
+    <Property Name="APELLIDOS" Type="varchar" MaxLength="50" />
+    <Property Name="CLAVE" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'JEEN.dbo.REPORTE_COMPRAS_ALM1' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="REPORTE_COMPRAS_ALM1">
+    <Key>
+      <PropertyRef Name="ID_REPORTE" />
+    </Key>
+    <Property Name="FECHA_DE" Type="datetime" />
+    <Property Name="FECHA_AL" Type="datetime" />
+    <Property Name="ID_REPORTE" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityType Name="REQUISICION">
+    <Key>
+      <PropertyRef Name="ID_REQUISICION" />
+    </Key>
+    <Property Name="ID_REQUISICION" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FECHA" Type="datetime" />
+    <Property Name="ID_PRODUCTO" Type="varchar" MaxLength="50" />
+    <Property Name="DESCRIPCION" Type="char" MaxLength="100" />
+    <Property Name="CANTIDAD" Type="float" />
+    <Property Name="ACTIVO" Type="char" MaxLength="1" />
+    <Property Name="CONTADOR" Type="int" />
+    <Property Name="COTIZADA" Type="char" MaxLength="1" />
+    <Property Name="ALMACEN" Type="varchar" MaxLength="2" />
+    <Property Name="URGENTE" Type="varchar" MaxLength="1" />
+    <Property Name="FOLIO" Type="int" />
+    <Property Name="MARCA" Type="varchar" MaxLength="50" />
+    <Property Name="COMENTARIO" Type="varchar" MaxLength="500" />
+    <Property Name="STATUS" Type="char" MaxLength="10" />
+    <Property Name="NO_PEDIDO" Type="int" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'JEEN.dbo.REQUISICION_ORDEN_RAPIDA' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="REQUISICION_ORDEN_RAPIDA">
+    <Key>
+      <PropertyRef Name="ID_REQUISICION" />
+      <PropertyRef Name="FECHA_ALTA" />
+    </Key>
+    <Property Name="ID_REQUISICION" Type="int" Nullable="false" />
+    <Property Name="DESCRIPCION" Type="varchar" MaxLength="500" />
+    <Property Name="NOTAS" Type="varchar" MaxLength="500" />
+    <Property Name="FECHA_ALTA" Type="datetime" Nullable="false" />
+    <Property Name="ACTIVO" Type="char" MaxLength="1" />
+    <Property Name="USUARIO" Type="varchar" MaxLength="500" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'JEEN.dbo.RESPALDOS_BD' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="RESPALDOS_BD">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FECHA" Type="datetime" />
+    <Property Name="NOMBRE_RESPALDO" Type="varchar" MaxLength="30" />
+  </EntityType>
+  <EntityType Name="REV_COMPRA_ALMACEN1">
+    <Key>
+      <PropertyRef Name="ID_REVISION" />
+    </Key>
+    <Property Name="ID_REVISION" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ID_PRODUCTO" Type="varchar" MaxLength="30" />
+    <Property Name="ID_PROVEEDOR" Type="int" />
+    <Property Name="CANTIDAD" Type="float" />
+    <Property Name="FECHA" Type="datetime" />
+    <Property Name="APROVADO" Type="char" MaxLength="1" />
+    <Property Name="FECHA_APROVADO" Type="datetime" />
+    <Property Name="CANTIDAD_APROVADA" Type="float" />
+    <Property Name="PRECIO_COMPRA" Type="float" />
+    <Property Name="GRUPO" Type="int" />
+    <Property Name="SUCURSAL" Type="varchar" MaxLength="25" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'JEEN.dbo.SALDO_FAVOR_PROVEEDOR' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="SALDO_FAVOR_PROVEEDOR">
+    <Key>
+      <PropertyRef Name="ID_SALDO" />
+      <PropertyRef Name="APLICADA" />
+    </Key>
+    <Property Name="ID_SALDO" Type="int" Nullable="false" />
+    <Property Name="ID_PROVEEDOR" Type="int" />
+    <Property Name="PROVEEDOR" Type="varchar" MaxLength="50" />
+    <Property Name="NUM_ORDEN" Type="int" />
+    <Property Name="TIPO" Type="char" MaxLength="1" />
+    <Property Name="ID_ORDEN_COMPRA" Type="int" />
+    <Property Name="TOTAL" Type="float" />
+    <Property Name="FECHA" Type="datetime" />
+    <Property Name="MOTIVO_CANCELACION" Type="varchar" MaxLength="100" />
+    <Property Name="APLICADA" Type="char" MaxLength="1" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'JEEN.dbo.SALIDAS' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="SALIDAS">
+    <Key>
+      <PropertyRef Name="ID_SALIDA" />
+    </Key>
+    <Property Name="ID_SALIDA" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ID_PRODUCTO" Type="varchar" MaxLength="25" />
+    <Property Name="PRECIO" Type="float" />
+    <Property Name="CANTIDAD" Type="float" />
+    <Property Name="JUSTIFICACION" Type="varchar" MaxLength="200" />
+    <Property Name="ID_USUARIO" Type="varchar" MaxLength="50" />
+    <Property Name="SUCURSAL" Type="char" MaxLength="15" />
+    <Property Name="FECHA" Type="datetime" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'JEEN.dbo.SalidasInvProd' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="SalidasInvProd">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="ID_PRODUCCION" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ID_PRODUCCION" Type="int" Nullable="false" />
+    <Property Name="ID_PRODUCTO" Type="varchar" MaxLength="25" />
+    <Property Name="CANTIDAD" Type="int" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'JEEN.dbo.SCRAP' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="SCRAP">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ID_COMANDA" Type="int" />
+    <Property Name="ID_PRODUCTO" Type="varchar" MaxLength="25" />
+    <Property Name="CANTIDAD" Type="float" />
+    <Property Name="MOTIVO" Type="varchar" MaxLength="50" />
+    <Property Name="COMENTARIO" Type="varchar" MaxLength="150" />
+    <Property Name="FECHA" Type="datetime" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'JEEN.dbo.SCRAP_SUCURSAL' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="SCRAP_SUCURSAL">
+    <Key>
+      <PropertyRef Name="ID_SCRAP" />
+      <PropertyRef Name="FECHA" />
+    </Key>
+    <Property Name="ID_SCRAP" Type="int" Nullable="false" />
+    <Property Name="ID_PRODUCTO" Type="varchar" MaxLength="25" />
+    <Property Name="CANTIDAD" Type="float" />
+    <Property Name="MOTIVO" Type="varchar" MaxLength="200" />
+    <Property Name="SUCURSAL" Type="varchar" MaxLength="25" />
+    <Property Name="FECHA" Type="datetime" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'JEEN.dbo.SEMANA' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="SEMANA">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="D1" Type="char" MaxLength="15" />
+    <Property Name="D2" Type="char" MaxLength="15" />
+    <Property Name="D3" Type="char" MaxLength="15" />
+    <Property Name="D4" Type="char" MaxLength="15" />
+    <Property Name="D5" Type="char" MaxLength="15" />
+    <Property Name="D6" Type="char" MaxLength="15" />
+    <Property Name="D7" Type="char" MaxLength="10" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'JEEN.dbo.SOLICITUD_NC' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="SOLICITUD_NC">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NOMBRE" Type="varchar" MaxLength="50" />
+    <Property Name="TOTAL" Type="float" />
+    <Property Name="FECHA" Type="datetime" />
+    <Property Name="MOTIVOCAMBIO" Type="varchar" MaxLength="100" />
+    <Property Name="ID_VENTA" Type="int" />
+    <Property Name="ID_USUARIO" Type="int" />
+    <Property Name="ID_CLIENTE" Type="int" />
+    <Property Name="AUTORIZADO" Type="varchar" MaxLength="1" />
+  </EntityType>
+  <EntityType Name="SUCURSALES">
+    <Key>
+      <PropertyRef Name="ID_SUCURSAL" />
+    </Key>
+    <Property Name="ID_SUCURSAL" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NOMBRE" Type="varchar" MaxLength="25" />
+    <Property Name="CALLE" Type="varchar" MaxLength="100" />
+    <Property Name="COLONIA" Type="varchar" MaxLength="50" />
+    <Property Name="CIUDAD" Type="varchar" MaxLength="50" />
+    <Property Name="ESTADO" Type="varchar" MaxLength="50" />
+    <Property Name="TELEFONO" Type="varchar" MaxLength="50" />
+    <Property Name="ELIMINADO" Type="char" MaxLength="1" />
+    <Property Name="DISTINTIVO" Type="varchar" MaxLength="3" />
+    <Property Name="IVA" Type="int" />
+    <Property Name="CP" Type="int" />
+    <Property Name="APLICA_PROMO" Type="char" MaxLength="1" />
+  </EntityType>
+  <EntityType Name="SURTIDOS">
+    <Key>
+      <PropertyRef Name="SURTIDO" />
+    </Key>
+    <Property Name="SURTIDO" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SUCURSAL" Type="char" MaxLength="15" Nullable="false" />
+    <Property Name="FECHA" Type="datetime" Nullable="false" />
+    <Property Name="ID_PRODUCTO" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="CANTIDAD" Type="float" Nullable="false" />
+    <Property Name="ESTADO_ACTUAL" Type="char" MaxLength="1" Nullable="false" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'JEEN.dbo.TablaPruebaImagen' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="TablaPruebaImagen">
+    <Key>
+      <PropertyRef Name="imagen" />
+    </Key>
+    <Property Name="imagen" Type="image" Nullable="false" />
+    <Property Name="imagen1" Type="image" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'JEEN.dbo.TPAGOS_OC' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="TPAGOS_OC">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DESCRIPCION" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'JEEN.dbo.TRASPASO_DETALLE' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="TRASPASO_DETALLE">
+    <Key>
+      <PropertyRef Name="ID_TRASPASO_DETALLE" />
+      <PropertyRef Name="ESTADO" />
+    </Key>
+    <Property Name="ID_TRASPASO_DETALLE" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ID_TRASPASO" Type="int" />
+    <Property Name="ID_PRODUCTO" Type="char" MaxLength="25" />
+    <Property Name="CANTIDAD" Type="float" />
+    <Property Name="ESTADO" Type="char" MaxLength="1" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TRASPASOS">
+    <Key>
+      <PropertyRef Name="ID_TRASPASO" />
+    </Key>
+    <Property Name="ID_TRASPASO" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SUCURSAL_DE" Type="char" MaxLength="15" />
+    <Property Name="SUCURSAL_AL" Type="char" MaxLength="15" />
+    <Property Name="FECHA" Type="datetime" />
+  </EntityType>
+  <EntityType Name="USUARIOS">
+    <Key>
+      <PropertyRef Name="Numero" />
+    </Key>
+    <Property Name="Numero" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ID_USUARIO" Type="int" Nullable="false" />
+    <Property Name="NOMBRE" Type="varchar" MaxLength="50" />
+    <Property Name="APELLIDOS" Type="varchar" MaxLength="50" />
+    <Property Name="PUESTO" Type="varchar" MaxLength="20" />
+    <Property Name="PASSWORD" Type="char" MaxLength="15" />
+    <Property Name="ID_SUCURSAL" Type="int" />
+    <Property Name="ESTADO" Type="char" MaxLength="1" />
+    <Property Name="Mail" Type="varchar" MaxLength="50" />
+    <Property Name="MailPass" Type="varchar" MaxLength="10" />
+    <Property Name="Pe1" Type="char" MaxLength="1" />
+    <Property Name="Pe2" Type="char" MaxLength="1" />
+    <Property Name="Pe3" Type="char" MaxLength="1" />
+    <Property Name="Pe4" Type="char" MaxLength="1" />
+    <Property Name="Pe5" Type="char" MaxLength="1" />
+    <Property Name="Pe6" Type="char" MaxLength="1" />
+    <Property Name="Pe7" Type="char" MaxLength="1" />
+    <Property Name="Pe8" Type="char" MaxLength="1" />
+    <Property Name="Pe9" Type="char" MaxLength="1" />
+    <Property Name="Pe10" Type="char" MaxLength="1" />
+    <Property Name="Pe11" Type="char" MaxLength="1" />
+    <Property Name="Pe12" Type="char" MaxLength="1" />
+    <Property Name="Pe13" Type="char" MaxLength="1" />
+    <Property Name="Pe14" Type="char" MaxLength="1" />
+    <Property Name="Pe15" Type="char" MaxLength="1" />
+    <Property Name="Pe16" Type="char" MaxLength="1" />
+    <Property Name="Pe17" Type="char" MaxLength="1" />
+    <Property Name="Pe18" Type="char" MaxLength="1" />
+    <Property Name="Pe19" Type="char" MaxLength="1" />
+    <Property Name="Pe20" Type="char" MaxLength="1" />
+    <Property Name="Pe21" Type="char" MaxLength="1" />
+    <Property Name="Pe22" Type="char" MaxLength="1" />
+    <Property Name="Pe23" Type="char" MaxLength="1" />
+    <Property Name="Pe24" Type="char" MaxLength="1" />
+    <Property Name="Pe25" Type="char" MaxLength="1" />
+    <Property Name="Pe26" Type="char" MaxLength="1" />
+    <Property Name="Pe27" Type="char" MaxLength="1" />
+    <Property Name="Pe28" Type="char" MaxLength="1" />
+    <Property Name="Pe29" Type="char" MaxLength="1" />
+    <Property Name="Pe30" Type="char" MaxLength="1" />
+    <Property Name="Pe31" Type="char" MaxLength="1" />
+    <Property Name="Pe32" Type="char" MaxLength="1" />
+    <Property Name="Pe33" Type="char" MaxLength="1" />
+    <Property Name="Pe34" Type="char" MaxLength="1" />
+    <Property Name="Pe35" Type="char" MaxLength="1" />
+    <Property Name="Pe36" Type="char" MaxLength="1" />
+    <Property Name="Pe37" Type="char" MaxLength="1" />
+    <Property Name="Pe38" Type="char" MaxLength="1" />
+    <Property Name="Pe39" Type="char" MaxLength="1" />
+    <Property Name="Pe40" Type="char" MaxLength="1" />
+    <Property Name="Pe41" Type="char" MaxLength="1" />
+    <Property Name="Pe42" Type="char" MaxLength="1" />
+    <Property Name="Pe43" Type="char" MaxLength="1" />
+    <Property Name="Pe44" Type="char" MaxLength="1" />
+    <Property Name="Pe45" Type="char" MaxLength="1" />
+    <Property Name="Pe46" Type="char" MaxLength="1" />
+    <Property Name="Pe47" Type="char" MaxLength="1" />
+    <Property Name="Pe48" Type="char" MaxLength="1" />
+    <Property Name="Pe49" Type="char" MaxLength="1" />
+    <Property Name="Pe50" Type="char" MaxLength="1" />
+    <Property Name="Pe51" Type="char" MaxLength="1" />
+    <Property Name="Pe52" Type="char" MaxLength="1" />
+    <Property Name="Pe53" Type="char" MaxLength="1" />
+    <Property Name="Pe54" Type="char" MaxLength="1" />
+    <Property Name="Pe55" Type="char" MaxLength="1" />
+    <Property Name="Pe56" Type="char" MaxLength="1" />
+    <Property Name="Pe57" Type="char" MaxLength="1" />
+    <Property Name="Pe58" Type="char" MaxLength="1" />
+    <Property Name="Pe59" Type="char" MaxLength="1" />
+    <Property Name="Pe60" Type="char" MaxLength="1" />
+    <Property Name="Pe61" Type="char" MaxLength="1" />
+    <Property Name="Pe62" Type="char" MaxLength="1" />
+    <Property Name="Pe63" Type="char" MaxLength="1" />
+    <Property Name="Pe64" Type="char" MaxLength="1" />
+    <Property Name="Pe65" Type="char" MaxLength="1" />
+    <Property Name="Pe66" Type="char" MaxLength="1" />
+    <Property Name="Pe67" Type="char" MaxLength="1" />
+    <Property Name="Pe68" Type="char" MaxLength="1" />
+    <Property Name="Pe69" Type="char" MaxLength="1" />
+    <Property Name="Pe70" Type="char" MaxLength="1" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'JEEN.dbo.VALE_CAJA' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="VALE_CAJA">
+    <Key>
+      <PropertyRef Name="ID_VALE" />
+    </Key>
+    <Property Name="ID_VALE" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ID_VENTA" Type="int" />
+    <Property Name="IMPORTE" Type="float" />
+    <Property Name="FECHA" Type="datetime" />
+    <Property Name="APLICADO" Type="varchar" MaxLength="1" />
+    <Property Name="ID_USUARIO" Type="int" />
+    <Property Name="CANTIDAD" Type="int" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'JEEN.dbo.Venta_Especial' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Venta_Especial">
+    <Key>
+      <PropertyRef Name="Numero" />
+    </Key>
+    <Property Name="Numero" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Clave" Type="varchar" MaxLength="10" />
+    <Property Name="Fecha" Type="datetime" />
+    <Property Name="Cumplido" Type="char" MaxLength="1" />
+  </EntityType>
+  <EntityType Name="VENTAS">
+    <Key>
+      <PropertyRef Name="ID_VENTA" />
+    </Key>
+    <Property Name="ID_VENTA" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ID_CLIENTE" Type="int" />
+    <Property Name="NOMBRE" Type="varchar" MaxLength="100" />
+    <Property Name="TOTAL" Type="float" />
+    <Property Name="DESCUENTO" Type="float" />
+    <Property Name="FECHA" Type="datetime" />
+    <Property Name="ID_USUARIO" Type="varchar" MaxLength="50" />
+    <Property Name="FACTURADO" Type="char" MaxLength="1" />
+    <Property Name="IVA" Type="float" />
+    <Property Name="SUBTOTAL" Type="float" />
+    <Property Name="TOTAL_LETRA" Type="char" MaxLength="200" />
+    <Property Name="FECHA_HOY" Type="datetime" />
+    <Property Name="DIA_HOY" Type="char" MaxLength="2" />
+    <Property Name="MES_HOY" Type="char" MaxLength="10" />
+    <Property Name="AÑO_HOY" Type="char" MaxLength="4" />
+    <Property Name="FECHA_PAGARE" Type="datetime" />
+    <Property Name="DIA_PAGARE" Type="char" MaxLength="2" />
+    <Property Name="MES_PAGARE" Type="char" MaxLength="10" />
+    <Property Name="AÑO_PAGARE" Type="char" MaxLength="4" />
+    <Property Name="CANTIDAD_PAGARE" Type="decimal" Precision="18" Scale="8" />
+    <Property Name="INTERES" Type="decimal" Precision="18" Scale="8" />
+    <Property Name="FORMA_PAGO" Type="char" MaxLength="30" />
+    <Property Name="UNA_EXIBICION" Type="char" MaxLength="1" />
+    <Property Name="PARCIALIDADES" Type="char" MaxLength="1" />
+    <Property Name="SUCURSAL" Type="char" MaxLength="15" />
+    <Property Name="DIAS_CREDITO" Type="int" />
+    <Property Name="FECHA_VENCE" Type="datetime" />
+    <Property Name="TIPO_PAGO" Type="char" MaxLength="1" />
+    <Property Name="FOLIO" Type="varchar" MaxLength="10" />
+    <Property Name="COMENTARIO" Type="varchar" MaxLength="100" />
+    <Property Name="NOOC" Type="varchar" MaxLength="15" />
+    <Property Name="FECHA_FACTURA" Type="datetime" />
+    <Property Name="F_ELECTRO" Type="varchar" MaxLength="250" />
+    <Property Name="EFECTO_COMPROBANTE" Type="char" MaxLength="1" />
+    <Property Name="PEDIMENTO_ADUANA" Type="varchar" MaxLength="300" />
+    <Property Name="FECHA_PEDIMENTO" Type="datetime" />
+    <Property Name="NOMBRE_ADUANA" Type="varchar" MaxLength="600" />
+    <Property Name="NO_APROBACION" Type="varchar" MaxLength="14" />
+    <Property Name="SEC_FACTURA" Type="int" />
+    <Property Name="FLAG_CANCELADO" Type="char" MaxLength="1" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'JEEN.dbo.VENTAS_DETALLE' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="VENTAS_DETALLE">
+    <Key>
+      <PropertyRef Name="ID_GARANTIA" />
+      <PropertyRef Name="IDDET" />
+      <PropertyRef Name="IMPORTE" />
+    </Key>
+    <Property Name="ID_VENTA" Type="int" />
+    <Property Name="ID_PRODUCTO" Type="char" MaxLength="25" />
+    <Property Name="DESCRIPCION" Type="varchar" MaxLength="100" />
+    <Property Name="CANTIDAD" Type="float" />
+    <Property Name="PRECIO_VENTA" Type="float" />
+    <Property Name="PRECIO_COSTO" Type="float" />
+    <Property Name="GANANCIA" Type="float" />
+    <Property Name="ID_GARANTIA" Type="int" Nullable="false" />
+    <Property Name="IDDET" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NO_COM_AT" Type="varchar" MaxLength="15" />
+    <Property Name="IMPORTE" Type="float" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="JEENModelStoreContainer">
+    <EntitySet Name="ASISTENCIA_TECNICA" EntityType="Self.ASISTENCIA_TECNICA" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CLIENTE" EntityType="Self.CLIENTE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="COBRO_MCIA" EntityType="Self.COBRO_MCIA" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="COBRO_MCIA_DETALLE" EntityType="Self.COBRO_MCIA_DETALLE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="COMANDAS_2" EntityType="Self.COMANDAS_2" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="COMANDAS_DETALLES_2" EntityType="Self.COMANDAS_DETALLES_2" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="COTIZA_CLIEN" EntityType="Self.COTIZA_CLIEN" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="COTIZA_REQUI" EntityType="Self.COTIZA_REQUI" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DETALLE_PEDIDO" EntityType="Self.DETALLE_PEDIDO" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DOLAR" EntityType="Self.DOLAR" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ENTRADAS" EntityType="Self.ENTRADAS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EXISTENCIAS" EntityType="Self.EXISTENCIAS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EXISTENCIAS_TEMPORAL" EntityType="Self.EXISTENCIAS_TEMPORAL" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EXISTENCIAS_TEMPORAL_DETALLES" EntityType="Self.EXISTENCIAS_TEMPORAL_DETALLES" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="GARANTIAS" EntityType="Self.GARANTIAS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="INVENTARIOS" EntityType="Self.INVENTARIOS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="JR_ALTERNOS" EntityType="Self.JR_ALTERNOS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="JR_TEMPORALES" EntityType="Self.JR_TEMPORALES" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MARCA" EntityType="Self.MARCA" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MENSAJERO" EntityType="Self.MENSAJERO" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MSGAPTONER" EntityType="Self.MSGAPTONER" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NOTA_CREDITO" EntityType="Self.NOTA_CREDITO" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ORDEN_COMPRA" EntityType="Self.ORDEN_COMPRA" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ORDEN_RAPIDA" EntityType="Self.ORDEN_RAPIDA" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PED_CLIEN_DETALLE" EntityType="Self.PED_CLIEN_DETALLE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PEDIDO" EntityType="Self.PEDIDO" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PERDIDAS" EntityType="Self.PERDIDAS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PRESTAMOS_CLIENTES" EntityType="Self.PRESTAMOS_CLIENTES" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PRODUCTOS_CONSUMIBLES" EntityType="Self.PRODUCTOS_CONSUMIBLES" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PROMOCION" EntityType="Self.PROMOCION" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PROVEEDOR" EntityType="Self.PROVEEDOR" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PROVEEDOR_ALMACEN1" EntityType="Self.PROVEEDOR_ALMACEN1" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PROVEEDOR_CONSUMO" EntityType="Self.PROVEEDOR_CONSUMO" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="REEMP_INV" EntityType="Self.REEMP_INV" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="REQUISICION" EntityType="Self.REQUISICION" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="REV_COMPRA_ALMACEN1" EntityType="Self.REV_COMPRA_ALMACEN1" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SUCURSALES" EntityType="Self.SUCURSALES" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SURTIDOS" EntityType="Self.SURTIDOS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TRASPASOS" EntityType="Self.TRASPASOS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="USUARIOS" EntityType="Self.USUARIOS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="VENTAS" EntityType="Self.VENTAS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ABONOS_CUENTA" EntityType="Self.ABONOS_CUENTA" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [ABONOS_CUENTA].[ID_ABONO] AS [ID_ABONO], 
+    [ABONOS_CUENTA].[ID_CLIENTE] AS [ID_CLIENTE], 
+    [ABONOS_CUENTA].[CANT_ABONO] AS [CANT_ABONO], 
+    [ABONOS_CUENTA].[FECHA] AS [FECHA], 
+    [ABONOS_CUENTA].[ID_USUARIO] AS [ID_USUARIO], 
+    [ABONOS_CUENTA].[NO_CHEQUE] AS [NO_CHEQUE], 
+    [ABONOS_CUENTA].[BANCO] AS [BANCO], 
+    [ABONOS_CUENTA].[FECHA_CHEQUE] AS [FECHA_CHEQUE], 
+    [ABONOS_CUENTA].[EFECTIVO] AS [EFECTIVO], 
+    [ABONOS_CUENTA].[ID_CUENTA] AS [ID_CUENTA], 
+    [ABONOS_CUENTA].[REFERENCIA] AS [REFERENCIA], 
+    [ABONOS_CUENTA].[DEPOSITO_TOTAL] AS [DEPOSITO_TOTAL], 
+    [ABONOS_CUENTA].[DEUDA_ACTUAL] AS [DEUDA_ACTUAL], 
+    [ABONOS_CUENTA].[CREDITO_DISPO] AS [CREDITO_DISPO], 
+    [ABONOS_CUENTA].[ID_VENTA] AS [ID_VENTA], 
+    [ABONOS_CUENTA].[FOLIO] AS [FOLIO], 
+    [ABONOS_CUENTA].[FECHA_ALTA] AS [FECHA_ALTA]
+    FROM [dbo].[ABONOS_CUENTA] AS [ABONOS_CUENTA]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="ABONOS_OC_CANCELADOS" EntityType="Self.ABONOS_OC_CANCELADOS" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [ABONOS_OC_CANCELADOS].[ID_ABONO] AS [ID_ABONO], 
+    [ABONOS_OC_CANCELADOS].[ID_PROVEEDOR] AS [ID_PROVEEDOR], 
+    [ABONOS_OC_CANCELADOS].[CANT_ABONO] AS [CANT_ABONO], 
+    [ABONOS_OC_CANCELADOS].[NO_CHEQUE] AS [NO_CHEQUE], 
+    [ABONOS_OC_CANCELADOS].[BANCO] AS [BANCO], 
+    [ABONOS_OC_CANCELADOS].[CANTIDAD] AS [CANTIDAD], 
+    [ABONOS_OC_CANCELADOS].[NUMTRANS] AS [NUMTRANS], 
+    [ABONOS_OC_CANCELADOS].[NUMCHEQUE] AS [NUMCHEQUE], 
+    [ABONOS_OC_CANCELADOS].[NUM_ORDEN] AS [NUM_ORDEN], 
+    [ABONOS_OC_CANCELADOS].[TIPO] AS [TIPO], 
+    [ABONOS_OC_CANCELADOS].[ID_ORDEN] AS [ID_ORDEN], 
+    [ABONOS_OC_CANCELADOS].[TIPOPAGO] AS [TIPOPAGO], 
+    [ABONOS_OC_CANCELADOS].[FECHA] AS [FECHA], 
+    [ABONOS_OC_CANCELADOS].[PROVEEDOR] AS [PROVEEDOR], 
+    [ABONOS_OC_CANCELADOS].[USR_CANCELO] AS [USR_CANCELO], 
+    [ABONOS_OC_CANCELADOS].[FECHA_CANCELACION] AS [FECHA_CANCELACION]
+    FROM [dbo].[ABONOS_OC_CANCELADOS] AS [ABONOS_OC_CANCELADOS]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="ABONOS_PAGO_OC" EntityType="Self.ABONOS_PAGO_OC" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [ABONOS_PAGO_OC].[ID_ABONO] AS [ID_ABONO], 
+    [ABONOS_PAGO_OC].[ID_PROVEEDOR] AS [ID_PROVEEDOR], 
+    [ABONOS_PAGO_OC].[CANT_ABONO] AS [CANT_ABONO], 
+    [ABONOS_PAGO_OC].[NO_CHEQUE] AS [NO_CHEQUE], 
+    [ABONOS_PAGO_OC].[BANCO] AS [BANCO], 
+    [ABONOS_PAGO_OC].[CANTIDAD] AS [CANTIDAD], 
+    [ABONOS_PAGO_OC].[NUMTRANS] AS [NUMTRANS], 
+    [ABONOS_PAGO_OC].[NUMCHEQUE] AS [NUMCHEQUE], 
+    [ABONOS_PAGO_OC].[NUM_ORDEN] AS [NUM_ORDEN], 
+    [ABONOS_PAGO_OC].[TIPO] AS [TIPO], 
+    [ABONOS_PAGO_OC].[ID_ORDEN] AS [ID_ORDEN], 
+    [ABONOS_PAGO_OC].[TIPOPAGO] AS [TIPOPAGO], 
+    [ABONOS_PAGO_OC].[FECHA] AS [FECHA], 
+    [ABONOS_PAGO_OC].[PROVEEDOR] AS [PROVEEDOR]
+    FROM [dbo].[ABONOS_PAGO_OC] AS [ABONOS_PAGO_OC]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="ALMACEN1" EntityType="Self.ALMACEN1" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [ALMACEN1].[ID_PRODUCTO] AS [ID_PRODUCTO], 
+    [ALMACEN1].[DESCRIPCION] AS [DESCRIPCION], 
+    [ALMACEN1].[ID_DESCUENTO] AS [ID_DESCUENTO], 
+    [ALMACEN1].[C_MINIMA] AS [C_MINIMA], 
+    [ALMACEN1].[C_MAXIMA] AS [C_MAXIMA], 
+    [ALMACEN1].[TIPO] AS [TIPO], 
+    [ALMACEN1].[VENTA_WEB] AS [VENTA_WEB], 
+    [ALMACEN1].[MARCA] AS [MARCA], 
+    [ALMACEN1].[MATERIAL] AS [MATERIAL], 
+    [ALMACEN1].[COLOR] AS [COLOR], 
+    [ALMACEN1].[FOTO_FRENTE] AS [FOTO_FRENTE], 
+    [ALMACEN1].[FOTO_LADO] AS [FOTO_LADO], 
+    [ALMACEN1].[GANANCIA] AS [GANANCIA], 
+    [ALMACEN1].[PRECIO_COSTO] AS [PRECIO_COSTO], 
+    [ALMACEN1].[PRECIO_COSTO2] AS [PRECIO_COSTO2], 
+    [ALMACEN1].[PRECIO_VENTA] AS [PRECIO_VENTA], 
+    [ALMACEN1].[ID] AS [ID], 
+    [ALMACEN1].[LOCALIZACION] AS [LOCALIZACION], 
+    [ALMACEN1].[PRECIO_EN] AS [PRECIO_EN], 
+    [ALMACEN1].[USR_ALTA] AS [USR_ALTA], 
+    [ALMACEN1].[FECHA_ALTA] AS [FECHA_ALTA], 
+    [ALMACEN1].[USR_MOD] AS [USR_MOD], 
+    [ALMACEN1].[FECHA_MOD] AS [FECHA_MOD], 
+    [ALMACEN1].[CATEGORIA] AS [CATEGORIA], 
+    [ALMACEN1].[ESPECIE] AS [ESPECIE]
+    FROM [dbo].[ALMACEN1] AS [ALMACEN1]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="ALMACEN3" EntityType="Self.ALMACEN3" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [ALMACEN3].[NUM] AS [NUM], 
+    [ALMACEN3].[ID_PRODUCTO] AS [ID_PRODUCTO], 
+    [ALMACEN3].[DESCRIPCION] AS [DESCRIPCION], 
+    [ALMACEN3].[ID_DESCUENTO] AS [ID_DESCUENTO], 
+    [ALMACEN3].[C_MINIMA] AS [C_MINIMA], 
+    [ALMACEN3].[C_MAXIMA] AS [C_MAXIMA], 
+    [ALMACEN3].[TIPO] AS [TIPO], 
+    [ALMACEN3].[VENTA_WEB] AS [VENTA_WEB], 
+    [ALMACEN3].[MARCA] AS [MARCA], 
+    [ALMACEN3].[MATERIAL] AS [MATERIAL], 
+    [ALMACEN3].[COLOR] AS [COLOR], 
+    [ALMACEN3].[FOTO_FRENTE] AS [FOTO_FRENTE], 
+    [ALMACEN3].[FOTO_LADO] AS [FOTO_LADO], 
+    [ALMACEN3].[GANANCIA] AS [GANANCIA], 
+    [ALMACEN3].[PRECIO_COSTO] AS [PRECIO_COSTO], 
+    [ALMACEN3].[CLASIFICACION] AS [CLASIFICACION], 
+    [ALMACEN3].[PRECIO_COSTO2] AS [PRECIO_COSTO2], 
+    [ALMACEN3].[LOCALIZACION] AS [LOCALIZACION], 
+    [ALMACEN3].[PRECIO_EN] AS [PRECIO_EN], 
+    [ALMACEN3].[USR_ALTA] AS [USR_ALTA], 
+    [ALMACEN3].[FECHA_ALTA] AS [FECHA_ALTA], 
+    [ALMACEN3].[USR_MOD] AS [USR_MOD], 
+    [ALMACEN3].[FECHA_MOD] AS [FECHA_MOD], 
+    [ALMACEN3].[CATEGORIA] AS [CATEGORIA], 
+    [ALMACEN3].[PRESENTACION] AS [PRESENTACION]
+    FROM [dbo].[ALMACEN3] AS [ALMACEN3]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="AutorizaRema" EntityType="Self.AutorizaRema" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [AutorizaRema].[ID] AS [ID], 
+    [AutorizaRema].[Nombre] AS [Nombre], 
+    [AutorizaRema].[Accion] AS [Accion], 
+    [AutorizaRema].[id_comanda] AS [id_comanda], 
+    [AutorizaRema].[fecha] AS [fecha]
+    FROM [dbo].[AutorizaRema] AS [AutorizaRema]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="BANCOS" EntityType="Self.BANCOS" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [BANCOS].[ID_BANCO] AS [ID_BANCO], 
+    [BANCOS].[NOMBRE] AS [NOMBRE], 
+    [BANCOS].[DIRECCION] AS [DIRECCION], 
+    [BANCOS].[TELEFONO] AS [TELEFONO], 
+    [BANCOS].[CUENTAS] AS [CUENTAS]
+    FROM [dbo].[BANCOS] AS [BANCOS]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="CAJA_CHICA" EntityType="Self.CAJA_CHICA" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [CAJA_CHICA].[ID_CAJA] AS [ID_CAJA], 
+    [CAJA_CHICA].[NOMBRE] AS [NOMBRE], 
+    [CAJA_CHICA].[FECHA] AS [FECHA], 
+    [CAJA_CHICA].[TOTAL] AS [TOTAL], 
+    [CAJA_CHICA].[TOTAL_LETRA] AS [TOTAL_LETRA], 
+    [CAJA_CHICA].[TIPO_ORDEN] AS [TIPO_ORDEN], 
+    [CAJA_CHICA].[NUM_ORDEN] AS [NUM_ORDEN], 
+    [CAJA_CHICA].[FECHA_REALIZADO] AS [FECHA_REALIZADO], 
+    [CAJA_CHICA].[ID_USUARIO] AS [ID_USUARIO]
+    FROM [dbo].[CAJA_CHICA] AS [CAJA_CHICA]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="CANCEPROGRA" EntityType="Self.CANCEPROGRA" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [CANCEPROGRA].[ID] AS [ID], 
+    [CANCEPROGRA].[NO_PEDIDO] AS [NO_PEDIDO], 
+    [CANCEPROGRA].[FECHA] AS [FECHA], 
+    [CANCEPROGRA].[ID_USUARIO] AS [ID_USUARIO], 
+    [CANCEPROGRA].[COMENTARIO] AS [COMENTARIO]
+    FROM [dbo].[CANCEPROGRA] AS [CANCEPROGRA]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="CARTVAC" EntityType="Self.CARTVAC" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [CARTVAC].[ID] AS [ID], 
+    [CARTVAC].[ID_PRODUCTO] AS [ID_PRODUCTO], 
+    [CARTVAC].[CANTIDAD] AS [CANTIDAD], 
+    [CARTVAC].[USUARIO] AS [USUARIO], 
+    [CARTVAC].[COMENTARIO] AS [COMENTARIO], 
+    [CARTVAC].[COMANDA] AS [COMANDA], 
+    [CARTVAC].[SUCURSAL] AS [SUCURSAL], 
+    [CARTVAC].[PRODUCCION] AS [PRODUCCION], 
+    [CARTVAC].[COMENTARIO_EXTR] AS [COMENTARIO_EXTR], 
+    [CARTVAC].[FECHA] AS [FECHA]
+    FROM [dbo].[CARTVAC] AS [CARTVAC]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="CHEQUES" EntityType="Self.CHEQUES" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [CHEQUES].[ID_CHEQUE] AS [ID_CHEQUE], 
+    [CHEQUES].[NOMBRE] AS [NOMBRE], 
+    [CHEQUES].[FECHA] AS [FECHA], 
+    [CHEQUES].[TOTAL] AS [TOTAL], 
+    [CHEQUES].[TOTAL_LETRA] AS [TOTAL_LETRA], 
+    [CHEQUES].[BANCO] AS [BANCO], 
+    [CHEQUES].[NUM_CHEQUE] AS [NUM_CHEQUE], 
+    [CHEQUES].[TIPO_ORDEN] AS [TIPO_ORDEN], 
+    [CHEQUES].[NUM_ORDEN] AS [NUM_ORDEN], 
+    [CHEQUES].[FECHA_REALIZADO] AS [FECHA_REALIZADO], 
+    [CHEQUES].[ID_USUARIO] AS [ID_USUARIO]
+    FROM [dbo].[CHEQUES] AS [CHEQUES]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="CLASIFICACIONES" EntityType="Self.CLASIFICACIONES" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [CLASIFICACIONES].[ID] AS [ID], 
+    [CLASIFICACIONES].[CLASIFICACION] AS [CLASIFICACION]
+    FROM [dbo].[CLASIFICACIONES] AS [CLASIFICACIONES]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="CLATINTONER" EntityType="Self.CLATINTONER" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [CLATINTONER].[ID] AS [ID], 
+    [CLATINTONER].[CLASIFICACION] AS [CLASIFICACION]
+    FROM [dbo].[CLATINTONER] AS [CLATINTONER]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="COBRANZA" EntityType="Self.COBRANZA" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [COBRANZA].[ID_PAGO] AS [ID_PAGO], 
+    [COBRANZA].[CLIENTE] AS [CLIENTE], 
+    [COBRANZA].[SUCURSAL] AS [SUCURSAL], 
+    [COBRANZA].[FACTURA] AS [FACTURA], 
+    [COBRANZA].[CREDITO] AS [CREDITO], 
+    [COBRANZA].[PAGO] AS [PAGO], 
+    [COBRANZA].[TOTAL] AS [TOTAL]
+    FROM [dbo].[COBRANZA] AS [COBRANZA]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="COBRO_ASISTENCIA_TECNICA" EntityType="Self.COBRO_ASISTENCIA_TECNICA" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [COBRO_ASISTENCIA_TECNICA].[ID] AS [ID], 
+    [COBRO_ASISTENCIA_TECNICA].[ID_AS_TEC] AS [ID_AS_TEC], 
+    [COBRO_ASISTENCIA_TECNICA].[ID_PRODUCTO] AS [ID_PRODUCTO], 
+    [COBRO_ASISTENCIA_TECNICA].[CANTIDAD] AS [CANTIDAD]
+    FROM [dbo].[COBRO_ASISTENCIA_TECNICA] AS [COBRO_ASISTENCIA_TECNICA]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="COLONIAS" EntityType="Self.COLONIAS" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [COLONIAS].[ID_COLONIA] AS [ID_COLONIA], 
+    [COLONIAS].[NOMBRE] AS [NOMBRE], 
+    [COLONIAS].[ZONA] AS [ZONA]
+    FROM [dbo].[COLONIAS] AS [COLONIAS]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="COMPARATIVO_LICITACIONES" EntityType="Self.COMPARATIVO_LICITACIONES" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [COMPARATIVO_LICITACIONES].[ID_COMPARATIVO] AS [ID_COMPARATIVO], 
+    [COMPARATIVO_LICITACIONES].[ID_CLIENTE] AS [ID_CLIENTE], 
+    [COMPARATIVO_LICITACIONES].[ID_COMPETIDOR] AS [ID_COMPETIDOR], 
+    [COMPARATIVO_LICITACIONES].[NO_LICITACION] AS [NO_LICITACION], 
+    [COMPARATIVO_LICITACIONES].[ID_PRODUCTO] AS [ID_PRODUCTO], 
+    [COMPARATIVO_LICITACIONES].[CANTIDAD] AS [CANTIDAD], 
+    [COMPARATIVO_LICITACIONES].[PRECIO] AS [PRECIO]
+    FROM [dbo].[COMPARATIVO_LICITACIONES] AS [COMPARATIVO_LICITACIONES]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="COMPETIDOR_LICITACION" EntityType="Self.COMPETIDOR_LICITACION" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [COMPETIDOR_LICITACION].[ID_COMPETIDOR] AS [ID_COMPETIDOR], 
+    [COMPETIDOR_LICITACION].[NOMBRE] AS [NOMBRE], 
+    [COMPETIDOR_LICITACION].[DIRECCION] AS [DIRECCION], 
+    [COMPETIDOR_LICITACION].[TELEFONO] AS [TELEFONO], 
+    [COMPETIDOR_LICITACION].[MAIL] AS [MAIL], 
+    [COMPETIDOR_LICITACION].[NOTAS] AS [NOTAS]
+    FROM [dbo].[COMPETIDOR_LICITACION] AS [COMPETIDOR_LICITACION]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="CORTEPENDIENTE" EntityType="Self.CORTEPENDIENTE" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [CORTEPENDIENTE].[ID] AS [ID], 
+    [CORTEPENDIENTE].[ID_VENTA] AS [ID_VENTA], 
+    [CORTEPENDIENTE].[FACTURA] AS [FACTURA], 
+    [CORTEPENDIENTE].[CLIENTE] AS [CLIENTE], 
+    [CORTEPENDIENTE].[TOTAL] AS [TOTAL], 
+    [CORTEPENDIENTE].[TIPO] AS [TIPO], 
+    [CORTEPENDIENTE].[FECHA] AS [FECHA], 
+    [CORTEPENDIENTE].[SUCURSAL] AS [SUCURSAL], 
+    [CORTEPENDIENTE].[ESTADO] AS [ESTADO]
+    FROM [dbo].[CORTEPENDIENTE] AS [CORTEPENDIENTE]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="COTIZA_CLIEN_DETALLE" EntityType="Self.COTIZA_CLIEN_DETALLE" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [COTIZA_CLIEN_DETALLE].[ID] AS [ID], 
+    [COTIZA_CLIEN_DETALLE].[ID_PRODUCTO] AS [ID_PRODUCTO], 
+    [COTIZA_CLIEN_DETALLE].[CANTIDAD] AS [CANTIDAD], 
+    [COTIZA_CLIEN_DETALLE].[PRECIO_VENTA] AS [PRECIO_VENTA], 
+    [COTIZA_CLIEN_DETALLE].[ID_COTIZA_CLIEN] AS [ID_COTIZA_CLIEN]
+    FROM [dbo].[COTIZA_CLIEN_DETALLE] AS [COTIZA_CLIEN_DETALLE]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="CUENTA_VENTA" EntityType="Self.CUENTA_VENTA" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [CUENTA_VENTA].[ID_RELACION] AS [ID_RELACION], 
+    [CUENTA_VENTA].[ID_VENTA] AS [ID_VENTA], 
+    [CUENTA_VENTA].[ID_CUENTA] AS [ID_CUENTA], 
+    [CUENTA_VENTA].[ESTADO] AS [ESTADO]
+    FROM [dbo].[CUENTA_VENTA] AS [CUENTA_VENTA]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="CUENTAS" EntityType="Self.CUENTAS" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [CUENTAS].[ID_CUENTA] AS [ID_CUENTA], 
+    [CUENTAS].[ID_CLIENTE] AS [ID_CLIENTE], 
+    [CUENTAS].[ID_USUARIO] AS [ID_USUARIO], 
+    [CUENTAS].[FECHA] AS [FECHA], 
+    [CUENTAS].[DIAS_CREDITO] AS [DIAS_CREDITO], 
+    [CUENTAS].[FECHA_VENCE] AS [FECHA_VENCE], 
+    [CUENTAS].[DESCUENTO] AS [DESCUENTO], 
+    [CUENTAS].[TOTAL_COMPRA] AS [TOTAL_COMPRA], 
+    [CUENTAS].[SUCURSAL] AS [SUCURSAL], 
+    [CUENTAS].[PAGADA] AS [PAGADA], 
+    [CUENTAS].[FOLIO] AS [FOLIO], 
+    [CUENTAS].[DEUDA] AS [DEUDA], 
+    [CUENTAS].[ID_VENTA] AS [ID_VENTA], 
+    [CUENTAS].[DEUDA_ACTUAL] AS [DEUDA_ACTUAL]
+    FROM [dbo].[CUENTAS] AS [CUENTAS]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="DESCUENTOS" EntityType="Self.DESCUENTOS" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [DESCUENTOS].[ID_DESCUENTO] AS [ID_DESCUENTO], 
+    [DESCUENTOS].[CLASIFICACION] AS [CLASIFICACION], 
+    [DESCUENTOS].[PORCENTAJE] AS [PORCENTAJE], 
+    [DESCUENTOS].[ID] AS [ID]
+    FROM [dbo].[DESCUENTOS] AS [DESCUENTOS]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="DEV_GARANTIA" EntityType="Self.DEV_GARANTIA" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [DEV_GARANTIA].[ID] AS [ID], 
+    [DEV_GARANTIA].[ID_PRODUCTO] AS [ID_PRODUCTO], 
+    [DEV_GARANTIA].[CANTIDAD] AS [CANTIDAD], 
+    [DEV_GARANTIA].[ID_VENTA] AS [ID_VENTA], 
+    [DEV_GARANTIA].[ID_GARANTIA] AS [ID_GARANTIA], 
+    [DEV_GARANTIA].[FECHA] AS [FECHA]
+    FROM [dbo].[DEV_GARANTIA] AS [DEV_GARANTIA]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="DEVOLUCION" EntityType="Self.DEVOLUCION" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [DEVOLUCION].[ID_DEV] AS [ID_DEV], 
+    [DEVOLUCION].[NUM_ORDEN] AS [NUM_ORDEN], 
+    [DEVOLUCION].[ID_ENTRADA] AS [ID_ENTRADA], 
+    [DEVOLUCION].[ID_PRODUCTO] AS [ID_PRODUCTO], 
+    [DEVOLUCION].[CANTIDAD] AS [CANTIDAD], 
+    [DEVOLUCION].[FECHA] AS [FECHA], 
+    [DEVOLUCION].[PROVEEDOR] AS [PROVEEDOR], 
+    [DEVOLUCION].[MOTIVO] AS [MOTIVO], 
+    [DEVOLUCION].[SUCURSAL] AS [SUCURSAL], 
+    [DEVOLUCION].[FACT_PRO] AS [FACT_PRO], 
+    [DEVOLUCION].[PRECIO] AS [PRECIO], 
+    [DEVOLUCION].[TOT_DEV] AS [TOT_DEV]
+    FROM [dbo].[DEVOLUCION] AS [DEVOLUCION]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="DIREIMPOR" EntityType="Self.DIREIMPOR" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [DIREIMPOR].[ID] AS [ID], 
+    [DIREIMPOR].[NOMBRE] AS [NOMBRE], 
+    [DIREIMPOR].[DIRECCION] AS [DIRECCION], 
+    [DIREIMPOR].[CD] AS [CD], 
+    [DIREIMPOR].[TEL1] AS [TEL1], 
+    [DIREIMPOR].[TEL2] AS [TEL2], 
+    [DIREIMPOR].[STATUS] AS [STATUS]
+    FROM [dbo].[DIREIMPOR] AS [DIREIMPOR]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="DOMICILIOS" EntityType="Self.DOMICILIOS" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [DOMICILIOS].[ID_DOMICILIO] AS [ID_DOMICILIO], 
+    [DOMICILIOS].[NOM_CLIENTE] AS [NOM_CLIENTE], 
+    [DOMICILIOS].[DOMICILIO] AS [DOMICILIO], 
+    [DOMICILIOS].[COLONIA] AS [COLONIA], 
+    [DOMICILIOS].[TELEFONO] AS [TELEFONO], 
+    [DOMICILIOS].[FECHA] AS [FECHA], 
+    [DOMICILIOS].[DE_HORA] AS [DE_HORA], 
+    [DOMICILIOS].[A_HORA] AS [A_HORA], 
+    [DOMICILIOS].[NOTA] AS [NOTA], 
+    [DOMICILIOS].[NUM_ARTICULOS] AS [NUM_ARTICULOS], 
+    [DOMICILIOS].[ESTADO] AS [ESTADO], 
+    [DOMICILIOS].[ZONA] AS [ZONA], 
+    [DOMICILIOS].[ID_REPA] AS [ID_REPA], 
+    [DOMICILIOS].[COMENTARIOS] AS [COMENTARIOS], 
+    [DOMICILIOS].[FECHA_FIN] AS [FECHA_FIN], 
+    [DOMICILIOS].[FECHA_ALTA] AS [FECHA_ALTA], 
+    [DOMICILIOS].[USUARIO] AS [USUARIO]
+    FROM [dbo].[DOMICILIOS] AS [DOMICILIOS]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="ENTRADA_PRODUCTO" EntityType="Self.ENTRADA_PRODUCTO" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [ENTRADA_PRODUCTO].[ID] AS [ID], 
+    [ENTRADA_PRODUCTO].[ID_ENTRADA] AS [ID_ENTRADA], 
+    [ENTRADA_PRODUCTO].[ID_PRODUCTO] AS [ID_PRODUCTO], 
+    [ENTRADA_PRODUCTO].[CANTIDAD] AS [CANTIDAD], 
+    [ENTRADA_PRODUCTO].[PRECIO] AS [PRECIO], 
+    [ENTRADA_PRODUCTO].[MONEDA] AS [MONEDA], 
+    [ENTRADA_PRODUCTO].[FECHA] AS [FECHA], 
+    [ENTRADA_PRODUCTO].[ID_SUCURSAL] AS [ID_SUCURSAL], 
+    [ENTRADA_PRODUCTO].[CODIGO_BARAS] AS [CODIGO_BARAS], 
+    [ENTRADA_PRODUCTO].[NUM_ORDEN] AS [NUM_ORDEN], 
+    [ENTRADA_PRODUCTO].[FACT_PROV] AS [FACT_PROV]
+    FROM [dbo].[ENTRADA_PRODUCTO] AS [ENTRADA_PRODUCTO]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="ENTRADA_RAPIDAS" EntityType="Self.ENTRADA_RAPIDAS" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [ENTRADA_RAPIDAS].[ID_ENTRADA] AS [ID_ENTRADA], 
+    [ENTRADA_RAPIDAS].[ID_ORDEN_RAPIDA] AS [ID_ORDEN_RAPIDA], 
+    [ENTRADA_RAPIDAS].[FACTURA] AS [FACTURA], 
+    [ENTRADA_RAPIDAS].[FECHA] AS [FECHA], 
+    [ENTRADA_RAPIDAS].[PROVEEDOR] AS [PROVEEDOR]
+    FROM [dbo].[ENTRADA_RAPIDAS] AS [ENTRADA_RAPIDAS]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="ESTADO_CUENTA" EntityType="Self.ESTADO_CUENTA" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [ESTADO_CUENTA].[ID] AS [ID], 
+    [ESTADO_CUENTA].[CANTIDAD] AS [CANTIDAD], 
+    [ESTADO_CUENTA].[SALDO] AS [SALDO], 
+    [ESTADO_CUENTA].[ID_TIPO_CARGO] AS [ID_TIPO_CARGO], 
+    [ESTADO_CUENTA].[ID_CARGO] AS [ID_CARGO], 
+    [ESTADO_CUENTA].[EFECTUADO] AS [EFECTUADO], 
+    [ESTADO_CUENTA].[FECHA] AS [FECHA], 
+    [ESTADO_CUENTA].[FECHA_VENCIMIENTO] AS [FECHA_VENCIMIENTO], 
+    [ESTADO_CUENTA].[FECHA_VENCIMIENTO_NO_VACIA] AS [FECHA_VENCIMIENTO_NO_VACIA], 
+    [ESTADO_CUENTA].[ID_ABONO] AS [ID_ABONO], 
+    [ESTADO_CUENTA].[ABONO] AS [ABONO], 
+    [ESTADO_CUENTA].[FECHA_PAGO] AS [FECHA_PAGO], 
+    [ESTADO_CUENTA].[OBSERVACIONES] AS [OBSERVACIONES], 
+    [ESTADO_CUENTA].[ID_FACTURA] AS [ID_FACTURA], 
+    [ESTADO_CUENTA].[ID_NOTA] AS [ID_NOTA], 
+    [ESTADO_CUENTA].[FECHA_CONTRARECIBO] AS [FECHA_CONTRARECIBO], 
+    [ESTADO_CUENTA].[FECHA_COBRO] AS [FECHA_COBRO], 
+    [ESTADO_CUENTA].[CHEQUE] AS [CHEQUE], 
+    [ESTADO_CUENTA].[BANCO] AS [BANCO], 
+    [ESTADO_CUENTA].[ID_CLIENTE] AS [ID_CLIENTE]
+    FROM [dbo].[ESTADO_CUENTA] AS [ESTADO_CUENTA]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="EXISTENCIA_FIJA" EntityType="Self.EXISTENCIA_FIJA" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [EXISTENCIA_FIJA].[ID_EXIS_FIJA] AS [ID_EXIS_FIJA], 
+    [EXISTENCIA_FIJA].[ID_PRODUCTO] AS [ID_PRODUCTO], 
+    [EXISTENCIA_FIJA].[CANTIDAD] AS [CANTIDAD]
+    FROM [dbo].[EXISTENCIA_FIJA] AS [EXISTENCIA_FIJA]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="EXISTENCIASTEMPORALES" EntityType="Self.EXISTENCIASTEMPORALES" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [EXISTENCIASTEMPORALES].[ID] AS [ID], 
+    [EXISTENCIASTEMPORALES].[ID_PRODUCTO] AS [ID_PRODUCTO], 
+    [EXISTENCIASTEMPORALES].[CANTIDAD] AS [CANTIDAD], 
+    [EXISTENCIASTEMPORALES].[SUCURSAL] AS [SUCURSAL]
+    FROM [dbo].[EXISTENCIASTEMPORALES] AS [EXISTENCIASTEMPORALES]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="FactCan" EntityType="Self.FactCan" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [FactCan].[ID] AS [ID], 
+    [FactCan].[ID_VENTA] AS [ID_VENTA], 
+    [FactCan].[FOLIO] AS [FOLIO], 
+    [FactCan].[Fecha] AS [Fecha], 
+    [FactCan].[ID_USUARIO] AS [ID_USUARIO], 
+    [FactCan].[ID_PROVEEDOR] AS [ID_PROVEEDOR], 
+    [FactCan].[ID_CLIENTE] AS [ID_CLIENTE], 
+    [FactCan].[PASA_FACTU] AS [PASA_FACTU], 
+    [FactCan].[NOMBRE] AS [NOMBRE]
+    FROM [dbo].[FactCan] AS [FactCan]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="FACTPROVEEDOR" EntityType="Self.FACTPROVEEDOR" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [FACTPROVEEDOR].[ID_FP] AS [ID_FP], 
+    [FACTPROVEEDOR].[NOMBRE] AS [NOMBRE], 
+    [FACTPROVEEDOR].[NUM_ORDEN_COMPRA] AS [NUM_ORDEN_COMPRA], 
+    [FACTPROVEEDOR].[FACTURA_PROV] AS [FACTURA_PROV], 
+    [FACTPROVEEDOR].[TIPO] AS [TIPO], 
+    [FACTPROVEEDOR].[TOTAL] AS [TOTAL], 
+    [FACTPROVEEDOR].[MONEDA] AS [MONEDA]
+    FROM [dbo].[FACTPROVEEDOR] AS [FACTPROVEEDOR]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="FACTURAS" EntityType="Self.FACTURAS" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [FACTURAS].[ID_FACTURA] AS [ID_FACTURA], 
+    [FACTURAS].[ID_CLIENTE] AS [ID_CLIENTE], 
+    [FACTURAS].[FECHA] AS [FECHA], 
+    [FACTURAS].[TOTAL] AS [TOTAL], 
+    [FACTURAS].[ID_USUARIO] AS [ID_USUARIO], 
+    [FACTURAS].[TOTAL_LETRAS] AS [TOTAL_LETRAS], 
+    [FACTURAS].[ORDENCOMPRA] AS [ORDENCOMPRA], 
+    [FACTURAS].[SOLICITO] AS [SOLICITO], 
+    [FACTURAS].[ID_COMANDA] AS [ID_COMANDA], 
+    [FACTURAS].[ID_NOTA] AS [ID_NOTA], 
+    [FACTURAS].[FORMA_PAGO] AS [FORMA_PAGO], 
+    [FACTURAS].[CANCELADA] AS [CANCELADA]
+    FROM [dbo].[FACTURAS] AS [FACTURAS]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="FOLIOSUC" EntityType="Self.FOLIOSUC" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [FOLIOSUC].[ID] AS [ID], 
+    [FOLIOSUC].[FOLIO] AS [FOLIO], 
+    [FOLIOSUC].[SUCURSAL] AS [SUCURSAL]
+    FROM [dbo].[FOLIOSUC] AS [FOLIOSUC]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="IMPCOMAN" EntityType="Self.IMPCOMAN" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [IMPCOMAN].[ID] AS [ID], 
+    [IMPCOMAN].[ID_COMANDA] AS [ID_COMANDA], 
+    [IMPCOMAN].[FECHA] AS [FECHA]
+    FROM [dbo].[IMPCOMAN] AS [IMPCOMAN]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="INVENTARIO_DETALLE" EntityType="Self.INVENTARIO_DETALLE" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [INVENTARIO_DETALLE].[ID_PRODUCTO] AS [ID_PRODUCTO], 
+    [INVENTARIO_DETALLE].[ID_INVENTARIO] AS [ID_INVENTARIO], 
+    [INVENTARIO_DETALLE].[CANTIDAD] AS [CANTIDAD], 
+    [INVENTARIO_DETALLE].[ESTADO_ACTUAL] AS [ESTADO_ACTUAL]
+    FROM [dbo].[INVENTARIO_DETALLE] AS [INVENTARIO_DETALLE]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="JUEGO_REPARACION" EntityType="Self.JUEGO_REPARACION" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [JUEGO_REPARACION].[ID_REPARACION] AS [ID_REPARACION], 
+    [JUEGO_REPARACION].[ID_PRODUCTO] AS [ID_PRODUCTO], 
+    [JUEGO_REPARACION].[CANTIDAD] AS [CANTIDAD]
+    FROM [dbo].[JUEGO_REPARACION] AS [JUEGO_REPARACION]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="LICITACIONES" EntityType="Self.LICITACIONES" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [LICITACIONES].[ID] AS [ID], 
+    [LICITACIONES].[ID_PRODUCTO] AS [ID_PRODUCTO], 
+    [LICITACIONES].[ID_CLIENTE] AS [ID_CLIENTE], 
+    [LICITACIONES].[PRECIO_VENTA] AS [PRECIO_VENTA], 
+    [LICITACIONES].[FECHA_FIN] AS [FECHA_FIN], 
+    [LICITACIONES].[ID_USUARIO_CAPTURO] AS [ID_USUARIO_CAPTURO], 
+    [LICITACIONES].[CANT_MIN] AS [CANT_MIN], 
+    [LICITACIONES].[NO_CONTRATO] AS [NO_CONTRATO], 
+    [LICITACIONES].[CANT_MAX] AS [CANT_MAX], 
+    [LICITACIONES].[NO_LICITACION] AS [NO_LICITACION], 
+    [LICITACIONES].[FECHA_INICIO] AS [FECHA_INICIO]
+    FROM [dbo].[LICITACIONES] AS [LICITACIONES]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="MERMAS" EntityType="Self.MERMAS" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [MERMAS].[ID_MERMA] AS [ID_MERMA], 
+    [MERMAS].[ID_NOTA] AS [ID_NOTA], 
+    [MERMAS].[ID_PRODUCTO] AS [ID_PRODUCTO], 
+    [MERMAS].[DESCRIPCION] AS [DESCRIPCION], 
+    [MERMAS].[CANTIDAD] AS [CANTIDAD], 
+    [MERMAS].[FECHA] AS [FECHA], 
+    [MERMAS].[CHEKADO] AS [CHEKADO]
+    FROM [dbo].[MERMAS] AS [MERMAS]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="MOTIVOS_SCRAP" EntityType="Self.MOTIVOS_SCRAP" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [MOTIVOS_SCRAP].[ID] AS [ID], 
+    [MOTIVOS_SCRAP].[MOTIVO] AS [MOTIVO]
+    FROM [dbo].[MOTIVOS_SCRAP] AS [MOTIVOS_SCRAP]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="NOTA_CREDITO_PRODUCTO" EntityType="Self.NOTA_CREDITO_PRODUCTO" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [NOTA_CREDITO_PRODUCTO].[ID_NOTA] AS [ID_NOTA], 
+    [NOTA_CREDITO_PRODUCTO].[ID_PRODUCTO] AS [ID_PRODUCTO], 
+    [NOTA_CREDITO_PRODUCTO].[DESCRIPCION] AS [DESCRIPCION], 
+    [NOTA_CREDITO_PRODUCTO].[CANTIDAD] AS [CANTIDAD], 
+    [NOTA_CREDITO_PRODUCTO].[PRECIO] AS [PRECIO]
+    FROM [dbo].[NOTA_CREDITO_PRODUCTO] AS [NOTA_CREDITO_PRODUCTO]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="NOTAS" EntityType="Self.NOTAS" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [NOTAS].[ID] AS [ID], 
+    [NOTAS].[ID_CLIENTE] AS [ID_CLIENTE], 
+    [NOTAS].[FECHA] AS [FECHA], 
+    [NOTAS].[TOTAL] AS [TOTAL], 
+    [NOTAS].[FECHA_PAGO] AS [FECHA_PAGO], 
+    [NOTAS].[DESCUENTO] AS [DESCUENTO], 
+    [NOTAS].[FACTURADA] AS [FACTURADA], 
+    [NOTAS].[ID_USER] AS [ID_USER], 
+    [NOTAS].[ID_FACTURA] AS [ID_FACTURA], 
+    [NOTAS].[ID_COMANDA] AS [ID_COMANDA], 
+    [NOTAS].[ORDENCOMPRA] AS [ORDENCOMPRA], 
+    [NOTAS].[SOLICITO] AS [SOLICITO], 
+    [NOTAS].[CREDITO] AS [CREDITO], 
+    [NOTAS].[ID_FORMA_PAGO] AS [ID_FORMA_PAGO], 
+    [NOTAS].[BANCO] AS [BANCO], 
+    [NOTAS].[CHEQUE] AS [CHEQUE]
+    FROM [dbo].[NOTAS] AS [NOTAS]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="ORDEN" EntityType="Self.ORDEN" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [ORDEN].[ID_ORDEN] AS [ID_ORDEN], 
+    [ORDEN].[CLIENTE] AS [CLIENTE], 
+    [ORDEN].[DIRECCION] AS [DIRECCION], 
+    [ORDEN].[FECHA] AS [FECHA], 
+    [ORDEN].[VENDEDOR] AS [VENDEDOR], 
+    [ORDEN].[FACTURADA] AS [FACTURADA], 
+    [ORDEN].[ID_ESTADO] AS [ID_ESTADO], 
+    [ORDEN].[ID_CLIENTE] AS [ID_CLIENTE], 
+    [ORDEN].[ID_USUARIO] AS [ID_USUARIO], 
+    [ORDEN].[ID_NOTA] AS [ID_NOTA], 
+    [ORDEN].[TOTAL] AS [TOTAL], 
+    [ORDEN].[ORDENCOMPRA] AS [ORDENCOMPRA], 
+    [ORDEN].[SOLICITO] AS [SOLICITO], 
+    [ORDEN].[FORMA_PAGO] AS [FORMA_PAGO], 
+    [ORDEN].[CONFIRMADA] AS [CONFIRMADA], 
+    [ORDEN].[COMENTARIOS] AS [COMENTARIOS]
+    FROM [dbo].[ORDEN] AS [ORDEN]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="ORDEN_CANCE" EntityType="Self.ORDEN_CANCE" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [ORDEN_CANCE].[ID] AS [ID], 
+    [ORDEN_CANCE].[ORDEN] AS [ORDEN], 
+    [ORDEN_CANCE].[TIPO] AS [TIPO], 
+    [ORDEN_CANCE].[COMENTARIO] AS [COMENTARIO], 
+    [ORDEN_CANCE].[ID_USUARIO] AS [ID_USUARIO], 
+    [ORDEN_CANCE].[FECHA] AS [FECHA], 
+    [ORDEN_CANCE].[FECHA_HORA] AS [FECHA_HORA]
+    FROM [dbo].[ORDEN_CANCE] AS [ORDEN_CANCE]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="ORDEN_COMPRA_DETALLE" EntityType="Self.ORDEN_COMPRA_DETALLE" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [ORDEN_COMPRA_DETALLE].[ID] AS [ID], 
+    [ORDEN_COMPRA_DETALLE].[ID_ORDEN_COMPRA] AS [ID_ORDEN_COMPRA], 
+    [ORDEN_COMPRA_DETALLE].[ID_PRODUCTO] AS [ID_PRODUCTO], 
+    [ORDEN_COMPRA_DETALLE].[DESCRIPCION] AS [DESCRIPCION], 
+    [ORDEN_COMPRA_DETALLE].[CANTIDAD] AS [CANTIDAD], 
+    [ORDEN_COMPRA_DETALLE].[PRECIO] AS [PRECIO], 
+    [ORDEN_COMPRA_DETALLE].[DIAS_ENTREGA] AS [DIAS_ENTREGA], 
+    [ORDEN_COMPRA_DETALLE].[FECHA] AS [FECHA], 
+    [ORDEN_COMPRA_DETALLE].[SURTIDO] AS [SURTIDO], 
+    [ORDEN_COMPRA_DETALLE].[FACT_PROVE] AS [FACT_PROVE], 
+    [ORDEN_COMPRA_DETALLE].[NO_ENVIO] AS [NO_ENVIO], 
+    [ORDEN_COMPRA_DETALLE].[NO_PEDIDO] AS [NO_PEDIDO]
+    FROM [dbo].[ORDEN_COMPRA_DETALLE] AS [ORDEN_COMPRA_DETALLE]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="ORDEN_RAPIDA_DETALLE" EntityType="Self.ORDEN_RAPIDA_DETALLE" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [ORDEN_RAPIDA_DETALLE].[ID_ORDEN_RAPIDA] AS [ID_ORDEN_RAPIDA], 
+    [ORDEN_RAPIDA_DETALLE].[ID_PRODUCTO] AS [ID_PRODUCTO], 
+    [ORDEN_RAPIDA_DETALLE].[PRECIO] AS [PRECIO], 
+    [ORDEN_RAPIDA_DETALLE].[SUBTOTAL] AS [SUBTOTAL], 
+    [ORDEN_RAPIDA_DETALLE].[CANTIDAD] AS [CANTIDAD], 
+    [ORDEN_RAPIDA_DETALLE].[IVA] AS [IVA], 
+    [ORDEN_RAPIDA_DETALLE].[TOTAL] AS [TOTAL], 
+    [ORDEN_RAPIDA_DETALLE].[IVARETENIDO] AS [IVARETENIDO], 
+    [ORDEN_RAPIDA_DETALLE].[ISR] AS [ISR], 
+    [ORDEN_RAPIDA_DETALLE].[IVADIEZ] AS [IVADIEZ], 
+    [ORDEN_RAPIDA_DETALLE].[ISR2] AS [ISR2], 
+    [ORDEN_RAPIDA_DETALLE].[NO_PROD] AS [NO_PROD], 
+    [ORDEN_RAPIDA_DETALLE].[SURTIDO] AS [SURTIDO], 
+    [ORDEN_RAPIDA_DETALLE].[CAN_RECIBIDA] AS [CAN_RECIBIDA], 
+    [ORDEN_RAPIDA_DETALLE].[FACTURA] AS [FACTURA], 
+    [ORDEN_RAPIDA_DETALLE].[COMENTARIO_SALID] AS [COMENTARIO_SALID], 
+    [ORDEN_RAPIDA_DETALLE].[TPIVA] AS [TPIVA], 
+    [ORDEN_RAPIDA_DETALLE].[OTROS_IMP] AS [OTROS_IMP]
+    FROM [dbo].[ORDEN_RAPIDA_DETALLE] AS [ORDEN_RAPIDA_DETALLE]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="ORDENES_NO_SURTIDAS" EntityType="Self.ORDENES_NO_SURTIDAS" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [ORDENES_NO_SURTIDAS].[ID] AS [ID], 
+    [ORDENES_NO_SURTIDAS].[ID_PRODUCTO] AS [ID_PRODUCTO], 
+    [ORDENES_NO_SURTIDAS].[DESCRIPCION] AS [DESCRIPCION], 
+    [ORDENES_NO_SURTIDAS].[PRECIO] AS [PRECIO], 
+    [ORDENES_NO_SURTIDAS].[CANTIDAD] AS [CANTIDAD], 
+    [ORDENES_NO_SURTIDAS].[TIPO] AS [TIPO], 
+    [ORDENES_NO_SURTIDAS].[NUM_ORDEN] AS [NUM_ORDEN], 
+    [ORDENES_NO_SURTIDAS].[ESTADO] AS [ESTADO]
+    FROM [dbo].[ORDENES_NO_SURTIDAS] AS [ORDENES_NO_SURTIDAS]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="PAGO_OC" EntityType="Self.PAGO_OC" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [PAGO_OC].[ID] AS [ID], 
+    [PAGO_OC].[ID_ORDEN] AS [ID_ORDEN], 
+    [PAGO_OC].[TIPOPAGO] AS [TIPOPAGO], 
+    [PAGO_OC].[BANCO] AS [BANCO], 
+    [PAGO_OC].[NUMTRANS] AS [NUMTRANS], 
+    [PAGO_OC].[NUMCHEQUE] AS [NUMCHEQUE], 
+    [PAGO_OC].[CANTIDAD] AS [CANTIDAD], 
+    [PAGO_OC].[FECHA] AS [FECHA]
+    FROM [dbo].[PAGO_OC] AS [PAGO_OC]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="PASSWORD" EntityType="Self.PASSWORD" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [PASSWORD].[ID] AS [ID], 
+    [PASSWORD].[DEPT] AS [DEPT], 
+    [PASSWORD].[VENTA] AS [VENTA], 
+    [PASSWORD].[CLAVE] AS [CLAVE]
+    FROM [dbo].[PASSWORD] AS [PASSWORD]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="PED_CLIEN" EntityType="Self.PED_CLIEN" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [PED_CLIEN].[NO_PEDIDO] AS [NO_PEDIDO], 
+    [PED_CLIEN].[ID_CLIENTE] AS [ID_CLIENTE], 
+    [PED_CLIEN].[USUARIO] AS [USUARIO], 
+    [PED_CLIEN].[FECHA] AS [FECHA], 
+    [PED_CLIEN].[ESTADO] AS [ESTADO], 
+    [PED_CLIEN].[FECHA_CAPTURA] AS [FECHA_CAPTURA], 
+    [PED_CLIEN].[NO_ORDEN] AS [NO_ORDEN], 
+    [PED_CLIEN].[COMENTARIO] AS [COMENTARIO], 
+    [PED_CLIEN].[FECHA_CIERRE] AS [FECHA_CIERRE], 
+    [PED_CLIEN].[FECHA_FACTURACION] AS [FECHA_FACTURACION]
+    FROM [dbo].[PED_CLIEN] AS [PED_CLIEN]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="PEDIDO_VENTA" EntityType="Self.PEDIDO_VENTA" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [PEDIDO_VENTA].[ID_Registro] AS [ID_Registro], 
+    [PEDIDO_VENTA].[NO_PEDIDO] AS [NO_PEDIDO], 
+    [PEDIDO_VENTA].[ID_VENTA] AS [ID_VENTA]
+    FROM [dbo].[PEDIDO_VENTA] AS [PEDIDO_VENTA]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="PhotosQuery" EntityType="Self.PhotosQuery" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [PhotosQuery].[ID_PHOTO] AS [ID_PHOTO], 
+    [PhotosQuery].[PHOTO] AS [PHOTO], 
+    [PhotosQuery].[NOTE] AS [NOTE], 
+    [PhotosQuery].[ID_CLIENTE] AS [ID_CLIENTE]
+    FROM [dbo].[PhotosQuery] AS [PhotosQuery]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="PRESTAMOS_CARTUCHOS" EntityType="Self.PRESTAMOS_CARTUCHOS" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [PRESTAMOS_CARTUCHOS].[ID_PRESTAMO] AS [ID_PRESTAMO], 
+    [PRESTAMOS_CARTUCHOS].[USUARIO] AS [USUARIO], 
+    [PRESTAMOS_CARTUCHOS].[SUCURSAL] AS [SUCURSAL], 
+    [PRESTAMOS_CARTUCHOS].[FECHA] AS [FECHA], 
+    [PRESTAMOS_CARTUCHOS].[NOTAS] AS [NOTAS], 
+    [PRESTAMOS_CARTUCHOS].[ESTADO] AS [ESTADO]
+    FROM [dbo].[PRESTAMOS_CARTUCHOS] AS [PRESTAMOS_CARTUCHOS]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="PRESTAMOS_CARTUCHOS_DETALLE" EntityType="Self.PRESTAMOS_CARTUCHOS_DETALLE" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [PRESTAMOS_CARTUCHOS_DETALLE].[ID] AS [ID], 
+    [PRESTAMOS_CARTUCHOS_DETALLE].[ID_PRESTAMO] AS [ID_PRESTAMO], 
+    [PRESTAMOS_CARTUCHOS_DETALLE].[ID_PRODUCTO] AS [ID_PRODUCTO], 
+    [PRESTAMOS_CARTUCHOS_DETALLE].[CANTIDAD] AS [CANTIDAD]
+    FROM [dbo].[PRESTAMOS_CARTUCHOS_DETALLE] AS [PRESTAMOS_CARTUCHOS_DETALLE]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="PRESTAMOS_CLIENTES_DETALLE" EntityType="Self.PRESTAMOS_CLIENTES_DETALLE" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [PRESTAMOS_CLIENTES_DETALLE].[ID] AS [ID], 
+    [PRESTAMOS_CLIENTES_DETALLE].[ID_PRESTAMO] AS [ID_PRESTAMO], 
+    [PRESTAMOS_CLIENTES_DETALLE].[ID_PRODUCTO] AS [ID_PRODUCTO], 
+    [PRESTAMOS_CLIENTES_DETALLE].[CANTIDAD] AS [CANTIDAD], 
+    [PRESTAMOS_CLIENTES_DETALLE].[PRECIO_VENTA] AS [PRECIO_VENTA], 
+    [PRESTAMOS_CLIENTES_DETALLE].[NO_SERIE] AS [NO_SERIE], 
+    [PRESTAMOS_CLIENTES_DETALLE].[CONT_INICIAL] AS [CONT_INICIAL], 
+    [PRESTAMOS_CLIENTES_DETALLE].[ESTADO] AS [ESTADO]
+    FROM [dbo].[PRESTAMOS_CLIENTES_DETALLE] AS [PRESTAMOS_CLIENTES_DETALLE]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="ProdPend" EntityType="Self.ProdPend" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [ProdPend].[ID] AS [ID], 
+    [ProdPend].[ID_COMANDA] AS [ID_COMANDA], 
+    [ProdPend].[ARTICULO] AS [ARTICULO]
+    FROM [dbo].[ProdPend] AS [ProdPend]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="PRODUCCION" EntityType="Self.PRODUCCION" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [PRODUCCION].[ID] AS [ID], 
+    [PRODUCCION].[FECHA] AS [FECHA], 
+    [PRODUCCION].[ID_USER] AS [ID_USER], 
+    [PRODUCCION].[ID_USER_CONFIRMAR] AS [ID_USER_CONFIRMAR], 
+    [PRODUCCION].[EFECTUADO] AS [EFECTUADO], 
+    [PRODUCCION].[COMENTARIOS] AS [COMENTARIOS]
+    FROM [dbo].[PRODUCCION] AS [PRODUCCION]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="PRODUCCION_ENTRADAS" EntityType="Self.PRODUCCION_ENTRADAS" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [PRODUCCION_ENTRADAS].[ID_PRODUCTO] AS [ID_PRODUCTO], 
+    [PRODUCCION_ENTRADAS].[CANTIDAD] AS [CANTIDAD], 
+    [PRODUCCION_ENTRADAS].[PRECIO] AS [PRECIO], 
+    [PRODUCCION_ENTRADAS].[ID_PRODUCCION] AS [ID_PRODUCCION]
+    FROM [dbo].[PRODUCCION_ENTRADAS] AS [PRODUCCION_ENTRADAS]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="PRODUCCION_SALIDAS" EntityType="Self.PRODUCCION_SALIDAS" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [PRODUCCION_SALIDAS].[ID_PRODUCTO] AS [ID_PRODUCTO], 
+    [PRODUCCION_SALIDAS].[CANTIDAD] AS [CANTIDAD], 
+    [PRODUCCION_SALIDAS].[PRECIO] AS [PRECIO], 
+    [PRODUCCION_SALIDAS].[ID_PRODUCCION] AS [ID_PRODUCCION], 
+    [PRODUCCION_SALIDAS].[CONFIRMADO] AS [CONFIRMADO], 
+    [PRODUCCION_SALIDAS].[CANTIDAD1] AS [CANTIDAD1]
+    FROM [dbo].[PRODUCCION_SALIDAS] AS [PRODUCCION_SALIDAS]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="PRODUCCIONES_ALMACEN3" EntityType="Self.PRODUCCIONES_ALMACEN3" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [PRODUCCIONES_ALMACEN3].[ID_FABRICACION] AS [ID_FABRICACION], 
+    [PRODUCCIONES_ALMACEN3].[ID_PRODUCTO] AS [ID_PRODUCTO], 
+    [PRODUCCIONES_ALMACEN3].[FECHA] AS [FECHA], 
+    [PRODUCCIONES_ALMACEN3].[ID_USUARIO] AS [ID_USUARIO], 
+    [PRODUCCIONES_ALMACEN3].[CANTIDAD] AS [CANTIDAD]
+    FROM [dbo].[PRODUCCIONES_ALMACEN3] AS [PRODUCCIONES_ALMACEN3]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="PROMO_CATEGO" EntityType="Self.PROMO_CATEGO" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [PROMO_CATEGO].[ID_PROMO] AS [ID_PROMO], 
+    [PROMO_CATEGO].[CATEGORIA] AS [CATEGORIA], 
+    [PROMO_CATEGO].[CANTIDAD] AS [CANTIDAD], 
+    [PROMO_CATEGO].[FECHA_VENCE] AS [FECHA_VENCE], 
+    [PROMO_CATEGO].[PORCE_DESC] AS [PORCE_DESC]
+    FROM [dbo].[PROMO_CATEGO] AS [PROMO_CATEGO]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="PROMO_PORCE" EntityType="Self.PROMO_PORCE" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [PROMO_PORCE].[ID_PROMO] AS [ID_PROMO], 
+    [PROMO_PORCE].[ID_PRODUCTO] AS [ID_PRODUCTO], 
+    [PROMO_PORCE].[CANTIDAD] AS [CANTIDAD], 
+    [PROMO_PORCE].[PORCE_DESC] AS [PORCE_DESC], 
+    [PROMO_PORCE].[FECHA_VENCE] AS [FECHA_VENCE]
+    FROM [dbo].[PROMO_PORCE] AS [PROMO_PORCE]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="RASTREOREQUI" EntityType="Self.RASTREOREQUI" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [RASTREOREQUI].[ID] AS [ID], 
+    [RASTREOREQUI].[ID_REQUI] AS [ID_REQUI], 
+    [RASTREOREQUI].[SOLICITO] AS [SOLICITO], 
+    [RASTREOREQUI].[CANTIDAD] AS [CANTIDAD], 
+    [RASTREOREQUI].[COMENTARIO] AS [COMENTARIO], 
+    [RASTREOREQUI].[FECHA] AS [FECHA]
+    FROM [dbo].[RASTREOREQUI] AS [RASTREOREQUI]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="REPAS" EntityType="Self.REPAS" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [REPAS].[ID_REPA] AS [ID_REPA], 
+    [REPAS].[NOMBRE] AS [NOMBRE], 
+    [REPAS].[APELLIDOS] AS [APELLIDOS], 
+    [REPAS].[CLAVE] AS [CLAVE]
+    FROM [dbo].[REPAS] AS [REPAS]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="REPORTE_COMPRAS_ALM1" EntityType="Self.REPORTE_COMPRAS_ALM1" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [REPORTE_COMPRAS_ALM1].[FECHA_DE] AS [FECHA_DE], 
+    [REPORTE_COMPRAS_ALM1].[FECHA_AL] AS [FECHA_AL], 
+    [REPORTE_COMPRAS_ALM1].[ID_REPORTE] AS [ID_REPORTE]
+    FROM [dbo].[REPORTE_COMPRAS_ALM1] AS [REPORTE_COMPRAS_ALM1]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="REQUISICION_ORDEN_RAPIDA" EntityType="Self.REQUISICION_ORDEN_RAPIDA" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [REQUISICION_ORDEN_RAPIDA].[ID_REQUISICION] AS [ID_REQUISICION], 
+    [REQUISICION_ORDEN_RAPIDA].[DESCRIPCION] AS [DESCRIPCION], 
+    [REQUISICION_ORDEN_RAPIDA].[NOTAS] AS [NOTAS], 
+    [REQUISICION_ORDEN_RAPIDA].[FECHA_ALTA] AS [FECHA_ALTA], 
+    [REQUISICION_ORDEN_RAPIDA].[ACTIVO] AS [ACTIVO], 
+    [REQUISICION_ORDEN_RAPIDA].[USUARIO] AS [USUARIO]
+    FROM [dbo].[REQUISICION_ORDEN_RAPIDA] AS [REQUISICION_ORDEN_RAPIDA]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="RESPALDOS_BD" EntityType="Self.RESPALDOS_BD" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [RESPALDOS_BD].[ID] AS [ID], 
+    [RESPALDOS_BD].[FECHA] AS [FECHA], 
+    [RESPALDOS_BD].[NOMBRE_RESPALDO] AS [NOMBRE_RESPALDO]
+    FROM [dbo].[RESPALDOS_BD] AS [RESPALDOS_BD]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="SALDO_FAVOR_PROVEEDOR" EntityType="Self.SALDO_FAVOR_PROVEEDOR" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [SALDO_FAVOR_PROVEEDOR].[ID_SALDO] AS [ID_SALDO], 
+    [SALDO_FAVOR_PROVEEDOR].[ID_PROVEEDOR] AS [ID_PROVEEDOR], 
+    [SALDO_FAVOR_PROVEEDOR].[PROVEEDOR] AS [PROVEEDOR], 
+    [SALDO_FAVOR_PROVEEDOR].[NUM_ORDEN] AS [NUM_ORDEN], 
+    [SALDO_FAVOR_PROVEEDOR].[TIPO] AS [TIPO], 
+    [SALDO_FAVOR_PROVEEDOR].[ID_ORDEN_COMPRA] AS [ID_ORDEN_COMPRA], 
+    [SALDO_FAVOR_PROVEEDOR].[TOTAL] AS [TOTAL], 
+    [SALDO_FAVOR_PROVEEDOR].[FECHA] AS [FECHA], 
+    [SALDO_FAVOR_PROVEEDOR].[MOTIVO_CANCELACION] AS [MOTIVO_CANCELACION], 
+    [SALDO_FAVOR_PROVEEDOR].[APLICADA] AS [APLICADA]
+    FROM [dbo].[SALDO_FAVOR_PROVEEDOR] AS [SALDO_FAVOR_PROVEEDOR]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="SALIDAS" EntityType="Self.SALIDAS" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [SALIDAS].[ID_SALIDA] AS [ID_SALIDA], 
+    [SALIDAS].[ID_PRODUCTO] AS [ID_PRODUCTO], 
+    [SALIDAS].[PRECIO] AS [PRECIO], 
+    [SALIDAS].[CANTIDAD] AS [CANTIDAD], 
+    [SALIDAS].[JUSTIFICACION] AS [JUSTIFICACION], 
+    [SALIDAS].[ID_USUARIO] AS [ID_USUARIO], 
+    [SALIDAS].[SUCURSAL] AS [SUCURSAL], 
+    [SALIDAS].[FECHA] AS [FECHA]
+    FROM [dbo].[SALIDAS] AS [SALIDAS]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="SalidasInvProd" EntityType="Self.SalidasInvProd" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [SalidasInvProd].[ID] AS [ID], 
+    [SalidasInvProd].[ID_PRODUCCION] AS [ID_PRODUCCION], 
+    [SalidasInvProd].[ID_PRODUCTO] AS [ID_PRODUCTO], 
+    [SalidasInvProd].[CANTIDAD] AS [CANTIDAD]
+    FROM [dbo].[SalidasInvProd] AS [SalidasInvProd]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="SCRAP" EntityType="Self.SCRAP" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [SCRAP].[ID] AS [ID], 
+    [SCRAP].[ID_COMANDA] AS [ID_COMANDA], 
+    [SCRAP].[ID_PRODUCTO] AS [ID_PRODUCTO], 
+    [SCRAP].[CANTIDAD] AS [CANTIDAD], 
+    [SCRAP].[MOTIVO] AS [MOTIVO], 
+    [SCRAP].[COMENTARIO] AS [COMENTARIO], 
+    [SCRAP].[FECHA] AS [FECHA]
+    FROM [dbo].[SCRAP] AS [SCRAP]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="SCRAP_SUCURSAL" EntityType="Self.SCRAP_SUCURSAL" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [SCRAP_SUCURSAL].[ID_SCRAP] AS [ID_SCRAP], 
+    [SCRAP_SUCURSAL].[ID_PRODUCTO] AS [ID_PRODUCTO], 
+    [SCRAP_SUCURSAL].[CANTIDAD] AS [CANTIDAD], 
+    [SCRAP_SUCURSAL].[MOTIVO] AS [MOTIVO], 
+    [SCRAP_SUCURSAL].[SUCURSAL] AS [SUCURSAL], 
+    [SCRAP_SUCURSAL].[FECHA] AS [FECHA]
+    FROM [dbo].[SCRAP_SUCURSAL] AS [SCRAP_SUCURSAL]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="SEMANA" EntityType="Self.SEMANA" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [SEMANA].[ID] AS [ID], 
+    [SEMANA].[D1] AS [D1], 
+    [SEMANA].[D2] AS [D2], 
+    [SEMANA].[D3] AS [D3], 
+    [SEMANA].[D4] AS [D4], 
+    [SEMANA].[D5] AS [D5], 
+    [SEMANA].[D6] AS [D6], 
+    [SEMANA].[D7] AS [D7]
+    FROM [dbo].[SEMANA] AS [SEMANA]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="SOLICITUD_NC" EntityType="Self.SOLICITUD_NC" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [SOLICITUD_NC].[ID] AS [ID], 
+    [SOLICITUD_NC].[NOMBRE] AS [NOMBRE], 
+    [SOLICITUD_NC].[TOTAL] AS [TOTAL], 
+    [SOLICITUD_NC].[FECHA] AS [FECHA], 
+    [SOLICITUD_NC].[MOTIVOCAMBIO] AS [MOTIVOCAMBIO], 
+    [SOLICITUD_NC].[ID_VENTA] AS [ID_VENTA], 
+    [SOLICITUD_NC].[ID_USUARIO] AS [ID_USUARIO], 
+    [SOLICITUD_NC].[ID_CLIENTE] AS [ID_CLIENTE], 
+    [SOLICITUD_NC].[AUTORIZADO] AS [AUTORIZADO]
+    FROM [dbo].[SOLICITUD_NC] AS [SOLICITUD_NC]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="TablaPruebaImagen" EntityType="Self.TablaPruebaImagen" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [TablaPruebaImagen].[imagen] AS [imagen], 
+    [TablaPruebaImagen].[imagen1] AS [imagen1]
+    FROM [dbo].[TablaPruebaImagen] AS [TablaPruebaImagen]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="TPAGOS_OC" EntityType="Self.TPAGOS_OC" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [TPAGOS_OC].[ID] AS [ID], 
+    [TPAGOS_OC].[DESCRIPCION] AS [DESCRIPCION]
+    FROM [dbo].[TPAGOS_OC] AS [TPAGOS_OC]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="TRASPASO_DETALLE" EntityType="Self.TRASPASO_DETALLE" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [TRASPASO_DETALLE].[ID_TRASPASO_DETALLE] AS [ID_TRASPASO_DETALLE], 
+    [TRASPASO_DETALLE].[ID_TRASPASO] AS [ID_TRASPASO], 
+    [TRASPASO_DETALLE].[ID_PRODUCTO] AS [ID_PRODUCTO], 
+    [TRASPASO_DETALLE].[CANTIDAD] AS [CANTIDAD], 
+    [TRASPASO_DETALLE].[ESTADO] AS [ESTADO]
+    FROM [dbo].[TRASPASO_DETALLE] AS [TRASPASO_DETALLE]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="VALE_CAJA" EntityType="Self.VALE_CAJA" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [VALE_CAJA].[ID_VALE] AS [ID_VALE], 
+    [VALE_CAJA].[ID_VENTA] AS [ID_VENTA], 
+    [VALE_CAJA].[IMPORTE] AS [IMPORTE], 
+    [VALE_CAJA].[FECHA] AS [FECHA], 
+    [VALE_CAJA].[APLICADO] AS [APLICADO], 
+    [VALE_CAJA].[ID_USUARIO] AS [ID_USUARIO], 
+    [VALE_CAJA].[CANTIDAD] AS [CANTIDAD]
+    FROM [dbo].[VALE_CAJA] AS [VALE_CAJA]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Venta_Especial" EntityType="Self.Venta_Especial" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Venta_Especial].[Numero] AS [Numero], 
+    [Venta_Especial].[Clave] AS [Clave], 
+    [Venta_Especial].[Fecha] AS [Fecha], 
+    [Venta_Especial].[Cumplido] AS [Cumplido]
+    FROM [dbo].[Venta_Especial] AS [Venta_Especial]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="VENTAS_DETALLE" EntityType="Self.VENTAS_DETALLE" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [VENTAS_DETALLE].[ID_VENTA] AS [ID_VENTA], 
+    [VENTAS_DETALLE].[ID_PRODUCTO] AS [ID_PRODUCTO], 
+    [VENTAS_DETALLE].[DESCRIPCION] AS [DESCRIPCION], 
+    [VENTAS_DETALLE].[CANTIDAD] AS [CANTIDAD], 
+    [VENTAS_DETALLE].[PRECIO_VENTA] AS [PRECIO_VENTA], 
+    [VENTAS_DETALLE].[PRECIO_COSTO] AS [PRECIO_COSTO], 
+    [VENTAS_DETALLE].[GANANCIA] AS [GANANCIA], 
+    [VENTAS_DETALLE].[ID_GARANTIA] AS [ID_GARANTIA], 
+    [VENTAS_DETALLE].[IDDET] AS [IDDET], 
+    [VENTAS_DETALLE].[NO_COM_AT] AS [NO_COM_AT], 
+    [VENTAS_DETALLE].[IMPORTE] AS [IMPORTE]
+    FROM [dbo].[VENTAS_DETALLE] AS [VENTAS_DETALLE]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,122 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - SACC </title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr") 
+    <link rel="stylesheet"  href="~/Content/Acordeon.css" /> 
+    <style type="text/css">
+       *{
+           padding:0px;
+           margin:0px;
+       }
+       #header{
+           margin:auto;
+           width:500px;
+           font-family:Arial,Arial, Helvetica, sans-serif;
+       }
+       ul,ol{
+           list-style:none;
+       }
+
+       .nav li a{
+           background-color:#000000;
+           color:#ffffff;
+           text-decoration:none;
+           padding:10px 15px;
+           display:block;
+       }
+
+       .nav li a:hover {
+           background-color:#808080
+       }
+        
+       .nav li ul{
+           display:none;
+           position:absolute;
+           min-width:140px;
+       }    
+       
+       .nav li:hover > ul{
+           display:block;
+       }  
+
+       .nav li ul li{
+           position:relative;
+       }
+
+       .nav li ul li ul{
+           right:-140px;
+           top:20px;
+       }
+    </style>
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("SACC", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    @*<li>@Html.ActionLink("Home", "Index", "Home")</li>*@
+                    @*<li>@Html.ActionLink("About", "About", "Home")</li>
+                        <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                        <li>@Html.ActionLink("Alumnos", "Index", "Alumno")</li>*@
+
+                    @*CODIGO GENERADO PARA LOS MENUS Y SUBMENUS DE SACC*@
+                    <li>
+                        @Html.ActionLink("Catalogos", "Index", "Home")
+                        <ul class="nav">
+                            @*<li>@Html.ActionLink("Agente", "Administracion", "Administracion")*@
+                            <li>@Html.ActionLink("Clientes", "ClientesLista", "Cliente")</li>
+                            <li>@Html.ActionLink("Sucursales", "SucursalLista", "Sucursal")</li>
+                            <li>@Html.ActionLink("Proveedores", "ProveedorLista", "Proveedor")</li>
+                            @*<li>@Html.ActionLink("Mensajero", "Administracion", "Administracion")</li>*@
+                            <li>@Html.ActionLink("Producto", "ProductosLista", "Producto")</li>
+                            @*<li>@Html.ActionLink("Materia prima", "Administracion", "Administracion")</li>*@
+                            @*<li>@Html.ActionLink("Marca", "Administracion", "Administracion")</li>*@
+                            @*<li>@Html.ActionLink("Bodega E.U.A.", "Administracion", "Administracion")</li>*@
+
+                        </ul>
+                    </li>
+                    <li>@Html.ActionLink("Ventas", "Index", "Home")</li>
+                    <li>@Html.ActionLink("Compras", "Index", "Home")</li>
+                    <li>@Html.ActionLink("Almacen", "Index", "Home")</li>
+                    <li>@Html.ActionLink("Producción", "Index", "Home")</li>
+                    <li>
+                        @Html.ActionLink("Administración", "Index", "Home")
+                        <ul>
+                            <li>@Html.ActionLink("Sistema", "Sistema", "Sistema")</li>
+                        </ul>
+                    </li>
+                    <li>@Html.ActionLink("Departamentos", "Index", "Home")</li>
+                    <li>@Html.ActionLink("Utilerias", "Index", "Home")</li>
+                    <li>@Html.ActionLink("Empresas", "Index", "Home")</li>
+                    <li>@Html.ActionLink("Salir", "Salir", "Salir")</li>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+        </footer>
+    </div>
+
+        @Scripts.Render("~/bundles/jquery")
+        @Scripts.Render("~/bundles/bootstrap")
+        <script src="~/Scripts/jquery.validate.unobtrusive.js"></script>
+        @RenderSection("scripts", required: false)
+    </body>
+    </html>

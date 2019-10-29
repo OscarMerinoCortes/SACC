@@ -1,0 +1,110 @@
+﻿@model IEnumerable<SACC.Models.SUCURSALES>
+
+@{
+    ViewBag.Title = "Sucursales";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    <link rel="stylesheet" href="~/Content/EstiloTablas.css" />
+}
+
+<h2>Sucursales</h2>
+
+<p>
+    @Html.ActionLink("Nuevo registro", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            NOMBRE
+            @*@Html.DisplayNameFor(model => model.NOMBRE)*@
+        </th>
+        <th>
+            CALLE
+            @*@Html.DisplayNameFor(model => model.CALLE)*@
+        </th>
+        <th>
+            COLONIA
+            @*@Html.DisplayNameFor(model => model.COLONIA)*@
+        </th>
+        <th>
+            CIUDAD
+            @*@Html.DisplayNameFor(model => model.CIUDAD)*@
+        </th>
+        <th>
+            ESTADO
+            @*@Html.DisplayNameFor(model => model.ESTADO)*@
+        </th>
+        <th>
+            TELEFONO
+            @*@Html.DisplayNameFor(model => model.TELEFONO)*@
+        </th>
+        @*<th>
+            @Html.DisplayNameFor(model => model.ELIMINADO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DISTINTIVO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IVA)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CP)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.APLICA_PROMO)
+        </th>*@
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.NOMBRE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CALLE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.COLONIA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CIUDAD)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ESTADO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TELEFONO)
+        </td>
+        @*<td>
+            @Html.DisplayFor(modelItem => item.ELIMINADO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DISTINTIVO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IVA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CP)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.APLICA_PROMO)
+        </td>*@
+        <td>
+            @Html.ActionLink("Editar", "Editar", new { id=item.ID_SUCURSAL }) |
+            @Html.ActionLink("Detalles", "Detalles", new { id=item.ID_SUCURSAL }) |
+            @Html.ActionLink("Eliminar", "Delete", new { id=item.ID_SUCURSAL }, new { @class = "aElimina" })
+        </td>
+    </tr>
+}
+
+</table>
+@section scripts {
+    <script>
+        $(".aElimina").click(function (event) {
+            if (!confirm('Estas seguro de eliminar ?')) {
+                event.preventDefault();
+            }
+        });
+    </script>
+}

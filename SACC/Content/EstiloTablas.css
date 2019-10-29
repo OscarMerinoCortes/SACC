@@ -1,0 +1,26 @@
+﻿th {
+    background-color: #000000;
+    color: #ffffff;
+    width: 550px;
+    height: 10px;
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial,Arial, Helvetica, sans-serif;
+    font-size:11px;
+}
+td{
+    font-size:12px;
+}
+
+#accordian section p {
+    display:none;
+}
+
+label{
+    font-size:11px;
+}
+
+h4{
+    background-color:#808080;
+    color:#ffffff;
+}
