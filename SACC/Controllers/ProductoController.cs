@@ -15,7 +15,7 @@ namespace SACC.Controllers
             try
             {
                 using (var db = new JEENContext())
-                {
+                {                    
                     //List<Alumnos> lista = db.Alumnos.Where(a => a.Edad > 18).ToList();
                     //return View(lista);
                     return View(db.ALMACEN3.ToList());
@@ -29,8 +29,15 @@ namespace SACC.Controllers
         }
 
         public ActionResult Create()
-        {            
-            return View();
+        {      //Aquí consultas los usuarios
+            using (var db = new JEENContext())
+            {
+                var mar = db.MARCA.ToList();
+                var listaMarcas = new SelectList(mar, "ID_MARCA", "MARCA1");
+                ViewData["marcas"] = listaMarcas;
+                return View();           
+            }
+            
         }
       
                 

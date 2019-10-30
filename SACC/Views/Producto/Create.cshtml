@@ -2,9 +2,26 @@
 
 @{
     ViewBag.Title = "Create";
+    List<SelectListItem> items = (List<SelectListItem>)ViewBag.items;
     Layout = "~/Views/Shared/_Layout.cshtml";
     @*<link rel="stylesheet" href="~/Content/Acordeon.css" />*@
     <link rel="stylesheet" href="~/Content/EstiloTablas.css" />
+}
+@{
+    var selectBool = new SelectList(
+        new List<SelectListItem>
+        {
+                    new SelectListItem {Text = "S", Value = "S"},
+            new SelectListItem {Text = "N", Value = "N"},
+}, "Value", "Text");
+}
+@{
+    var selectTipo = new SelectList(
+        new List<SelectListItem>
+        {
+            new SelectListItem {Text = "SIMPLE", Value = "SIMPLE"},
+            new SelectListItem {Text = "COMPUESTO", Value = "COMPUESTO"},
+        }, "Value", "Text");
 }
 
 <h2>Registrar producto</h2>
@@ -74,7 +91,7 @@
                         @*@Html.LabelFor(model => model.CONTACTO, htmlAttributes: new { @class = "control-label col-md-2" })*@
                     </td>
                     <td>
-                        @Html.EditorFor(model => model.TIPO, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.DropDownListFor(m => Model.TIPO, selectTipo, "", new { @class = "form-control" })
                         @Html.ValidationMessageFor(model => model.TIPO, "", new { @class = "text-danger" })
                     </td>
                     <td></td>
@@ -83,7 +100,7 @@
                         @*@Html.LabelFor(model => model.TELEFONO_TRABAJO, htmlAttributes: new { @class = "control-label col-md-2" })*@
                     </td>
                     <td>
-                        @Html.EditorFor(model => model.VENTA_WEB, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.DropDownListFor(m => Model.VENTA_WEB, selectBool, "", new { @class = "form-control" })
                         @Html.ValidationMessageFor(model => model.VENTA_WEB, "", new { @class = "text-danger" })
                     </td>
                     <td></td>
@@ -91,8 +108,9 @@
                         <label>MARCA</label>
                         @*@Html.LabelFor(model => model.FAX, htmlAttributes: new { @class = "control-label col-md-2" })*@
                     </td>
-                    <td>
-                        @Html.EditorFor(model => model.MARCA, new { htmlAttributes = new { @class = "form-control" } })
+                    <td>    
+                        @Html.DropDownListFor(m => Model.VENTA_WEB, ViewData["marcas"] as SelectList, "", new { @class = "form-control" })                  
+                        @*@Html.DropDownList("marcas", ViewData["marcas"] as SelectList, new { @id = "ID_MARCA" })*@
                         @Html.ValidationMessageFor(model => model.MARCA, "", new { @class = "text-danger" })
                     </td>
                 </tr>
@@ -226,10 +244,6 @@
                         @Html.ValidationMessageFor(model => model.FECHA_ALTA, "", new { @class = "text-danger" })
                     </td>
                 </tr>
-
-
-
-
                 <tr>
                     <td>
                         &nbsp;
