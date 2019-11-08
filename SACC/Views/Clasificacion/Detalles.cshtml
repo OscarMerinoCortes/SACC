@@ -1,0 +1,27 @@
+﻿@model SACC.Models.CLASIFICACIONES
+
+@{
+    ViewBag.Title = "Detalles";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Detalles</h2>
+
+<div>
+    <h4>CLASIFICACIONES</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.CLASIFICACION)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CLASIFICACION)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Editar", "Editar", new { id = Model.ID }) |
+    @Html.ActionLink("Regresar", "ClasificacionLista")
+</p>

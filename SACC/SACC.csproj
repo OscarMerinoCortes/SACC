@@ -25,6 +25,7 @@
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <Use64BitIISExpress />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -158,8 +159,10 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\ClasificacionController.cs" />
     <Compile Include="Controllers\ClienteController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\MarcaController.cs" />
     <Compile Include="Controllers\ProductoController.cs" />
     <Compile Include="Controllers\ProveedorController.cs" />
     <Compile Include="Controllers\SucursalController.cs" />
@@ -202,6 +205,9 @@
     <Compile Include="Models\Catalogos\ALMACEN3_DA.cs" />
     <Compile Include="Models\Catalogos\PROVEEDORES_DA.cs" />
     <Compile Include="Models\Catalogos\SUCURSALES_DA.cs" />
+    <Compile Include="Models\CATEGORIAS.cs">
+      <DependentUpon>ModelSACC.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\CHEQUES.cs">
       <DependentUpon>ModelSACC.tt</DependentUpon>
     </Compile>
@@ -429,6 +435,9 @@
     <Compile Include="Models\PhotosQuery.cs">
       <DependentUpon>ModelSACC.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\PRESENTACION.cs">
+      <DependentUpon>ModelSACC.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\PRESTAMOS_CARTUCHOS.cs">
       <DependentUpon>ModelSACC.tt</DependentUpon>
     </Compile>
@@ -564,6 +573,7 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Acordeon.css" />
+    <Content Include="Content\mediascreen.css" />
     <Content Include="Content\EstiloTablas.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
@@ -632,6 +642,13 @@
     <Content Include="Views\Proveedor\Editar.cshtml" />
     <Content Include="Views\Producto\ProductosLista.cshtml" />
     <Content Include="Views\Producto\Create.cshtml" />
+    <Content Include="Views\Producto\Detalles.cshtml" />
+    <Content Include="Views\Producto\Editar.cshtml" />
+    <Content Include="Views\Clasificacion\ClasificacionLista.cshtml" />
+    <Content Include="Views\Clasificacion\Create.cshtml" />
+    <Content Include="Views\Clasificacion\Editar.cshtml" />
+    <Content Include="Views\Clasificacion\Detalles.cshtml" />
+    <Content Include="Views\Marca\MarcasLista.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

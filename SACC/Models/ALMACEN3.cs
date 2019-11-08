@@ -13,6 +13,7 @@ namespace SACC.Models
     using System.Collections.Generic;
     using System.ComponentModel;
     using System.ComponentModel.DataAnnotations;
+    using System.Data.Entity;
 
     public partial class ALMACEN3
     {
@@ -48,19 +49,19 @@ namespace SACC.Models
         [Required]
         [StringLength(10)]
         public string COLOR { get; set; }
-        [DisplayName("FOTO FRENTE")]        
+        [DisplayName("FOTO FRENTE")]
         public byte[] FOTO_FRENTE { get; set; }
         [DisplayName("FOTO LADO")]
         public byte[] FOTO_LADO { get; set; }
-        [Required]
+        //[Required]
         public double GANANCIA { get; set; }
-        [Required]
+        //[Required]
         [DisplayName("PRECIO COSTO")]
         public double PRECIO_COSTO { get; set; }
         [Required]
         [StringLength(25)]
         public string CLASIFICACION { get; set; }
-        [Required]
+        //[Required]
         [DisplayName("PRECIO VENTA")]
         public double PRECIO_COSTO2 { get; set; }
         [Required]
@@ -74,9 +75,10 @@ namespace SACC.Models
         public int USR_ALTA { get; set; }
         [Required]
         [DisplayName("FECHA")]
-        [DataType(DataType.DateTime)]
+        [DataType(DataType.Date)]
         public DateTime FECHA_ALTA { get; set; }
         public int USR_MOD { get; set; }//DATOS SOLO UTILIZADOS PARA ACTUALIZACION SE ENVIAN EN NULL
+        [DataType(DataType.Date)]
         public DateTime FECHA_MOD { get; set; }//DATOS SOLO UTILIZADOS PARA ACTUALIZACION SE ENVIAN EN NULL
         [Required]
         [StringLength(25)]

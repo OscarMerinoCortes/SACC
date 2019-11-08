@@ -2,7 +2,6 @@
 
 @{
     ViewBag.Title = "Create";
-    List<SelectListItem> items = (List<SelectListItem>)ViewBag.items;
     Layout = "~/Views/Shared/_Layout.cshtml";
     @*<link rel="stylesheet" href="~/Content/Acordeon.css" />*@
     <link rel="stylesheet" href="~/Content/EstiloTablas.css" />
@@ -23,11 +22,18 @@
             new SelectListItem {Text = "COMPUESTO", Value = "COMPUESTO"},
         }, "Value", "Text");
 }
+@{
+    var selectTipoCambio = new SelectList(
+        new List<SelectListItem>
+        {
+            new SelectListItem {Text = "PESOS", Value = "PESOS"},
+            new SelectListItem {Text = "DOLARES", Value = "DOLARES"},
+        }, "Value", "Text");
+}
 
 <h2>Registrar producto</h2>
 
-
-@using (Html.BeginForm())
+@using (Html.BeginForm("Create","Producto",FormMethod.Post,new { enctype = "multipart/form-data" }))
 
 {
     @Html.AntiForgeryToken()
@@ -91,7 +97,7 @@
                         @*@Html.LabelFor(model => model.CONTACTO, htmlAttributes: new { @class = "control-label col-md-2" })*@
                     </td>
                     <td>
-                        @Html.DropDownListFor(m => Model.TIPO, selectTipo, "", new { @class = "form-control" })
+                        @Html.DropDownListFor(m => Model.TIPO, selectTipo, "Seleccionar...", new { @class = "form-control" })
                         @Html.ValidationMessageFor(model => model.TIPO, "", new { @class = "text-danger" })
                     </td>
                     <td></td>
@@ -100,7 +106,7 @@
                         @*@Html.LabelFor(model => model.TELEFONO_TRABAJO, htmlAttributes: new { @class = "control-label col-md-2" })*@
                     </td>
                     <td>
-                        @Html.DropDownListFor(m => Model.VENTA_WEB, selectBool, "", new { @class = "form-control" })
+                        @Html.DropDownListFor(m => Model.VENTA_WEB, selectBool, "Seleccionar...", new { @class = "form-control" })
                         @Html.ValidationMessageFor(model => model.VENTA_WEB, "", new { @class = "text-danger" })
                     </td>
                     <td></td>
@@ -109,7 +115,7 @@
                         @*@Html.LabelFor(model => model.FAX, htmlAttributes: new { @class = "control-label col-md-2" })*@
                     </td>
                     <td>    
-                        @Html.DropDownListFor(m => Model.VENTA_WEB, ViewData["marcas"] as SelectList, "", new { @class = "form-control" })                  
+                        @Html.DropDownListFor(model => model.MARCA, ViewData["MarcasAP"] as SelectList, "Seleccionar...", new { @class = "form-control" })
                         @*@Html.DropDownList("marcas", ViewData["marcas"] as SelectList, new { @id = "ID_MARCA" })*@
                         @Html.ValidationMessageFor(model => model.MARCA, "", new { @class = "text-danger" })
                     </td>
@@ -141,6 +147,7 @@
                     <td>
                         <label>FOTO FRENTE</label>
                         @*@Html.LabelFor(model => model.ID_AGENTE, htmlAttributes: new { @class = "control-label col-md-2" })*@
+
                     </td>
                     <td>
                         <input type="file" name="ImageData" id="ImageData" onchange="fileCheck(this);" />
@@ -151,6 +158,7 @@
                     <td>
                         <label>FOTO LADO</label>
                         @*@Html.LabelFor(model => model.ID_AGENTE, htmlAttributes: new { @class = "control-label col-md-2" })*@
+
                     </td>
                     <td>
                         <input type="file" name="ImageData" id="ImageData" onchange="fileCheck(this);" />
@@ -181,16 +189,6 @@
                     </td>
                     <td></td>
                     <td>
-                        <label>CLASIFICACION</label>
-                        @*@Html.LabelFor(model => model.ID_AGENTE, htmlAttributes: new { @class = "control-label col-md-2" })*@
-                    </td>
-                    <td>
-
-                        @Html.EditorFor(model => model.CLASIFICACION, new { htmlAttributes = new { @class = "form-control" } })
-                        @Html.ValidationMessageFor(model => model.CLASIFICACION, "", new { @class = "text-danger" })
-                    </td>
-                    <td></td>
-                    <td>
                         <label>PRECIO VENTA</label>
                         @*@Html.LabelFor(model => model.ID_AGENTE, htmlAttributes: new { @class = "control-label col-md-2" })*@
                     </td>
@@ -198,6 +196,16 @@
 
                         @Html.EditorFor(model => model.PRECIO_COSTO2, new { htmlAttributes = new { @class = "form-control" } })
                         @Html.ValidationMessageFor(model => model.PRECIO_COSTO2, "", new { @class = "text-danger" })
+                    </td>
+                    <td></td>
+                    <td>
+                        <label>CLASIFICACION</label>
+                        @*@Html.LabelFor(model => model.ID_AGENTE, htmlAttributes: new { @class = "control-label col-md-2" })*@
+                    </td>
+                    <td>
+
+                        @Html.DropDownListFor(model => model.CLASIFICACION, ViewData["clasificaciones"] as SelectList, "Seleccionar...", new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.CLASIFICACION, "", new { @class = "text-danger" })
                     </td>
                 </tr>
                 <tr>
@@ -220,7 +228,7 @@
                         @*@Html.LabelFor(model => model.Clave_CFDI, htmlAttributes: new { @class = "control-label col-md-2" })*@
                     </td>
                     <td>
-                        @Html.EditorFor(model => model.PRECIO_EN, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.DropDownListFor(model => model.PRECIO_EN, selectTipoCambio, "Seleccionar...", new { @class = "form-control" })
                         @Html.ValidationMessageFor(model => model.PRECIO_EN, "", new { @class = "text-danger" })
                     </td>
                     <td></td>
@@ -236,13 +244,13 @@
                     <td></td>
                     <td>
                         <label>FECHA</label>
-                        @*@Html.LabelFor(model => model.ID_AGENTE, htmlAttributes: new { @class = "control-label col-md-2" })*@
+                        @*@Html.LabelFor(model => model.FECHA_ALTA, htmlAttributes: new { @class = "control-label col-md-2" })*@
                     </td>
                     <td>
-
                         @Html.EditorFor(model => model.FECHA_ALTA, new { htmlAttributes = new { @class = "form-control" } })
                         @Html.ValidationMessageFor(model => model.FECHA_ALTA, "", new { @class = "text-danger" })
                     </td>
+                    <td></td>     
                 </tr>
                 <tr>
                     <td>
@@ -255,7 +263,7 @@
                         @*@Html.LabelFor(model => model.WEB_PASSWORD, htmlAttributes: new { @class = "control-label col-md-2" })*@
                     </td>
                     <td>
-                        @Html.EditorFor(model => model.CATEGORIA, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.DropDownListFor(model => model.CATEGORIA, ViewData["categorias"] as SelectList, "Seleccionar...", new { @class = "form-control" })
                         @Html.ValidationMessageFor(model => model.CATEGORIA, "", new { @class = "text-danger" })
                     </td>
                     <td></td>
@@ -264,7 +272,7 @@
                         @*@Html.LabelFor(model => model.Clave_CFDI, htmlAttributes: new { @class = "control-label col-md-2" })*@
                     </td>
                     <td>
-                        @Html.EditorFor(model => model.PRESENTACION, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.DropDownListFor(model => model.PRESENTACION, ViewData["presentaciones"] as SelectList, "Seleccionar...", new { @class = "form-control" })
                         @Html.ValidationMessageFor(model => model.PRESENTACION, "", new { @class = "text-danger" })
                     </td>
                     <td></td>

@@ -1,4 +1,4 @@
-﻿// T4 code generation is enabled for model 'C:\Users\Desarrollo\documents\visual studio 2015\Projects\SACC\SACC\Models\ModelSACC.edmx'. 
+﻿// T4 code generation is enabled for model 'C:\Users\Desarrollo\Desktop\SACC\SACC\Models\ModelSACC.edmx'. 
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
 // is open in the designer.

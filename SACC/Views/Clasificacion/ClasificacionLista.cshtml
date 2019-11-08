@@ -1,0 +1,44 @@
+﻿@model IEnumerable<SACC.Models.CLASIFICACIONES>
+
+@{
+    ViewBag.Title = "ClasificacionLista";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    <link rel="stylesheet" href="~/Content/EstiloTablas.css" />
+}
+
+<h2>Clasificaciones</h2>
+
+<p>
+    @Html.ActionLink("Nuevo registro", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.CLASIFICACION)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.CLASIFICACION)
+        </td>
+        <td>
+            @Html.ActionLink("Editar", "Editar", new { id=item.ID }) |
+            @Html.ActionLink("Detalles", "Detalles", new { id=item.ID }) |
+            @Html.ActionLink("Eliminar", "Delete", new { id=item.ID }, new { @class = "aElimina" })
+        </td>
+    </tr>
+}
+
+</table>
+@section scripts {
+    <script>
+        $(".aElimina").click(function (event) {
+            if (!confirm('Estas seguro de eliminar ?')) {
+                event.preventDefault();
+            }
+        });
+    </script>
+}

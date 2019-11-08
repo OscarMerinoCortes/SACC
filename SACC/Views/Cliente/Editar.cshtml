@@ -302,7 +302,7 @@
                                     @*@Html.LabelFor(model => model.DIAS_CREDITO, htmlAttributes: new { @class = "control-label col-md-2" })*@
                                 </td>
                                 <td>
-                                    @Html.DropDownListFor(m => Model.DIAS_CREDITO, selectListDiasCredito, "", new { @class = "form-control" })
+                                    @Html.DropDownListFor(m => Model.DIAS_CREDITO, selectListDiasCredito, "Seleccionar...", new { @class = "form-control" })
                                     @Html.ValidationMessageFor(model => model.DIAS_CREDITO, "", new { @class = "text-danger" })
                                 </td>
                                 <td></td>
@@ -311,7 +311,7 @@
                                     @*@Html.LabelFor(model => model.DESCUENTO, htmlAttributes: new { @class = "control-label col-md-2" })*@
                                 </td>
                                 <td>
-                                    @Html.DropDownListFor(m => Model.DESCUENTO, selectListDescuento, "", new { @class = "form-control" })
+                                    @Html.DropDownListFor(m => Model.DESCUENTO, selectListDescuento, "Seleccionar...", new { @class = "form-control" })
                                     @Html.ValidationMessageFor(model => model.DESCUENTO, "", new { @class = "text-danger" })
                                 </td>
                                 <td></td>

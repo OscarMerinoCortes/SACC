@@ -42,7 +42,6 @@ namespace SACC.Models
         public virtual DbSet<INVENTARIOS> INVENTARIOS { get; set; }
         public virtual DbSet<JR_ALTERNOS> JR_ALTERNOS { get; set; }
         public virtual DbSet<JR_TEMPORALES> JR_TEMPORALES { get; set; }
-        public virtual DbSet<MARCA> MARCA { get; set; }
         public virtual DbSet<MSGAPTONER> MSGAPTONER { get; set; }
         public virtual DbSet<NOTA_CREDITO> NOTA_CREDITO { get; set; }
         public virtual DbSet<ORDEN_COMPRA> ORDEN_COMPRA { get; set; }
@@ -69,7 +68,6 @@ namespace SACC.Models
         public virtual DbSet<ABONOS_OC_CANCELADOS> ABONOS_OC_CANCELADOS { get; set; }
         public virtual DbSet<ABONOS_PAGO_OC> ABONOS_PAGO_OC { get; set; }
         public virtual DbSet<ALMACEN1> ALMACEN1 { get; set; }
-        public virtual DbSet<ALMACEN3> ALMACEN3 { get; set; }
         public virtual DbSet<AutorizaRema> AutorizaRema { get; set; }
         public virtual DbSet<BANCOS> BANCOS { get; set; }
         public virtual DbSet<CAJA_CHICA> CAJA_CHICA { get; set; }
@@ -149,5 +147,9 @@ namespace SACC.Models
         public virtual DbSet<VENTAS_DETALLE> VENTAS_DETALLE { get; set; }
         public virtual DbSet<CLIENTE> CLIENTE { get; set; }
         public virtual DbSet<MENSAJERO> MENSAJERO { get; set; }
+        public virtual DbSet<PRESENTACION> PRESENTACION { get; set; }
+        public virtual DbSet<CATEGORIAS> CATEGORIAS { get; set; }
+        public virtual DbSet<MARCA> MARCA { get; set; }
+        public virtual DbSet<ALMACEN3> ALMACEN3 { get; set; }
     }
 }

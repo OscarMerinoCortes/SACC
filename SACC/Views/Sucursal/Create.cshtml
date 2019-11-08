@@ -123,7 +123,7 @@
                         <label>PROMOCION</label>                        
                     </td>
                     <td>
-                        @Html.DropDownListFor(m => Model.APLICA_PROMO, selectList, "", new { @class = "form-control" })
+                        @Html.DropDownListFor(m => Model.APLICA_PROMO, selectList, "Seleccionar...", new { @class = "form-control" })
                         @Html.ValidationMessageFor(model => model.APLICA_PROMO, "", new { @class = "text-danger" })
                     </td>
                 </tr>

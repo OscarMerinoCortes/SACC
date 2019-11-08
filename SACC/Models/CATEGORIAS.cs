@@ -12,9 +12,11 @@ namespace SACC.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class MARCA
+    public partial class CATEGORIAS
     {
-        public int ID_MARCA { get; set; }
-        public string DESCRIPCION { get; set; }
+        public int IdCategoria { get; set; }
+        public string Descripcion { get; set; }
+        public System.DateTime Fecha { get; set; }
+        public int IdEstatus { get; set; }
     }
 }
