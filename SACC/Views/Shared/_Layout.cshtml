@@ -6,6 +6,7 @@
     <title>@ViewBag.Title - SACC </title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr") 
+    @*@Scripts.Render("~/bundles/bootstrap")*@    
     <link rel="stylesheet"  href="~/Content/Acordeon.css" /> 
     <style type="text/css">
        *{
@@ -21,22 +22,24 @@
            list-style:none;
        }
 
-       .nav li a{
-           background-color:#000000;
-           color:#ffffff;
-           text-decoration:none;
-           padding:10px 15px;
-           display:block;
-       }
+        .nav li a {
+            background-color: #154360; /*Barra Menu*/
+            color: #ffffff; /*Letras barra menu*/
+            text-decoration: none;
+            padding: 12.5px 18px;
+            display: block;
+            position: relative;
+        }
 
        .nav li a:hover {
-           background-color:#808080
-       }
+           background-color:#009fc3
+       }      
         
        .nav li ul{
            display:none;
            position:absolute;
-           min-width:140px;
+           min-width:100px;
+           z-index:10;
        }    
        
        .nav li:hover > ul{
@@ -44,34 +47,37 @@
        }  
 
        .nav li ul li{
-           position:relative;
+           position:center;
        }
 
        .nav li ul li ul{
-           right:-140px;
-           top:20px;
+           right:-168px;
+           top:0px;
        }
     </style>
 </head>
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar navbar-fixed-top">
         <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                @Html.ActionLink("SACC", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-            </div>
-            <div class="navbar-collapse collapse">
+           
+            @*<div class="navbar-header">
+
+        <a class="navbar-brand" href="#">
+            <img src="http://www.tienda-aptoner.com.mx/" alt="">
+        </a>
+    </div>*@
+
+
+            @*<div class="navbar-collapse collapse">*@
+            <div id="Lista1">
                 <ul class="nav navbar-nav">
                     @*<li>@Html.ActionLink("Home", "Index", "Home")</li>*@
                     @*<li>@Html.ActionLink("About", "About", "Home")</li>
-                        <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-                        <li>@Html.ActionLink("Alumnos", "Index", "Alumno")</li>*@
+                <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                <li>@Html.ActionLink("Alumnos", "Index", "Alumno")</li>*@
 
                     @*CODIGO GENERADO PARA LOS MENUS Y SUBMENUS DE SACC*@
+                    <li><img src="http://www.conektor.com.mx/APToner/Administrador/Aplicacion_96/Categoria_1311/contenido_18282.png" alt="" width="150" height="45"></li>
                     <li>
                         @Html.ActionLink("Catalogos", "Index", "Home")
                         <ul class="nav">
@@ -79,17 +85,34 @@
                             <li>@Html.ActionLink("Clientes", "ClientesLista", "Cliente")</li>
                             <li>@Html.ActionLink("Sucursales", "SucursalLista", "Sucursal")</li>
                             <li>@Html.ActionLink("Proveedores", "ProveedorLista", "Proveedor")</li>
+                            <li>@Html.ActionLink("Categorias", "CategoriasLista", "Categoria")</li>
+                            <li>@Html.ActionLink("Presentación", "PresentacionesLista", "Presentacion")</li>
                             <li>@Html.ActionLink("Clasificaciones", "ClasificacionLista", "Clasificacion")</li>
                             <li>@Html.ActionLink("Marcas", "MarcasLista", "Marca")</li>
-                            @*<li>@Html.ActionLink("Mensajero", "Administracion", "Administracion")</li>*@
-                            <li>@Html.ActionLink("Productos", "ProductosLista", "Producto")</li>
-                            @*<li>@Html.ActionLink("Materia prima", "Administracion", "Administracion")</li>*@
-                            @*<li>@Html.ActionLink("Marca", "Administracion", "Administracion")</li>*@
-                            @*<li>@Html.ActionLink("Bodega E.U.A.", "Administracion", "Administracion")</li>*@                   
+                            <li>@Html.ActionLink("Almacén 1", "Materia1Lista", "Materia")</li>
+                            <li>@Html.ActionLink("Almacén 2", "Materia2Lista", "Materia")</li>
+                            <li>@Html.ActionLink("Almacén 3", "ProductosLista", "Producto")</li>
+                            <li>@Html.ActionLink("Bodega E.U.A.", "BodegaLista", "BodegaUSA")</li>
                         </ul>
                     </li>
                     <li>@Html.ActionLink("Ventas", "Index", "Home")</li>
-                    <li>@Html.ActionLink("Compras", "Index", "Home")</li>
+                    <li>
+                        @Html.ActionLink("Compras", "Index", "Home")
+                        <ul class="nav">
+                            <li>
+                                @Html.ActionLink("Cotizar", "Index", "Home")
+                                <ul class="nav">
+                                    <li>@Html.ActionLink("Requisición", "Requisicion", "Requisicion")</li>
+                                    <li>@Html.ActionLink("Revisar cotizaciones", "RevisaCotizacion", "RevisaCotizacion")</li>
+                                    <li>@Html.ActionLink("Asignar proveedor", "AsignaProveedor", "AsignaProveedor")</li>
+                                    <li>@Html.ActionLink("Pre-orden de compra", "PreordenCompra", "PreordenCompra")</li>
+                                </ul>
+                            </li>
+                            <li>@Html.ActionLink("Ordenes de compra", "Index", "Home")</li>
+                            <li>@Html.ActionLink("Materia prima", "Index", "Home")</li>
+                            <li>@Html.ActionLink("Herramientas", "Index", "Home")</li>
+                        </ul>
+                    </li>
                     <li>@Html.ActionLink("Almacen", "Index", "Home")</li>
                     <li>@Html.ActionLink("Producción", "Index", "Home")</li>
                     <li>
@@ -102,7 +125,6 @@
                     <li>@Html.ActionLink("Utilerias", "Index", "Home")</li>
                     <li>@Html.ActionLink("Empresas", "Index", "Home")</li>
                     <li>@Html.ActionLink("Salir", "Salir", "Salir")</li>
-
                 </ul>
             </div>
         </div>

@@ -1,0 +1,212 @@
+﻿@model SACC.Models.ALMACEN2
+
+@{
+    ViewBag.Title = "DetallesAlm2";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    @*<link rel="stylesheet" href="~/Content/Acordeon.css" />*@
+    <link rel="stylesheet" href="~/Content/mediascreen.css" />
+}
+
+<h2>DetallesAlm2</h2>
+
+<div>
+    <h4>ALMACEN2</h4>
+    <hr />
+    <table>
+        <tr>
+            <td></td>
+            <td><img src="@ViewBag.ImageData" width="450" height="200" /></td>
+            <td></td>
+        </tr>
+    </table>
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ID_PRODUCTO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ID_PRODUCTO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DESCRIPCION)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DESCRIPCION)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ID_DESCUENTO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ID_DESCUENTO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.C_MINIMA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.C_MINIMA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.C_MAXIMA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.C_MAXIMA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TIPO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TIPO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.VENTA_WEB)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VENTA_WEB)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MARCA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MARCA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MATERIAL)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MATERIAL)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.COLOR)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.COLOR)
+        </dd>
+
+        @*<dt>
+            @Html.DisplayNameFor(model => model.FOTO_FRENTE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FOTO_FRENTE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FOTO_LADO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FOTO_LADO)
+        </dd>*@
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GANANCIA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GANANCIA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PRECIO_COSTO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PRECIO_COSTO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PRECIO_VENTA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PRECIO_VENTA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LOCALIZACION)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LOCALIZACION)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PRECIO_EN)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PRECIO_EN)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.USR_ALTA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.USR_ALTA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FECHA_ALTA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FECHA_ALTA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.USR_MOD)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.USR_MOD)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FECHA_MOD)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FECHA_MOD)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PRECIO_COSTO2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PRECIO_COSTO2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ESPECIE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ESPECIE)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Editar", "EditarAlm2", new { id = Model.ID }) |
+    @Html.ActionLink("Regresar", "Materia2Lista")
+</p>

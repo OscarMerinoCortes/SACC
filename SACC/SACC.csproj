@@ -159,13 +159,18 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Controllers\ClasificacionController.cs" />
-    <Compile Include="Controllers\ClienteController.cs" />
-    <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\MarcaController.cs" />
-    <Compile Include="Controllers\ProductoController.cs" />
-    <Compile Include="Controllers\ProveedorController.cs" />
-    <Compile Include="Controllers\SucursalController.cs" />
+    <Compile Include="Controllers\Catalogos\BodegaUSAController.cs" />
+    <Compile Include="Controllers\Catalogos\CategoriaController.cs" />
+    <Compile Include="Controllers\Catalogos\ClasificacionController.cs" />
+    <Compile Include="Controllers\Catalogos\ClienteController.cs" />
+    <Compile Include="Controllers\Catalogos\HomeController.cs" />
+    <Compile Include="Controllers\Catalogos\MarcaController.cs" />
+    <Compile Include="Controllers\Catalogos\MateriaController.cs" />
+    <Compile Include="Controllers\Catalogos\PresentacionController.cs" />
+    <Compile Include="Controllers\Catalogos\ProductoController.cs" />
+    <Compile Include="Controllers\Catalogos\ProveedorController.cs" />
+    <Compile Include="Controllers\Catalogos\SucursalController.cs" />
+    <Compile Include="Controllers\Compras\CompraController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -179,6 +184,9 @@
       <DependentUpon>ModelSACC.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\ALMACEN1.cs">
+      <DependentUpon>ModelSACC.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ALMACEN2.cs">
       <DependentUpon>ModelSACC.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\ALMACEN3.cs">
@@ -202,7 +210,12 @@
     <Compile Include="Models\CARTVAC.cs">
       <DependentUpon>ModelSACC.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\Catalogos\ALMACEN1_DA.cs" />
+    <Compile Include="Models\Catalogos\ALMACEN2_DA.cs" />
     <Compile Include="Models\Catalogos\ALMACEN3_DA.cs" />
+    <Compile Include="Models\Catalogos\CATEGORIAS_DA.cs" />
+    <Compile Include="Models\Catalogos\DIREIMPOR_DA.cs" />
+    <Compile Include="Models\Catalogos\PRESENTACION_DA.cs" />
     <Compile Include="Models\Catalogos\PROVEEDORES_DA.cs" />
     <Compile Include="Models\Catalogos\SUCURSALES_DA.cs" />
     <Compile Include="Models\CATEGORIAS.cs">
@@ -294,6 +307,9 @@
       <DependentUpon>ModelSACC.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\ENTRADA_RAPIDAS.cs">
+      <DependentUpon>ModelSACC.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ESPECIE.cs">
       <DependentUpon>ModelSACC.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\ESTADO_CUENTA.cs">
@@ -572,7 +588,6 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
-    <Content Include="Content\Acordeon.css" />
     <Content Include="Content\mediascreen.css" />
     <Content Include="Content\EstiloTablas.css" />
     <Content Include="favicon.ico" />
@@ -614,7 +629,9 @@
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\_references.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
@@ -649,6 +666,30 @@
     <Content Include="Views\Clasificacion\Editar.cshtml" />
     <Content Include="Views\Clasificacion\Detalles.cshtml" />
     <Content Include="Views\Marca\MarcasLista.cshtml" />
+    <Content Include="Views\Marca\Create.cshtml" />
+    <Content Include="Views\Marca\Editar.cshtml" />
+    <Content Include="Views\Marca\Detalles.cshtml" />
+    <Content Include="Views\Categoria\CategoriasLista.cshtml" />
+    <Content Include="Views\Categoria\Create.cshtml" />
+    <Content Include="Views\Categoria\Editar.cshtml" />
+    <Content Include="Views\Categoria\Detalles.cshtml" />
+    <Content Include="Views\Presentacion\PresentacionesLista.cshtml" />
+    <Content Include="Views\Presentacion\Create.cshtml" />
+    <Content Include="Views\Presentacion\Editar.cshtml" />
+    <Content Include="Views\Presentacion\Detalles.cshtml" />
+    <Content Include="Views\Materia\Materia1Lista.cshtml" />
+    <Content Include="Views\Materia\Materia2Lista.cshtml" />
+    <Content Include="Views\Materia\Create.cshtml" />
+    <Content Include="Views\Materia\CreateAlm2.cshtml" />
+    <Content Include="Views\Materia\Editar.cshtml" />
+    <Content Include="Views\Materia\EditarAlm2.cshtml" />
+    <Content Include="Views\Materia\Detalles.cshtml" />
+    <Content Include="Views\Materia\DetallesAlm2.cshtml" />
+    <Content Include="Views\BodegaUSA\BodegaLista.cshtml" />
+    <Content Include="Views\BodegaUSA\Create.cshtml" />
+    <Content Include="Views\BodegaUSA\Editar.cshtml" />
+    <Content Include="Views\BodegaUSA\Detalles.cshtml" />
+    <Content Include="Views\Compra\ListaRequisiciones.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

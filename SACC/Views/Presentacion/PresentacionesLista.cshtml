@@ -1,0 +1,56 @@
+﻿@model IEnumerable<SACC.Models.PRESENTACION>
+
+@{
+    ViewBag.Title = "PresentacionesLista";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    <link rel="stylesheet" href="~/Content/EstiloTablas.css" />
+}
+
+<h2>Presentaciones</h2>
+
+<p>
+    @Html.ActionLink("Nuevo registro", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Descripcion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Fecha)
+        </th>
+        @*<th>
+            @Html.DisplayNameFor(model => model.IdEstatus)
+        </th>*@
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Descripcion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Fecha)
+        </td>
+        @*<td>
+            @Html.DisplayFor(modelItem => item.IdEstatus)
+        </td>*@
+        <td>
+            @Html.ActionLink("Editar", "Editar", new { id=item.IdPresentacion }) |
+            @Html.ActionLink("Detalles", "Detalles", new { id=item.IdPresentacion }) |
+            @Html.ActionLink("Eliminar", "Delete", new { id=item.IdPresentacion }, new { @class = "aElimina" })
+        </td>
+    </tr>
+}
+
+</table>
+@section scripts {
+    <script>
+        $(".aElimina").click(function (event) {
+            if (!confirm('Estas seguro de eliminar ?')) {
+                event.preventDefault();
+            }
+        });
+    </script>
+}

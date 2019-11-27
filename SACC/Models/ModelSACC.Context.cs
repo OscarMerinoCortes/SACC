@@ -88,7 +88,6 @@ namespace SACC.Models
         public virtual DbSet<DESCUENTOS> DESCUENTOS { get; set; }
         public virtual DbSet<DEV_GARANTIA> DEV_GARANTIA { get; set; }
         public virtual DbSet<DEVOLUCION> DEVOLUCION { get; set; }
-        public virtual DbSet<DIREIMPOR> DIREIMPOR { get; set; }
         public virtual DbSet<DOMICILIOS> DOMICILIOS { get; set; }
         public virtual DbSet<ENTRADA_PRODUCTO> ENTRADA_PRODUCTO { get; set; }
         public virtual DbSet<ENTRADA_RAPIDAS> ENTRADA_RAPIDAS { get; set; }
@@ -151,5 +150,8 @@ namespace SACC.Models
         public virtual DbSet<CATEGORIAS> CATEGORIAS { get; set; }
         public virtual DbSet<MARCA> MARCA { get; set; }
         public virtual DbSet<ALMACEN3> ALMACEN3 { get; set; }
+        public virtual DbSet<ALMACEN2> ALMACEN2 { get; set; }
+        public virtual DbSet<ESPECIE> ESPECIE { get; set; }
+        public virtual DbSet<DIREIMPOR> DIREIMPOR { get; set; }
     }
 }

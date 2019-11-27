@@ -14,9 +14,9 @@ namespace SACC.Models
     using System.ComponentModel;
     using System.ComponentModel.DataAnnotations;
 
-    public partial class ALMACEN3
+    public partial class ALMACEN2
     {
-        public int NUM { get; set; }
+        public int ID { get; set; }
         [Required]
         [DisplayName("ID PRODUCTO")]
         [StringLength(25)]
@@ -52,17 +52,11 @@ namespace SACC.Models
         public byte[] FOTO_FRENTE { get; set; }
         [DisplayName("FOTO LADO")]
         public byte[] FOTO_LADO { get; set; }
-        //[Required]
         public double GANANCIA { get; set; }
-        //[Required]
         [DisplayName("PRECIO COSTO")]
         public double PRECIO_COSTO { get; set; }
-        [Required]
-        [StringLength(25)]
-        public string CLASIFICACION { get; set; }
-        //[Required]
         [DisplayName("PRECIO VENTA")]
-        public double PRECIO_COSTO2 { get; set; }
+        public double PRECIO_VENTA { get; set; }
         [Required]
         public string LOCALIZACION { get; set; }
         [Required]
@@ -76,14 +70,14 @@ namespace SACC.Models
         [DataType(DataType.Date)]
         [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}", ApplyFormatInEditMode = true)]
         public DateTime FECHA_ALTA { get; set; }
-        public int USR_MOD { get; set; }//DATOS SOLO UTILIZADOS PARA ACTUALIZACION SE ENVIAN EN NULL
+        public int USR_MOD { get; set; }
         [DataType(DataType.DateTime)]
-        public DateTime FECHA_MOD { get; set; }//DATOS SOLO UTILIZADOS PARA ACTUALIZACION SE ENVIAN EN NULL
+        public DateTime FECHA_MOD { get; set; }
+        [Required]
+        [DisplayName("PRECIO COSTO 2")]
+        public double PRECIO_COSTO2 { get; set; }
         [Required]
         [StringLength(25)]
-        public string CATEGORIA { get; set; }
-        [Required]
-        [StringLength(10)]
-        public string PRESENTACION { get; set; }
+        public string ESPECIE { get; set; }
     }
 }

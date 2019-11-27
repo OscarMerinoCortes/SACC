@@ -27,7 +27,7 @@ namespace SACC.Models.Catalogos
         [DisplayName("CANTIDAD MAXIMA")]
         public double C_MAXIMA { get; set; }
         [Required]
-        [StringLength(10)]
+        [StringLength(20)]
         public string TIPO { get; set; }
         [Required]
         [DisplayName("VENTA WEB")]
@@ -65,12 +65,12 @@ namespace SACC.Models.Catalogos
         [Required]
         [DisplayName("USR ALTA")]
         public int USR_ALTA { get; set; }
-        [Required]
-        [DisplayName("FECHA")]
+        [DisplayName("FECHA REG.")]
         [DataType(DataType.Date)]
+        [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}", ApplyFormatInEditMode = true)]
         public DateTime FECHA_ALTA { get; set; }
         public int USR_MOD { get; set; }//DATOS SOLO UTILIZADOS PARA ACTUALIZACION SE ENVIAN EN NULL
-        [DataType(DataType.Date)]
+        [DataType(DataType.DateTime)]
         public DateTime FECHA_MOD { get; set; }//DATOS SOLO UTILIZADOS PARA ACTUALIZACION SE ENVIAN EN NULL
         [Required]
         [StringLength(25)]

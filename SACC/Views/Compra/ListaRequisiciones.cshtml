@@ -1,0 +1,135 @@
+﻿@model IEnumerable<SACC.Models.REQUISICION>
+
+@{
+    ViewBag.Title = "ListaRequisiciones";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    <link rel="stylesheet" href="~/Content/EstiloTablas.css" />
+}
+<h2>Requisiciones</h2>
+@using (Html.BeginForm())
+{
+    <div>
+        <div>
+            <fieldset>
+                <label>Buscar:</label>
+                @*<legend>Selecting elements</legend>*@
+                <p>
+                    <label>URGENTE</label>
+                    <select id="inpBuscar" class="btn btn-default">
+                        <option value="S">SI</option>
+                        <option value="N">NO</option>
+                    </select>
+                </p>
+            </fieldset>
+        </div>
+        <div>
+            <div>
+                <i class="fa fa-refresh" style="color:red;"></i>
+                <input type="submit" value="Filtrar" class="btn btn-default" id="btngetdata">
+            </div>
+        </div>
+    </div>
+}
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ID_PRODUCTO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DESCRIPCION)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CANTIDAD)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FECHA)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.COMENTARIO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.URGENTE)
+        </th>
+        @*<th>
+                @Html.DisplayNameFor(model => model.ACTIVO)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CONTADOR)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.COTIZADA)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ALMACEN)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FOLIO)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MARCA)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.STATUS)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NO_PEDIDO)
+            </th>*@
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.ID_PRODUCTO)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DESCRIPCION)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CANTIDAD)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FECHA)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.COMENTARIO)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.URGENTE)
+            </td>
+            @*<td>
+                    @Html.DisplayFor(modelItem => item.ACTIVO)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CONTADOR)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.COTIZADA)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ALMACEN)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FOLIO)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MARCA)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.STATUS)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NO_PEDIDO)
+                </td>*@
+            <td>
+                @*@Html.ActionLink("Edit", "Edit", new { id=item.ID_REQUISICION }) |
+                    @Html.ActionLink("Details", "Details", new { id=item.ID_REQUISICION }) |
+                    @Html.ActionLink("Delete", "Delete", new { id=item.ID_REQUISICION })*@
+            </td>
+        </tr>
+    }
+
+</table>

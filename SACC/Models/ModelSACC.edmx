@@ -74,8 +74,6 @@ warning 6002: The table/view 'JEEN.dbo.ABONOS_PAGO_OC' does not have a primary k
           <Property Name="FECHA" Type="datetime" />
           <Property Name="PROVEEDOR" Type="char" MaxLength="100" />
         </EntityType>
-        <!--Errors Found During Generation:
-warning 6002: The table/view 'JEEN.dbo.ALMACEN1' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="ALMACEN1">
           <Key>
             <PropertyRef Name="ID" />
@@ -105,6 +103,35 @@ warning 6002: The table/view 'JEEN.dbo.ALMACEN1' does not have a primary key def
           <Property Name="FECHA_MOD" Type="datetime" />
           <Property Name="CATEGORIA" Type="varchar" MaxLength="25" />
           <Property Name="ESPECIE" Type="varchar" MaxLength="25" />
+        </EntityType>
+        <EntityType Name="ALMACEN2">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID_PRODUCTO" Type="char" MaxLength="25" />
+          <Property Name="DESCRIPCION" Type="varchar" MaxLength="100" />
+          <Property Name="ID_DESCUENTO" Type="char" MaxLength="10" />
+          <Property Name="C_MINIMA" Type="float" />
+          <Property Name="C_MAXIMA" Type="float" />
+          <Property Name="TIPO" Type="char" MaxLength="10" />
+          <Property Name="VENTA_WEB" Type="char" MaxLength="10" />
+          <Property Name="MARCA" Type="varchar" MaxLength="50" />
+          <Property Name="MATERIAL" Type="char" MaxLength="20" />
+          <Property Name="COLOR" Type="char" MaxLength="10" />
+          <Property Name="FOTO_FRENTE" Type="image" />
+          <Property Name="FOTO_LADO" Type="image" />
+          <Property Name="GANANCIA" Type="float" />
+          <Property Name="PRECIO_COSTO" Type="float" />
+          <Property Name="PRECIO_VENTA" Type="float" />
+          <Property Name="LOCALIZACION" Type="char" MaxLength="10" />
+          <Property Name="PRECIO_EN" Type="varchar" MaxLength="10" />
+          <Property Name="USR_ALTA" Type="int" />
+          <Property Name="FECHA_ALTA" Type="datetime" />
+          <Property Name="USR_MOD" Type="int" />
+          <Property Name="FECHA_MOD" Type="datetime" />
+          <Property Name="PRECIO_COSTO2" Type="float" />
+          <Property Name="ESPECIE" Type="varchar" MaxLength="25" />
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
         </EntityType>
         <EntityType Name="ALMACEN3">
           <Key>
@@ -588,8 +615,6 @@ warning 6002: The table/view 'JEEN.dbo.DEVOLUCION' does not have a primary key d
           <Property Name="PRECIO" Type="char" MaxLength="53" />
           <Property Name="TOT_DEV" Type="char" MaxLength="53" />
         </EntityType>
-        <!--Errors Found During Generation:
-warning 6002: The table/view 'JEEN.dbo.DIREIMPOR' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="DIREIMPOR">
           <Key>
             <PropertyRef Name="ID" />
@@ -678,6 +703,15 @@ warning 6002: The table/view 'JEEN.dbo.ENTRADA_RAPIDAS' does not have a primary 
           <Property Name="ID_USUARIO" Type="char" MaxLength="10" />
           <Property Name="NUM_ORDEN" Type="char" MaxLength="10" />
           <Property Name="ID_ORDEN_COMPRA" Type="int" />
+        </EntityType>
+        <EntityType Name="ESPECIE">
+          <Key>
+            <PropertyRef Name="IdEspecie" />
+          </Key>
+          <Property Name="IdEspecie" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Descripcion" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Fecha" Type="datetime" Nullable="false" />
+          <Property Name="IdEstatus" Type="int" Nullable="false" />
         </EntityType>
         <!--Errors Found During Generation:
 warning 6002: The table/view 'JEEN.dbo.ESTADO_CUENTA' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
@@ -1988,6 +2022,8 @@ warning 6002: The table/view 'JEEN.dbo.VENTAS_DETALLE' does not have a primary k
           <Property Name="IMPORTE" Type="float" Nullable="false" />
         </EntityType>
         <EntityContainer Name="JEENModelStoreContainer">
+          <EntitySet Name="ALMACEN1" EntityType="Self.ALMACEN1" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ALMACEN2" EntityType="Self.ALMACEN2" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="ALMACEN3" EntityType="Self.ALMACEN3" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="ASISTENCIA_TECNICA" EntityType="Self.ASISTENCIA_TECNICA" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="CATEGORIAS" EntityType="Self.CATEGORIAS" Schema="dbo" store:Type="Tables" />
@@ -2000,8 +2036,10 @@ warning 6002: The table/view 'JEEN.dbo.VENTAS_DETALLE' does not have a primary k
           <EntitySet Name="COTIZA_CLIEN" EntityType="Self.COTIZA_CLIEN" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="COTIZA_REQUI" EntityType="Self.COTIZA_REQUI" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="DETALLE_PEDIDO" EntityType="Self.DETALLE_PEDIDO" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="DIREIMPOR" EntityType="Self.DIREIMPOR" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="DOLAR" EntityType="Self.DOLAR" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="ENTRADAS" EntityType="Self.ENTRADAS" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ESPECIE" EntityType="Self.ESPECIE" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="EXISTENCIAS" EntityType="Self.EXISTENCIAS" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="EXISTENCIAS_TEMPORAL" EntityType="Self.EXISTENCIAS_TEMPORAL" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="EXISTENCIAS_TEMPORAL_DETALLES" EntityType="Self.EXISTENCIAS_TEMPORAL_DETALLES" Schema="dbo" store:Type="Tables" />
@@ -2092,35 +2130,6 @@ warning 6002: The table/view 'JEEN.dbo.VENTAS_DETALLE' does not have a primary k
     [ABONOS_PAGO_OC].[FECHA] AS [FECHA], 
     [ABONOS_PAGO_OC].[PROVEEDOR] AS [PROVEEDOR]
     FROM [dbo].[ABONOS_PAGO_OC] AS [ABONOS_PAGO_OC]</DefiningQuery>
-          </EntitySet>
-          <EntitySet Name="ALMACEN1" EntityType="Self.ALMACEN1" store:Type="Tables" store:Schema="dbo">
-            <DefiningQuery>SELECT 
-    [ALMACEN1].[ID_PRODUCTO] AS [ID_PRODUCTO], 
-    [ALMACEN1].[DESCRIPCION] AS [DESCRIPCION], 
-    [ALMACEN1].[ID_DESCUENTO] AS [ID_DESCUENTO], 
-    [ALMACEN1].[C_MINIMA] AS [C_MINIMA], 
-    [ALMACEN1].[C_MAXIMA] AS [C_MAXIMA], 
-    [ALMACEN1].[TIPO] AS [TIPO], 
-    [ALMACEN1].[VENTA_WEB] AS [VENTA_WEB], 
-    [ALMACEN1].[MARCA] AS [MARCA], 
-    [ALMACEN1].[MATERIAL] AS [MATERIAL], 
-    [ALMACEN1].[COLOR] AS [COLOR], 
-    [ALMACEN1].[FOTO_FRENTE] AS [FOTO_FRENTE], 
-    [ALMACEN1].[FOTO_LADO] AS [FOTO_LADO], 
-    [ALMACEN1].[GANANCIA] AS [GANANCIA], 
-    [ALMACEN1].[PRECIO_COSTO] AS [PRECIO_COSTO], 
-    [ALMACEN1].[PRECIO_COSTO2] AS [PRECIO_COSTO2], 
-    [ALMACEN1].[PRECIO_VENTA] AS [PRECIO_VENTA], 
-    [ALMACEN1].[ID] AS [ID], 
-    [ALMACEN1].[LOCALIZACION] AS [LOCALIZACION], 
-    [ALMACEN1].[PRECIO_EN] AS [PRECIO_EN], 
-    [ALMACEN1].[USR_ALTA] AS [USR_ALTA], 
-    [ALMACEN1].[FECHA_ALTA] AS [FECHA_ALTA], 
-    [ALMACEN1].[USR_MOD] AS [USR_MOD], 
-    [ALMACEN1].[FECHA_MOD] AS [FECHA_MOD], 
-    [ALMACEN1].[CATEGORIA] AS [CATEGORIA], 
-    [ALMACEN1].[ESPECIE] AS [ESPECIE]
-    FROM [dbo].[ALMACEN1] AS [ALMACEN1]</DefiningQuery>
           </EntitySet>
           <EntitySet Name="AutorizaRema" EntityType="Self.AutorizaRema" store:Type="Tables" store:Schema="dbo">
             <DefiningQuery>SELECT 
@@ -2325,17 +2334,6 @@ warning 6002: The table/view 'JEEN.dbo.VENTAS_DETALLE' does not have a primary k
     [DEVOLUCION].[PRECIO] AS [PRECIO], 
     [DEVOLUCION].[TOT_DEV] AS [TOT_DEV]
     FROM [dbo].[DEVOLUCION] AS [DEVOLUCION]</DefiningQuery>
-          </EntitySet>
-          <EntitySet Name="DIREIMPOR" EntityType="Self.DIREIMPOR" store:Type="Tables" store:Schema="dbo">
-            <DefiningQuery>SELECT 
-    [DIREIMPOR].[ID] AS [ID], 
-    [DIREIMPOR].[NOMBRE] AS [NOMBRE], 
-    [DIREIMPOR].[DIRECCION] AS [DIRECCION], 
-    [DIREIMPOR].[CD] AS [CD], 
-    [DIREIMPOR].[TEL1] AS [TEL1], 
-    [DIREIMPOR].[TEL2] AS [TEL2], 
-    [DIREIMPOR].[STATUS] AS [STATUS]
-    FROM [dbo].[DIREIMPOR] AS [DIREIMPOR]</DefiningQuery>
           </EntitySet>
           <EntitySet Name="DOMICILIOS" EntityType="Self.DOMICILIOS" store:Type="Tables" store:Schema="dbo">
             <DefiningQuery>SELECT 
@@ -3941,18 +3939,6 @@ warning 6002: The table/view 'JEEN.dbo.VENTAS_DETALLE' does not have a primary k
           <Property Name="PRECIO" Type="String" MaxLength="53" FixedLength="true" Unicode="false" />
           <Property Name="TOT_DEV" Type="String" MaxLength="53" FixedLength="true" Unicode="false" />
         </EntityType>
-        <EntityType Name="DIREIMPOR">
-          <Key>
-            <PropertyRef Name="ID" />
-          </Key>
-          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="NOMBRE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="DIRECCION" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
-          <Property Name="CD" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="TEL1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="TEL2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="STATUS" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
-        </EntityType>
         <EntityType Name="DOMICILIOS">
           <Key>
             <PropertyRef Name="ID_DOMICILIO" />
@@ -4729,7 +4715,6 @@ warning 6002: The table/view 'JEEN.dbo.VENTAS_DETALLE' does not have a primary k
           <EntitySet Name="DESCUENTOS" EntityType="Self.DESCUENTOS" />
           <EntitySet Name="DEV_GARANTIA" EntityType="Self.DEV_GARANTIA" />
           <EntitySet Name="DEVOLUCION" EntityType="Self.DEVOLUCION" />
-          <EntitySet Name="DIREIMPOR" EntityType="Self.DIREIMPOR" />
           <EntitySet Name="DOMICILIOS" EntityType="Self.DOMICILIOS" />
           <EntitySet Name="ENTRADA_PRODUCTO" EntityType="Self.ENTRADA_PRODUCTO" />
           <EntitySet Name="ENTRADA_RAPIDAS" EntityType="Self.ENTRADA_RAPIDAS" />
@@ -4792,6 +4777,9 @@ warning 6002: The table/view 'JEEN.dbo.VENTAS_DETALLE' does not have a primary k
           <EntitySet Name="CATEGORIAS" EntityType="JEENModel.CATEGORIAS" />
           <EntitySet Name="MARCA" EntityType="JEENModel.MARCA" />
           <EntitySet Name="ALMACEN3" EntityType="JEENModel.ALMACEN3" />
+          <EntitySet Name="ALMACEN2" EntityType="JEENModel.ALMACEN2" />
+          <EntitySet Name="ESPECIE" EntityType="JEENModel.ESPECIE" />
+          <EntitySet Name="DIREIMPOR" EntityType="JEENModel.DIREIMPOR" />
         </EntityContainer>
         <EntityType Name="CLIENTE">
           <Key>
@@ -4904,6 +4892,56 @@ warning 6002: The table/view 'JEEN.dbo.VENTAS_DETALLE' does not have a primary k
           <Property Name="FECHA_MOD" Type="DateTime" Precision="3" />
           <Property Name="CATEGORIA" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
           <Property Name="PRESENTACION" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="ALMACEN2">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID_PRODUCTO" Type="String" MaxLength="25" FixedLength="true" Unicode="false" />
+          <Property Name="DESCRIPCION" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="ID_DESCUENTO" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="C_MINIMA" Type="Double" />
+          <Property Name="C_MAXIMA" Type="Double" />
+          <Property Name="TIPO" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="VENTA_WEB" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="MARCA" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="MATERIAL" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+          <Property Name="COLOR" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="FOTO_FRENTE" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="FOTO_LADO" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="GANANCIA" Type="Double" />
+          <Property Name="PRECIO_COSTO" Type="Double" />
+          <Property Name="PRECIO_VENTA" Type="Double" />
+          <Property Name="LOCALIZACION" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="PRECIO_EN" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="USR_ALTA" Type="Int32" />
+          <Property Name="FECHA_ALTA" Type="DateTime" Precision="3" />
+          <Property Name="USR_MOD" Type="Int32" />
+          <Property Name="FECHA_MOD" Type="DateTime" Precision="3" />
+          <Property Name="PRECIO_COSTO2" Type="Double" />
+          <Property Name="ESPECIE" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="ESPECIE">
+          <Key>
+            <PropertyRef Name="IdEspecie" />
+          </Key>
+          <Property Name="IdEspecie" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Descripcion" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Fecha" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="IdEstatus" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="DIREIMPOR">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NOMBRE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="DIRECCION" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+          <Property Name="CD" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="TEL1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="TEL2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="STATUS" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -5957,19 +5995,6 @@ warning 6002: The table/view 'JEEN.dbo.VENTAS_DETALLE' does not have a primary k
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="DIREIMPOR">
-            <EntityTypeMapping TypeName="JEENModel.DIREIMPOR">
-              <MappingFragment StoreEntitySet="DIREIMPOR">
-                <ScalarProperty Name="ID" ColumnName="ID" />
-                <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
-                <ScalarProperty Name="DIRECCION" ColumnName="DIRECCION" />
-                <ScalarProperty Name="CD" ColumnName="CD" />
-                <ScalarProperty Name="TEL1" ColumnName="TEL1" />
-                <ScalarProperty Name="TEL2" ColumnName="TEL2" />
-                <ScalarProperty Name="STATUS" ColumnName="STATUS" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="DOMICILIOS">
             <EntityTypeMapping TypeName="JEENModel.DOMICILIOS">
               <MappingFragment StoreEntitySet="DOMICILIOS">
@@ -6813,6 +6838,59 @@ warning 6002: The table/view 'JEEN.dbo.VENTAS_DETALLE' does not have a primary k
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <EntitySetMapping Name="ALMACEN2">
+            <EntityTypeMapping TypeName="JEENModel.ALMACEN2">
+              <MappingFragment StoreEntitySet="ALMACEN2">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="ESPECIE" ColumnName="ESPECIE" />
+                <ScalarProperty Name="PRECIO_COSTO2" ColumnName="PRECIO_COSTO2" />
+                <ScalarProperty Name="FECHA_MOD" ColumnName="FECHA_MOD" />
+                <ScalarProperty Name="USR_MOD" ColumnName="USR_MOD" />
+                <ScalarProperty Name="FECHA_ALTA" ColumnName="FECHA_ALTA" />
+                <ScalarProperty Name="USR_ALTA" ColumnName="USR_ALTA" />
+                <ScalarProperty Name="PRECIO_EN" ColumnName="PRECIO_EN" />
+                <ScalarProperty Name="LOCALIZACION" ColumnName="LOCALIZACION" />
+                <ScalarProperty Name="PRECIO_VENTA" ColumnName="PRECIO_VENTA" />
+                <ScalarProperty Name="PRECIO_COSTO" ColumnName="PRECIO_COSTO" />
+                <ScalarProperty Name="GANANCIA" ColumnName="GANANCIA" />
+                <ScalarProperty Name="FOTO_LADO" ColumnName="FOTO_LADO" />
+                <ScalarProperty Name="FOTO_FRENTE" ColumnName="FOTO_FRENTE" />
+                <ScalarProperty Name="COLOR" ColumnName="COLOR" />
+                <ScalarProperty Name="MATERIAL" ColumnName="MATERIAL" />
+                <ScalarProperty Name="MARCA" ColumnName="MARCA" />
+                <ScalarProperty Name="VENTA_WEB" ColumnName="VENTA_WEB" />
+                <ScalarProperty Name="TIPO" ColumnName="TIPO" />
+                <ScalarProperty Name="C_MAXIMA" ColumnName="C_MAXIMA" />
+                <ScalarProperty Name="C_MINIMA" ColumnName="C_MINIMA" />
+                <ScalarProperty Name="ID_DESCUENTO" ColumnName="ID_DESCUENTO" />
+                <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+                <ScalarProperty Name="ID_PRODUCTO" ColumnName="ID_PRODUCTO" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ESPECIE">
+            <EntityTypeMapping TypeName="JEENModel.ESPECIE">
+              <MappingFragment StoreEntitySet="ESPECIE">
+                <ScalarProperty Name="IdEstatus" ColumnName="IdEstatus" />
+                <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+                <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+                <ScalarProperty Name="IdEspecie" ColumnName="IdEspecie" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DIREIMPOR">
+            <EntityTypeMapping TypeName="JEENModel.DIREIMPOR">
+              <MappingFragment StoreEntitySet="DIREIMPOR">
+                <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+                <ScalarProperty Name="TEL2" ColumnName="TEL2" />
+                <ScalarProperty Name="TEL1" ColumnName="TEL1" />
+                <ScalarProperty Name="CD" ColumnName="CD" />
+                <ScalarProperty Name="DIRECCION" ColumnName="DIRECCION" />
+                <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>
@@ -6827,8 +6905,8 @@ warning 6002: The table/view 'JEEN.dbo.VENTAS_DETALLE' does not have a primary k
     <Options>
       <DesignerInfoPropertySet>
         <DesignerProperty Name="ValidateOnBuild" Value="true" />
-        <DesignerProperty Name="EnablePluralization" Value="false" />
-        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
         <DesignerProperty Name="UseLegacyProvider" Value="false" />
         <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
       </DesignerInfoPropertySet>

@@ -28,6 +28,6 @@ namespace SACC.Models
         public string MARCA { get; set; }
         public string COMENTARIO { get; set; }
         public string STATUS { get; set; }
-        public Nullable<int> NO_PEDIDO { get; set; }
+        public Nullable<int> NO_PEDIDO { get; set; }       
     }
 }

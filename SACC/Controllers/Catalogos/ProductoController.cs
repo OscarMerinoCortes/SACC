@@ -84,7 +84,20 @@ namespace SACC.Controllers
                 {
                     LlenarViewDatas();
                     //Alumnos al = db.Alumnos.Where(a => a.Id == id).FirstOrDefault();//Usar en todos los casos en claves compuestas
-                    ALMACEN3 alm3 = db.ALMACEN3.Find(id);//Cuando se tiene un id unico.                
+                    ALMACEN3 alm3 = db.ALMACEN3.Find(id);//Cuando se tiene un id unico.   
+                    alm3.ID_PRODUCTO = (alm3.ID_PRODUCTO == null) ? alm3.ID_PRODUCTO = "" :alm3.ID_PRODUCTO.Trim();
+                    alm3.DESCRIPCION = (alm3.DESCRIPCION == null) ? alm3.DESCRIPCION = "" : alm3.DESCRIPCION.Trim();
+                    alm3.ID_DESCUENTO = (alm3.ID_DESCUENTO == null) ? alm3.ID_DESCUENTO = "" : alm3.ID_DESCUENTO.Trim();
+                    alm3.TIPO = (alm3.TIPO == null) ? alm3.TIPO = "" : alm3.TIPO.Trim();
+                    alm3.VENTA_WEB = (alm3.VENTA_WEB == null) ? alm3.VENTA_WEB = "" : alm3.VENTA_WEB.Trim();
+                    alm3.MARCA = (alm3.MARCA == null) ? alm3.MARCA = "" : alm3.MARCA.Trim();
+                    alm3.MATERIAL = (alm3.MATERIAL == null) ? alm3.MATERIAL = "" : alm3.MATERIAL.Trim();
+                    alm3.COLOR = (alm3.COLOR == null) ? alm3.COLOR = "" : alm3.COLOR.Trim();
+                    alm3.CLASIFICACION = (alm3.CLASIFICACION == null) ? alm3.CLASIFICACION = "" : alm3.CLASIFICACION.Trim();
+                    alm3.LOCALIZACION = (alm3.LOCALIZACION == null) ? alm3.LOCALIZACION = "" : alm3.LOCALIZACION.Trim();
+                    alm3.PRECIO_EN = (alm3.PRECIO_EN == null) ? alm3.PRECIO_EN = "" : alm3.PRECIO_EN.Trim();
+                    alm3.CATEGORIA = (alm3.CATEGORIA == null) ? alm3.CATEGORIA = "" : alm3.CATEGORIA.Trim();
+                    alm3.PRESENTACION = (alm3.PRESENTACION == null) ? alm3.PRESENTACION = "" : alm3.PRESENTACION.Trim();
                     return View(alm3);
                 }
             }
@@ -215,6 +228,8 @@ namespace SACC.Controllers
                 var cat = db.CATEGORIAS.ToList();
                 var listaCategorias = new SelectList(cat, "DESCRIPCION", "DESCRIPCION");
                 ViewData["categorias"] = listaCategorias;
+                //FECHA ACTUAL
+                //ViewData["fechaActual"] = DateTime.Now.ToString();
             }
         }
 

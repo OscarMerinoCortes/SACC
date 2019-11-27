@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="e9d5cdc7618a4389841602f81c7513f4" Name="Diagram1" ZoomLevel="65">
+      <Diagram DiagramId="e9d5cdc7618a4389841602f81c7513f4" Name="Diagram1" ZoomLevel="62">
         <EntityTypeShape EntityType="JEENModel.ASISTENCIA_TECNICA" Width="1.5" PointX="0.5" PointY="0.5" IsExpanded="true" />
         <EntityTypeShape EntityType="JEENModel.COBRO_MCIA" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="JEENModel.COBRO_MCIA_DETALLE" Width="1.5" PointX="2.75" PointY="3.75" IsExpanded="true" />
@@ -68,7 +68,6 @@
         <EntityTypeShape EntityType="JEENModel.DESCUENTOS" Width="1.5" PointX="16.75" PointY="23.75" IsExpanded="true" />
         <EntityTypeShape EntityType="JEENModel.DEV_GARANTIA" Width="1.5" PointX="24.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="JEENModel.DEVOLUCION" Width="1.5" PointX="24.75" PointY="3.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="JEENModel.DIREIMPOR" Width="1.5" PointX="4.75" PointY="24.75" IsExpanded="true" />
         <EntityTypeShape EntityType="JEENModel.DOMICILIOS" Width="1.5" PointX="24.75" PointY="8.75" IsExpanded="true" />
         <EntityTypeShape EntityType="JEENModel.ENTRADA_PRODUCTO" Width="1.5" PointX="24.75" PointY="14.75" IsExpanded="true" />
         <EntityTypeShape EntityType="JEENModel.ENTRADA_RAPIDAS" Width="1.5" PointX="24.75" PointY="18.75" IsExpanded="true" />
@@ -131,6 +130,9 @@
         <EntityTypeShape EntityType="JEENModel.CATEGORIAS" Width="1.5" PointX="19.375" PointY="27.75" />
         <EntityTypeShape EntityType="JEENModel.MARCA" Width="1.5" PointX="33.375" PointY="21.75" />
         <EntityTypeShape EntityType="JEENModel.ALMACEN3" Width="1.5" PointX="33.375" PointY="24.75" />
+        <EntityTypeShape EntityType="JEENModel.ALMACEN2" Width="1.5" PointX="25.375" PointY="33.75" />
+        <EntityTypeShape EntityType="JEENModel.ESPECIE" Width="1.5" PointX="17.375" PointY="18.75" />
+        <EntityTypeShape EntityType="JEENModel.DIREIMPOR" Width="1.5" PointX="33.375" PointY="31.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

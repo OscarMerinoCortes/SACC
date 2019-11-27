@@ -1,0 +1,53 @@
+﻿@model SACC.Models.MARCA
+
+@{
+    ViewBag.Title = "Editar";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    @*<link rel="stylesheet" href="~/Content/Acordeon.css" />*@
+    <link rel="stylesheet" href="~/Content/EstiloTablas.css" />
+}
+
+<h2>Editar marca</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">       
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        @Html.HiddenFor(model => model.ID_MARCA)
+        <table>
+            <tbody>
+                <tr>
+                    <td>
+                        <div><label>DESCRIPCION</label></div>
+                        @*@Html.LabelFor(model => model.CLASIFICACION, htmlAttributes: new { @class = "control-label col-md-2" })*@
+                    </td>
+                    <td>
+                        @Html.EditorFor(model => model.DESCRIPCION, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.DESCRIPCION, "", new { @class = "text-danger" })
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        &nbsp;
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="submit" value="Actualizar" class="btn btn-default" />
+                    </td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>        
+    </div>
+}
+<br />
+<div>
+    @Html.ActionLink("Regresar", "MarcasLista")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

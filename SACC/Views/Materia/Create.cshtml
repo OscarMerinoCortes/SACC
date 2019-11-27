@@ -1,18 +1,10 @@
-﻿@model SACC.Models.ALMACEN3
+﻿@model SACC.Models.ALMACEN1
 
 @{
     ViewBag.Title = "Create";
     Layout = "~/Views/Shared/_Layout.cshtml";
     @*<link rel="stylesheet" href="~/Content/Acordeon.css" />*@
     <link rel="stylesheet" href="~/Content/EstiloTablas.css" />
-}
-@{
-    var selectBool = new SelectList(
-        new List<SelectListItem>
-        {
-                    new SelectListItem {Text = "S", Value = "S"},
-            new SelectListItem {Text = "N", Value = "N"},
-}, "Value", "Text");
 }
 @{
     var selectTipo = new SelectList(
@@ -23,6 +15,14 @@
         }, "Value", "Text");
 }
 @{
+    var selectBool = new SelectList(
+        new List<SelectListItem>
+        {
+                    new SelectListItem {Text = "S", Value = "S"},
+            new SelectListItem {Text = "N", Value = "N"},
+}, "Value", "Text");
+}
+@{
     var selectTipoCambio = new SelectList(
         new List<SelectListItem>
         {
@@ -30,11 +30,9 @@
             new SelectListItem {Text = "DOLARES", Value = "DOLARES"},
         }, "Value", "Text");
 }
-
 <h2>Registrar producto</h2>
 
-@using (Html.BeginForm("Create","Producto",FormMethod.Post,new { enctype = "multipart/form-data" }))
-
+@using (Html.BeginForm("Create", "Materia", FormMethod.Post, new { enctype = "multipart/form-data" }))
 {
     @Html.AntiForgeryToken()
     <div>
@@ -43,7 +41,7 @@
                 <tr>
                     <td>
                         <div><label>ID PRODUCTO</label></div>
-                        @*@Html.LabelFor(model => model.NOMBRE, htmlAttributes: new { @class = "control-label col-md-2" })*@
+                        @*@Html.LabelFor(model => model.ID_PRODUCTO, htmlAttributes: new { @class = "control-label col-md-2" })*@
                     </td>
                     <td>
                         @Html.EditorFor(model => model.ID_PRODUCTO, new { htmlAttributes = new { @class = "form-control" } })
@@ -52,7 +50,7 @@
                     <td></td>
                     <td>
                         <label>DESCRIPCION</label>
-                        @*@Html.LabelFor(model => model.NOMBRE_COMERCIAL, htmlAttributes: new { @class = "control-label col-md-2" })*@
+                        @*@Html.LabelFor(model => model.DESCRIPCION, htmlAttributes: new { @class = "control-label col-md-2" })*@
                     </td>
                     <td>
                         @Html.EditorFor(model => model.DESCRIPCION, new { htmlAttributes = new { @class = "form-control" } })
@@ -61,7 +59,7 @@
                     <td></td>
                     <td>
                         <label>ID DESCUENTO</label>
-                        @*@Html.LabelFor(model => model.RFC, htmlAttributes: new { @class = "control-label col-md-2" })*@
+                        @*@Html.LabelFor(model => model.ID_DESCUENTO, htmlAttributes: new { @class = "control-label col-md-2" })*@
                     </td>
                     <td>
                         @Html.EditorFor(model => model.ID_DESCUENTO, new { htmlAttributes = new { @class = "form-control" } })
@@ -70,7 +68,7 @@
                     <td></td>
                     <td>
                         <label>COMPRA MINIMA</label>
-                        @*@Html.LabelFor(model => model.TELEFONO_CASA, htmlAttributes: new { @class = "control-label col-md-2" })*@
+                        @*@Html.LabelFor(model => model.C_MINIMA, htmlAttributes: new { @class = "control-label col-md-2" })*@
                     </td>
                     <td>
                         @Html.EditorFor(model => model.C_MINIMA, new { htmlAttributes = new { @class = "form-control" } })
@@ -85,7 +83,7 @@
                 <tr>
                     <td>
                         <label>COMPRA MAXIMA</label>
-                        @*@Html.LabelFor(model => model.CURP, htmlAttributes: new { @class = "control-label col-md-2" })*@
+                        @*@Html.LabelFor(model => model.C_MAXIMA, htmlAttributes: new { @class = "control-label col-md-2" })*@
                     </td>
                     <td>
                         @Html.EditorFor(model => model.C_MAXIMA, new { htmlAttributes = new { @class = "form-control" } })
@@ -94,7 +92,7 @@
                     <td></td>
                     <td>
                         <label>TIPO</label>
-                        @*@Html.LabelFor(model => model.CONTACTO, htmlAttributes: new { @class = "control-label col-md-2" })*@
+                        @*@Html.LabelFor(model => model.TIPO, htmlAttributes: new { @class = "control-label col-md-2" })*@
                     </td>
                     <td>
                         @Html.DropDownListFor(m => Model.TIPO, selectTipo, "Seleccionar...", new { @class = "form-control" })
@@ -103,7 +101,7 @@
                     <td></td>
                     <td>
                         <label>VENTA WEB</label>
-                        @*@Html.LabelFor(model => model.TELEFONO_TRABAJO, htmlAttributes: new { @class = "control-label col-md-2" })*@
+                        @*@Html.LabelFor(model => model.VENTA_WEB, htmlAttributes: new { @class = "control-label col-md-2" })*@
                     </td>
                     <td>
                         @Html.DropDownListFor(m => Model.VENTA_WEB, selectBool, "Seleccionar...", new { @class = "form-control" })
@@ -112,9 +110,9 @@
                     <td></td>
                     <td>
                         <label>MARCA</label>
-                        @*@Html.LabelFor(model => model.FAX, htmlAttributes: new { @class = "control-label col-md-2" })*@
+                        @*@Html.LabelFor(model => model.MARCA, htmlAttributes: new { @class = "control-label col-md-2" })*@
                     </td>
-                    <td>    
+                    <td>
                         @Html.DropDownListFor(model => model.MARCA, ViewData["MarcasAP"] as SelectList, "Seleccionar...", new { @class = "form-control" })
                         @*@Html.DropDownList("marcas", ViewData["marcas"] as SelectList, new { @id = "ID_MARCA" })*@
                         @Html.ValidationMessageFor(model => model.MARCA, "", new { @class = "text-danger" })
@@ -128,7 +126,7 @@
                 <tr>
                     <td>
                         <label>MATERIAL</label>
-                        @*@Html.LabelFor(model => model.WEB_PASSWORD, htmlAttributes: new { @class = "control-label col-md-2" })*@
+                        @*@Html.LabelFor(model => model.MATERIAL, htmlAttributes: new { @class = "control-label col-md-2" })*@
                     </td>
                     <td>
                         @Html.EditorFor(model => model.MATERIAL, new { htmlAttributes = new { @class = "form-control" } })
@@ -137,7 +135,7 @@
                     <td></td>
                     <td>
                         <label>COLOR</label>
-                        @*@Html.LabelFor(model => model.Clave_CFDI, htmlAttributes: new { @class = "control-label col-md-2" })*@
+                        @*@Html.LabelFor(model => model.COLOR, htmlAttributes: new { @class = "control-label col-md-2" })*@
                     </td>
                     <td>
                         @Html.EditorFor(model => model.COLOR, new { htmlAttributes = new { @class = "form-control" } })
@@ -146,7 +144,7 @@
                     <td></td>
                     <td>
                         <label>FOTO FRENTE</label>
-                        @*@Html.LabelFor(model => model.ID_AGENTE, htmlAttributes: new { @class = "control-label col-md-2" })*@
+                        @*@Html.LabelFor(model => model.FOTO_FRENTE, htmlAttributes: new { @class = "control-label col-md-2" })*@
 
                     </td>
                     <td>
@@ -157,8 +155,7 @@
                     <td></td>
                     <td>
                         <label>FOTO LADO</label>
-                        @*@Html.LabelFor(model => model.ID_AGENTE, htmlAttributes: new { @class = "control-label col-md-2" })*@
-
+                        @*@Html.LabelFor(model => model.FOTO_LADO, htmlAttributes: new { @class = "control-label col-md-2" })*@
                     </td>
                     <td>
                         <input type="file" name="ImageData" id="ImageData" onchange="fileCheck(this);" />
@@ -172,7 +169,7 @@
                 <tr>
                     <td>
                         <label>GANANCIA</label>
-                        @*@Html.LabelFor(model => model.WEB_PASSWORD, htmlAttributes: new { @class = "control-label col-md-2" })*@
+                        @*@Html.LabelFor(model => model.GANANCIA, htmlAttributes: new { @class = "control-label col-md-2" })*@
                     </td>
                     <td>
                         @Html.EditorFor(model => model.GANANCIA, new { htmlAttributes = new { @class = "form-control" } })
@@ -181,7 +178,7 @@
                     <td></td>
                     <td>
                         <label>PRECIO COSTO</label>
-                        @*@Html.LabelFor(model => model.Clave_CFDI, htmlAttributes: new { @class = "control-label col-md-2" })*@
+                        @*@Html.LabelFor(model => model.PRECIO_COSTO, htmlAttributes: new { @class = "control-label col-md-2" })*@
                     </td>
                     <td>
                         @Html.EditorFor(model => model.PRECIO_COSTO, new { htmlAttributes = new { @class = "form-control" } })
@@ -189,8 +186,8 @@
                     </td>
                     <td></td>
                     <td>
-                        <label>PRECIO VENTA</label>
-                        @*@Html.LabelFor(model => model.ID_AGENTE, htmlAttributes: new { @class = "control-label col-md-2" })*@
+                        <label>PRECIO COSTO 2</label>
+                        @*@Html.LabelFor(model => model.PRECIO_COSTO2, htmlAttributes: new { @class = "control-label col-md-2" })*@
                     </td>
                     <td>
 
@@ -199,13 +196,13 @@
                     </td>
                     <td></td>
                     <td>
-                        <label>CLASIFICACION</label>
-                        @*@Html.LabelFor(model => model.ID_AGENTE, htmlAttributes: new { @class = "control-label col-md-2" })*@
+                        <label>PRECIO VENTA</label>
+                        @*@Html.LabelFor(model => model.PRECIO_VENTA, htmlAttributes: new { @class = "control-label col-md-2" })*@
                     </td>
                     <td>
 
-                        @Html.DropDownListFor(model => model.CLASIFICACION, ViewData["clasificaciones"] as SelectList, "Seleccionar...", new { @class = "form-control" })
-                        @Html.ValidationMessageFor(model => model.CLASIFICACION, "", new { @class = "text-danger" })
+                       @Html.EditorFor(model => model.PRECIO_VENTA, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.PRECIO_VENTA, "", new { @class = "text-danger" })
                     </td>
                 </tr>
                 <tr>
@@ -216,7 +213,7 @@
                 <tr>
                     <td>
                         <label>LOCALIZACION</label>
-                        @*@Html.LabelFor(model => model.WEB_PASSWORD, htmlAttributes: new { @class = "control-label col-md-2" })*@
+                        @*@Html.LabelFor(model => model.LOCALIZACION, htmlAttributes: new { @class = "control-label col-md-2" })*@
                     </td>
                     <td>
                         @Html.EditorFor(model => model.LOCALIZACION, new { htmlAttributes = new { @class = "form-control" } })
@@ -225,7 +222,7 @@
                     <td></td>
                     <td>
                         <label>TIPO CAMBIO</label>
-                        @*@Html.LabelFor(model => model.Clave_CFDI, htmlAttributes: new { @class = "control-label col-md-2" })*@
+                        @*@Html.LabelFor(model => model.PRECIO_EN, htmlAttributes: new { @class = "control-label col-md-2" })*@
                     </td>
                     <td>
                         @Html.DropDownListFor(model => model.PRECIO_EN, selectTipoCambio, "Seleccionar...", new { @class = "form-control" })
@@ -234,7 +231,7 @@
                     <td></td>
                     <td>
                         <label>USR</label>
-                        @*@Html.LabelFor(model => model.ID_AGENTE, htmlAttributes: new { @class = "control-label col-md-2" })*@
+                        @*@Html.LabelFor(model => model.USR_ALTA, htmlAttributes: new { @class = "control-label col-md-2" })*@
                     </td>
                     <td>
 
@@ -250,7 +247,7 @@
                         @Html.EditorFor(model => model.FECHA_ALTA, new { htmlAttributes = new { @class = "form-control" } })
                         @Html.ValidationMessageFor(model => model.FECHA_ALTA, "", new { @class = "text-danger" })
                     </td>
-                    <td></td>     
+                    <td></td>
                 </tr>
                 <tr>
                     <td>
@@ -268,28 +265,28 @@
                     </td>
                     <td></td>
                     <td>
-                        <label>PRESENTACION</label>
+                        <label>ESPECIE</label>
                         @*@Html.LabelFor(model => model.Clave_CFDI, htmlAttributes: new { @class = "control-label col-md-2" })*@
                     </td>
                     <td>
-                        @Html.DropDownListFor(model => model.PRESENTACION, ViewData["presentaciones"] as SelectList, "Seleccionar...", new { @class = "form-control" })
-                        @Html.ValidationMessageFor(model => model.PRESENTACION, "", new { @class = "text-danger" })
+                        @Html.DropDownListFor(model => model.ESPECIE, ViewData["especies"] as SelectList, "Seleccionar...", new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.ESPECIE, "", new { @class = "text-danger" })
                     </td>
                     <td></td>
                 </tr>
-                <tr>                   
+                <tr>
                     <td>
-                       <br />
-                            <input type="submit" value="Guardar" class="btn btn-default" />                       
+                        <br />
+                        <input type="submit" value="Guardar" class="btn btn-default" />
                     </td>
                 </tr>
             </tbody>
         </table>
-    </div>
+    </div>   
 }
 <br />
 <div>
-    @Html.ActionLink("Regresar", "ProductosLista")
+    @Html.ActionLink("Regresar", "Materia1Lista")
 </div>
 
 @section Scripts {

@@ -30,6 +30,7 @@ namespace SACC.Controllers
 
         public ActionResult Create()
         {
+            //LlenarViewDatas();
             return View();
         }
 
@@ -38,9 +39,11 @@ namespace SACC.Controllers
         public ActionResult Create(CLIENTE a)
         {
             if (!ModelState.IsValid)//ModelState es para validar que los datos sean los correctos.
-
+            {
+                //LlenarViewDatas();
                 return View();
-
+            }
+                
             try
             {
                 using (var db = new JEENContext())
@@ -69,6 +72,7 @@ namespace SACC.Controllers
                 {
                     //Alumnos al = db.Alumnos.Where(a => a.Id == id).FirstOrDefault();//Usar en todos los casos en claves compuestas
                     CLIENTE cli = db.CLIENTE.Find(id);//Cuando se tiene un id unico.
+                    //LlenarViewDatas();
                     return View(cli);
                 }
             }
@@ -85,8 +89,11 @@ namespace SACC.Controllers
         public ActionResult Editar(CLIENTE a)
         {
             if (!ModelState.IsValid)//ModelState es para validar que los datos sean los correctos.
-
+            {
+                //LlenarViewDatas();
                 return View();
+            }
+                
             try
             {
                 using (var db = new JEENContext())
@@ -176,5 +183,11 @@ namespace SACC.Controllers
                 throw;
             }
         }
+
+        //public void LlenarViewDatas()
+        //{           
+        //        //FECHA ACTUAL
+        //        ViewData["fechaActual"] = DateTime.Now.Date.ToString("dd/MM/yyyy");    
+        //}
     }
 }
